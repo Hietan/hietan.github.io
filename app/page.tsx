@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+import Title from "@/components/elements/Title/Title"
+
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -90,6 +92,7 @@ export default function Home() {
           </p>
         </a>
       </div>
+			<Title>Test Title</Title>
     </main>
   );
 }
