@@ -22,6 +22,12 @@ export default function Home() {
 					accountName="hietan"
 				/>
 				<SNSLink
+					href="https://codeforces.com/profile/Hietan"
+					img="/logo/CodeForces.svg"
+					serviceName="Codeforces"
+					accountName="Hietan"
+				/>
+				<SNSLink
 					href="https://www.kaggle.com/hietan"
 					img="/logo/Kaggle.svg"
 					serviceName="Kaggle"
