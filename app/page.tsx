@@ -23,7 +23,7 @@ export default function Home() {
 				/>
 				<SNSLink
 					href="https://codeforces.com/profile/Hietan"
-					img="/logo/CodeForces.svg"
+					img="/logo/Codeforces.svg"
 					serviceName="Codeforces"
 					accountName="Hietan"
 				/>
@@ -71,7 +71,7 @@ export default function Home() {
 				/>
 				<SNSLink
 					href="https://www.instagram.com/hietamaru/"
-					img="/logo/official/Instagram.svg"
+					img="/logo/official/Instagram.png"
 					serviceName="Instagram"
 					accountName="Hietamaru"
 				/>
