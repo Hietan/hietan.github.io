@@ -21,8 +21,8 @@ export default function SNSLink(props: Props) {
 				<Image
 					className={styles.image}
 					src={props.img}
-					width={48}
-					height={48}
+					width={100}
+					height={100}
 					alt={`Logo of ${props.serviceName}`}
 				/>
 			</div>
