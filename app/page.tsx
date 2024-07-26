@@ -65,7 +65,7 @@ export default function Home() {
 				/>
 				<SNSLink
 					href="https://www.instagram.com/hietamaru/"
-					img="/logo/official/Instagram.svg"
+					img="/logo/official/Instagram.png"
 					serviceName="Instagram"
 					accountName="Hietamaru"
 				/>
