@@ -34,7 +34,7 @@ export default function Home() {
 					accountName="Hietan"
 				/>
 			</div>
-			<h3>Techブログ</h3>
+			<h3>Tech ブログ</h3>
 			<div className={styles.flex}>
 				<SNSLink 
 					href="https://qiita.com/Hietan"
