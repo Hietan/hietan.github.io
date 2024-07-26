@@ -1,98 +1,88 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 
 import Title from "@/components/elements/Title/Title"
+import SNSLink from "@/components/elements/SNSLink/SNSLink"
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-			<Title>Test Title</Title>
-    </main>
-  );
+	return (
+		<main>
+			<Title>Links</Title>
+			<div>プログラミング</div>
+			<div className={styles.flex}>
+				<SNSLink
+					href="https://github.com/Hietan"
+					img="/logo/official/GitHub.svg"
+					serviceName="GitHub"
+					accountName="Hietan"
+				/>
+				<SNSLink
+					href="https://atcoder.jp/users/hietan"
+					img="/logo/official/AtCoder.png"
+					serviceName="AtCoder"
+					accountName="hietan"
+				/>
+				<SNSLink
+					href="https://www.kaggle.com/hietan"
+					img="/logo/Kaggle.svg"
+					serviceName="Kaggle"
+					accountName="Hietan"
+				/>
+			</div>
+			<div>Techブログ</div>
+			<div className={styles.flex}>
+				<SNSLink 
+					href="https://qiita.com/Hietan"
+					img="/logo/official/Qiita.png"
+					serviceName="Qiita"
+					accountName="Hietan"
+				/>	
+				<SNSLink
+					href="https://zenn.dev/hietan"
+					img="/logo/official/Zenn.svg"
+					serviceName="Zenn"
+					accountName="hietan"
+				/>
+				<SNSLink
+					href="https://hietan.hatenablog.com/"
+					img="/logo/official/HatenaBlog.svg"
+					serviceName="Hatena Blog"
+					accountName="Hietan"
+				/>
+				<SNSLink
+					href="https://note.com/hietan"
+					img="/logo/official/note.svg"
+					serviceName="note"
+					accountName="Hietan"
+				/>
+			</div>
+			<div>SNS</div>
+			<div className={styles.flex}>
+				<SNSLink
+					href="https://x.com/Hietamaru"
+					img="/logo/official/X.svg"
+					serviceName="X"
+					accountName="Hietamaru"
+				/>
+				<SNSLink
+					href="https://www.instagram.com/hietamaru/"
+					img="/logo/official/Instagram.svg"
+					serviceName="Instagram"
+					accountName="Hietamaru"
+				/>
+				<SNSLink
+					href="https://www.facebook.com/profile.php?id=100091391457577"
+					img="/logo/official/Facebook.png"
+					serviceName="Facebook"
+					accountName="Hietan"
+				/>
+				<SNSLink
+					href="https://www.linkedin.com/in/kazumayamasaki/"
+					img="/logo/official/LinkedIn.png"
+					serviceName="LinkedIn"
+					accountName="Kazuma Yamasaki"
+				/>
+			</div>
+			<Title>Contact</Title>
+		</main>
+	);
 }
