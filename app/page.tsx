@@ -1,5 +1,8 @@
+import Image from "next/image";
+
 import styles from "./page.module.scss";
 
+import Grid12 from "@/components/layouts/Grid12/Grid12";
 import Title from "@/components/elements/Title/Title"
 import SNSLink from "@/components/elements/SNSLink/SNSLink"
 
@@ -7,6 +10,27 @@ export default function Home() {
 	return (
 		<main>
 			<Title>About Me</Title>
+			<Grid12>
+				<div className={styles.imageWrapper} style={{ gridColumn: '1 / 5' }}>
+					<Image
+						className={styles.image}
+						src="/KazumaYamasaki.jpg"
+						fill
+						alt="Kazuma Yamasaki"
+					/>
+				</div>
+				<section style={{ gridColumn: '5 / 12' }}>
+					<h3>山﨑 和真 <small>（やまさき かずま）</small></h3>
+					<ul>
+						<li>生年月日 : 2001年 06月 22日 （金）</li>
+						<li>年齢 : 23 歳 （修士１年）</li>
+						<li>住所 : 神戸生まれ，神戸育ち，神戸在住 （３年間，京都府精華町に在住）</li>
+						<li>所属：奈良先端科学技術大学院大学 先端科学技術研究科 先端科学技術専攻 ソフトウェア工学研究室</li>
+						<li>専門：ソフトウェア工学</li>
+						<li>趣味：プログラミング，音楽 （特に，吹奏楽，Jazz）</li>
+					</ul>
+				</section>
+			</Grid12>
 			<Title>Links</Title>
 			<h3>プログラミング</h3>
 			<div className={styles.flex}>

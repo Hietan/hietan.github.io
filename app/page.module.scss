@@ -3,3 +3,16 @@
     flex-wrap: wrap;
     gap: 1rem;
 }
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem white;
+}
+
+.image {
+    object-fit: cover;
+}
