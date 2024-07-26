@@ -1,0 +1,14 @@
+@import '/style/variables';
+
+.titleWrapper {
+	width: 100%;
+	border-radius: 1rem;
+	box-shadow: $boxshadow-inset;
+	background: $color-main-background;
+}
+
+.title {
+	text-align: center;
+	line-height: 2;
+	font-size: 2rem;
+}
