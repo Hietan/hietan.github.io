@@ -6,6 +6,7 @@ import SNSLink from "@/components/elements/SNSLink/SNSLink"
 export default function Home() {
 	return (
 		<main>
+			<Title>About Me</Title>
 			<Title>Links</Title>
 			<h3>プログラミング</h3>
 			<div className={styles.flex}>
