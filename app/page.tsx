@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<main>
 			<Title>Links</Title>
-			<div>プログラミング</div>
+			<h3>プログラミング</h3>
 			<div className={styles.flex}>
 				<SNSLink
 					href="https://github.com/Hietan"
@@ -34,7 +34,7 @@ export default function Home() {
 					accountName="Hietan"
 				/>
 			</div>
-			<div>Techブログ</div>
+			<h3>Techブログ</h3>
 			<div className={styles.flex}>
 				<SNSLink 
 					href="https://qiita.com/Hietan"
@@ -61,7 +61,7 @@ export default function Home() {
 					accountName="Hietan"
 				/>
 			</div>
-			<div>SNS</div>
+			<h3>SNS</h3>
 			<div className={styles.flex}>
 				<SNSLink
 					href="https://x.com/Hietamaru"
