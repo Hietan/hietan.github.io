@@ -1,0 +1,9 @@
+$color-white: white;
+$color-gray: #999999;
+$color-black: black;
+
+$color-main-text: $color-white;
+$color-main-background: $color-black;
+$color-boxshadow: $color-main-text;
+
+$boxshadow-inset: inset 0 0 1rem $color-main-text;
