@@ -1,0 +1,15 @@
+@use "@/styles/variables.scss" as *;
+
+.wrapper {
+	width: 100%;
+	margin-block: 2rem;
+	padding: 2rem;
+	text-align: center;
+	box-shadow: $shadow-inset;
+	border-radius: $border-radius;
+}
+
+.title {
+	margin: 0;
+	font-size: 2.5rem;
+}

@@ -1,0 +1,12 @@
+@use "@/styles/variables.scss" as *;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "HackGen35", sans-serif;
+	background: $color-background;
+	color: $color-text;
+}
