@@ -1,6 +1,6 @@
 import localFonts from "next/font/local";
-import "@/styles/globals.scss";
 
+/*
 const fontHackGen = localFonts({
 	src: [
 		{
@@ -16,6 +16,7 @@ const fontHackGen = localFonts({
 	],
 	variable: "--font-hackgen",
 });
+*/
 
 const fontHackGen35 = localFonts({
 	src: [
