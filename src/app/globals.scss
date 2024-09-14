@@ -1,0 +1,41 @@
+/*
+ * Font Name: HackGen
+ * License: SIL Open Font License 1.1
+ * URL: https://github.com/yuru7/HackGen/blob/master/LICENSE
+ */
+
+// HackGen Regular
+@font-face {
+	font-family: "HackGen";
+	src: url("public/fonts/HackGenConsoleNF-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+// HackGen Bold
+@font-face {
+	font-family: "HackGen";
+	src: url("public/fonts/HackGenConsoleNF-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+// HackGen35 Regular
+@font-face {
+	font-family: "HackGen35";
+	src: url("public/fonts/HackGen35ConsoleNF-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+// HackGen35 Bold
+@font-face {
+	font-family: "HackGen35";
+	src: url("public/fonts/HackGen35ConsoleNF-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+body {
+	font-family: "HackGen35", sans-serif;
+}
