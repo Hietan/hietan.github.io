@@ -22,12 +22,12 @@ const fontHackGen = localFonts({
 const fontHackGen35 = localFonts({
 	src: [
 		{
-			path: "../public/fonts/HackGen/HackGen35ConsoleNF-Regular.woff2",
+			path: "../public/fonts/HackGen/HackGen-Regular.woff2",
 			weight: "normal",
 			style: "normal",
 		},
 		{
-			path: "../public/fonts/HackGen/HackGen35ConsoleNF-Bold.woff2",
+			path: "../public/fonts/HackGen/HackGen-Bold.woff2",
 			weight: "bold",
 			style: "normal",
 		},
