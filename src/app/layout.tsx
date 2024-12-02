@@ -1,4 +1,5 @@
 import localFonts from "next/font/local";
+import Head from "next/head";
 
 /*
 const fontHackGen = localFonts({
@@ -41,6 +42,9 @@ export default function RootLayout({
 }>) {
   return (
 		<html lang="ja">
+			<Head>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 			<body className={fontHackGen35.className}>
 				{children}
 			</body>
