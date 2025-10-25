@@ -1,4 +1,5 @@
 import Image from "next/image";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Tile} from "@carbon/react";
 
 export default function Home() {
   return (
@@ -59,6 +60,35 @@ export default function Home() {
             Documentation
           </a>
         </div>
+        <Tile>
+          <h2 className="cds--type-productive-heading-02">Education</h2>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableHeader>Period</TableHeader>
+                <TableHeader>Degree</TableHeader>
+                <TableHeader>Institution</TableHeader>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>2020/04 – 2024/03</TableCell>
+                <TableCell>Bachelor</TableCell>
+                <TableCell>Doshisha University</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>2024/04 – 2025/09</TableCell>
+                <TableCell>Master</TableCell>
+                <TableCell>Nara Institute of Science and Technology (NAIST)</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>2025/09 – Present</TableCell>
+                <TableCell>Doctor</TableCell>
+                <TableCell>Nara Institute of Science and Technology (NAIST)</TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </Tile>
       </main>
     </div>
   );
