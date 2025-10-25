@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="chore: init IDEA project" />
+    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="chore: add dependencies for build">
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,10 +14,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="34YAAWBXIqKMbLXJux0DpbcbJCG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,6 +29,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
@@ -35,7 +39,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
+    "npm.Next.js: server-side.executor": "Run",
     "settings.editor.selected.configurable": "vcs.Git",
+    "ts.external.directory.path": "/Users/lab/ghq/GitHub/Hietan/hietan.github.io/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -69,6 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761379988680</updated>
       <workItem from="1761379989881" duration="574000" />
+      <workItem from="1761380566423" duration="1025000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init IDEA project">
       <option name="closed" value="true" />
@@ -78,7 +85,47 @@
       <option name="project" value="LOCAL" />
       <updated>1761380141144</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="chore: init Next.js project by pnpm">
+      <option name="closed" value="true" />
+      <created>1761380728920</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761380728920</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chore: init Next.js project by pnpm">
+      <option name="closed" value="true" />
+      <created>1761380810407</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761380810407</updated>
+    </task>
+    <task id="LOCAL-00004" summary="chore: add dependencies for build">
+      <option name="closed" value="true" />
+      <created>1761380867870</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761380867870</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chore: add Carbon packages">
+      <option name="closed" value="true" />
+      <created>1761380926276</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761380926276</updated>
+    </task>
+    <task id="LOCAL-00006" summary="chore: add dependencies for build">
+      <option name="closed" value="true" />
+      <created>1761380965684</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1761380965684</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +144,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: init IDEA project" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: init IDEA project" />
+    <MESSAGE value="chore: init Next.js project by pnpm" />
+    <MESSAGE value="chore: add Carbon packages" />
+    <MESSAGE value="chore: add dependencies for build" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add dependencies for build" />
   </component>
 </project>
