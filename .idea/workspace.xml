@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="feat: add &quot;Education&quot; section">
+    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="feat: Add &quot;ProfileSidebar&quot; component">
+      <change afterPath="$PROJECT_DIR$/public/Kazuma_Yamasaki.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ProfileSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProfileSidebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +38,7 @@
     "git-widget-placeholder": "main",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
-    "last_opened_file_path": "/Users/lab/ghq/GitHub/Hietan/hietan.github.io",
+    "last_opened_file_path": "C:/Users/hieta/WebstormProjects/hietan.github.io/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,6 +50,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hieta\WebstormProjects\hietan.github.io\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hieta\WebstormProjects\hietan.github.io\public" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
     <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
@@ -148,7 +155,39 @@
       <option name="project" value="LOCAL" />
       <updated>1761382923002</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="chore: init Codex setting files">
+      <option name="closed" value="true" />
+      <created>1762839825394</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1762839825394</updated>
+    </task>
+    <task id="LOCAL-00010" summary="chore: change IDEA settings">
+      <option name="closed" value="true" />
+      <created>1762839840240</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1762839840240</updated>
+    </task>
+    <task id="LOCAL-00011" summary="chore: change IDEA settings">
+      <option name="closed" value="true" />
+      <created>1762839847322</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1762839847322</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: Add &quot;ProfileSidebar&quot; component">
+      <option name="closed" value="true" />
+      <created>1762839860614</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1762839860614</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +211,9 @@
     <MESSAGE value="chore: add dependencies for build" />
     <MESSAGE value="feat: add Carbon style" />
     <MESSAGE value="feat: add &quot;Education&quot; section" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add &quot;Education&quot; section" />
+    <MESSAGE value="chore: init Codex setting files" />
+    <MESSAGE value="chore: change IDEA settings" />
+    <MESSAGE value="feat: Add &quot;ProfileSidebar&quot; component" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add &quot;ProfileSidebar&quot; component" />
   </component>
 </project>

@@ -1,29 +1,60 @@
 import Image from "next/image";
 import { Link, Tile } from "@carbon/react";
 import { LogoGithub, Email, Link as LinkIcon } from "@carbon/icons-react";
+import * as Fa6 from "react-icons/fa6";
+import { FaXTwitter, FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa6";
+import { SiGooglescholar } from "react-icons/si";
 import { SIDEBAR_WIDTH } from "@/app/components/layoutConstants";
 
 type ExternalLink = {
   label: string;
   href: string;
+  extra_info: string;
   icon?: React.ComponentType<any>;
 };
 
 type Props = {
   photoSrc?: string;
-  name?: string;
+  name_ja?: string;
+  name_en?: string;
   affiliation?: string;
   links?: ExternalLink[];
+  sns?: { href: string; ariaLabel: string; icon: React.ComponentType<any> }[];
 };
 
 export default function ProfileSidebar({
-  photoSrc = "/vercel.svg",
-  name = "Kazuma Yamasaki (山﨑 和真)",
+  photoSrc = "/Kazuma_Yamasaki.png",
+  name_ja = "山﨑 和真",
+  name_en = "Kazuma Yamasaki",
   affiliation = "Nara Institute of Science and Technology (NAIST)",
   links = [
-    { label: "GitHub", href: "https://github.com/hietan", icon: LogoGithub },
-    { label: "Website", href: "https://hietan.github.io", icon: LinkIcon },
-    { label: "Email", href: "mailto:yamasaki.kazuma.yj9@naist.ac.jp", icon: Email },
+    { label: "E-mail",
+      href: "mailto:yamasaki.kazuma.yj9@naist.ac.jp",
+      extra_info: "yamasaki.kazuma.yj9@naist.ac.jp",
+      icon: Email },
+    {
+      label: "GitHub",
+      href: "https://github.com/hietan",
+      extra_info: "@Hietan",
+      icon: LogoGithub
+    },
+    {
+      label: "ORCID",
+      href: "https://orcid.org/0009-0001-2657-8682",
+      extra_info: "0009-0001-2657-8682",
+    },
+    {
+      label: "Google Scholar",
+      href: "https://scholar.google.co.jp/citations?user=BpMVjB8AAAAJ&hl=ja",
+      extra_info: "",
+      icon: ((Fa6 as any).FaGoogleScholar ?? SiGooglescholar) as React.ComponentType<any>,
+    },
+  ],
+  sns = [
+    { href: "#", ariaLabel: "X (Twitter)", icon: FaXTwitter },
+    { href: "#", ariaLabel: "Instagram", icon: FaInstagram },
+    { href: "#", ariaLabel: "Facebook", icon: FaFacebook },
+    { href: "#", ariaLabel: "LinkedIn", icon: FaLinkedin },
   ],
 }: Props) {
   return (
@@ -42,28 +73,52 @@ export default function ProfileSidebar({
       }}
       aria-label="Profile sidebar"
     >
-      <Tile style={{ height: "auto" }}>
-        <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-            <div
+      <Tile style={{ height: "100%" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "1rem", minHeight: "100%" }}>
+          <div
+            style={{
+              width: "100%",
+              aspectRatio: "1 / 1",
+              overflow: "hidden",
+              border: "1px solid var(--cds-border-subtle)",
+              flex: "0 0 auto",
+            }}
+          >
+            <Image
+              src={photoSrc}
+              alt={name_en}
+              width={500}
+              height={500}
               style={{
-                width: 56,
-                height: 56,
-                borderRadius: "50%",
-                overflow: "hidden",
-                border: "1px solid var(--cds-border-subtle)",
-                flex: "0 0 auto",
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            />
+          </div>
+          <div>
+            <div
+              className="cds--type-productive-heading-02"
+              style={{
+                fontWeight: "bold",
+                fontSize: "2em",
+                lineHeight: 1.5
               }}
             >
-              <Image src={photoSrc} alt={name} width={56} height={56} />
+              {name_ja}
             </div>
-            <div>
-              <div className="cds--type-productive-heading-02" style={{ lineHeight: 1.2 }}>
-                {name}
-              </div>
-              <div className="cds--label-01" style={{ color: "var(--cds-text-secondary)" }}>
-                {affiliation}
-              </div>
+            <div
+              className="cds--type-productive-heading-02"
+              style={{
+                fontWeight: "bold",
+                fontSize: "1.5em",
+                lineHeight: 1.5
+              }}
+            >
+              {name_en}
+            </div>
+            <div className="cds--label-01" style={{ color: "var(--cds-text-secondary)" }}>
+              {affiliation}
             </div>
           </div>
 
@@ -74,12 +129,44 @@ export default function ProfileSidebar({
                 <Link key={l.href} href={l.href} target="_blank" rel="noopener noreferrer">
                   <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
                     <Icon size={20} />
-                    {l.label}
+                    {l.label}<br/>
+                    {l.extra_info}
                   </span>
                 </Link>
               );
             })}
           </nav>
+          <div
+            role="navigation"
+            aria-label="Social media"
+            style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginTop: "auto" }}
+          >
+            {sns.map((s) => {
+              const Icon = s.icon;
+              return (
+                <Link
+                  key={s.ariaLabel}
+                  href={s.href}
+                  aria-label={s.ariaLabel}
+                  title={s.ariaLabel}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    style={{
+                      width: 32,
+                      height: 32,
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <Icon size={20} />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </Tile>
     </aside>
