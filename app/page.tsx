@@ -2,6 +2,10 @@ import Image from "next/image";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Tile} from "@carbon/react";
 import ProfileSidebar from "@/app/components/ProfileSidebar";
 import { SIDEBAR_WIDTH } from "@/app/components/layoutConstants";
+import PapersSection from "@/app/components/PapersSection";
+import PresentationsSection from "@/app/components/PresentationsSection";
+import WorksSection from "@/app/components/WorksSection";
+import PublicationsExtraSection from "@/app/components/PublicationsExtraSection";
 
 export default function Home() {
   return (
@@ -61,7 +65,7 @@ export default function Home() {
             </TableBody>
           </Table>
         </Tile>
-        <Tile>
+        <Tile style={{ marginBottom: "1rem" }}>
           <h2 className="cds--type-productive-heading-02" style={{marginBottom: "1rem"}}>Education</h2>
           <Table>
             <TableHead>
@@ -90,6 +94,10 @@ export default function Home() {
             </TableBody>
           </Table>
         </Tile>
+        <PapersSection />
+        <PresentationsSection />
+        <WorksSection />
+        <PublicationsExtraSection />
       </main>
     </>
   );
