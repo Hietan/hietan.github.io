@@ -73,39 +73,42 @@ export default function PresentationsSection({
           </TableRow>
         </TableHead>
         <TableBody>
-          {items.map((p, idx) => (
-            <TableRow key={`${p.title}-${p.date}-${idx}`}>
-              <TableCell>{p.date}</TableCell>
-              <TableCell>{p.title}</TableCell>
-              <TableCell>
-                {Array.isArray(p.authors)
-                  ? p.authors.map((name, i) => {
-                      const isSelf = selfNamesLower.includes(name.toLowerCase());
-                      return (
-                        <span key={`${name}-${i}`}>
-                          {isSelf ? (
-                            <span style={{ textDecoration: "underline" }}>{name}</span>
-                          ) : (
-                            name
-                          )}
-                          {i < p.authors.length - 1 ? ", " : ""}
-                        </span>
-                      );
-                    })
-                  : underlineInString(p.authors as string | undefined)}
-              </TableCell>
-              <TableCell>{p.event ?? ""}</TableCell>
-              <TableCell>
-                {p.link ? (
-                  <Link href={p.link} target="_blank" rel="noopener noreferrer">
-                    {p.link_tag ?? "View"}
-                  </Link>
-                ) : (
-                  ""
-                )}
-              </TableCell>
-            </TableRow>
-          ))}
+          {items.map((p, idx) => {
+            const authorsArr = Array.isArray(p.authors) ? p.authors : null;
+            return (
+              <TableRow key={`${p.title}-${p.date}-${idx}`}>
+                <TableCell>{p.date}</TableCell>
+                <TableCell>{p.title}</TableCell>
+                <TableCell>
+                  {authorsArr
+                    ? authorsArr.map((name, i) => {
+                        const isSelf = selfNamesLower.includes(name.toLowerCase());
+                        return (
+                          <span key={`${name}-${i}`}>
+                            {isSelf ? (
+                              <span style={{ textDecoration: "underline" }}>{name}</span>
+                            ) : (
+                              name
+                            )}
+                            {i < authorsArr.length - 1 ? ", " : ""}
+                          </span>
+                        );
+                      })
+                    : underlineInString(p.authors as string | undefined)}
+                </TableCell>
+                <TableCell>{p.event ?? ""}</TableCell>
+                <TableCell>
+                  {p.link ? (
+                    <Link href={p.link} target="_blank" rel="noopener noreferrer">
+                      {p.link_tag ?? "View"}
+                    </Link>
+                  ) : (
+                    ""
+                  )}
+                </TableCell>
+              </TableRow>
+            );
+          })}
         </TableBody>
       </Table>
     </Tile>
