@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="feat: Add &quot;ProfileSidebar&quot; component">
-      <change afterPath="$PROJECT_DIR$/public/Kazuma_Yamasaki.png" afterDir="false" />
+    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="feat: Implement &quot;ProfileSidebar&quot; component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/ProfileSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProfileSidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762839860614</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: Implement &quot;ProfileSidebar&quot; component">
+      <option name="closed" value="true" />
+      <created>1762842739321</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1762842739321</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +219,7 @@
     <MESSAGE value="chore: init Codex setting files" />
     <MESSAGE value="chore: change IDEA settings" />
     <MESSAGE value="feat: Add &quot;ProfileSidebar&quot; component" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add &quot;ProfileSidebar&quot; component" />
+    <MESSAGE value="feat: Implement &quot;ProfileSidebar&quot; component" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Implement &quot;ProfileSidebar&quot; component" />
   </component>
 </project>

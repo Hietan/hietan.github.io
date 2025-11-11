@@ -7,7 +7,7 @@ import { SiGooglescholar } from "react-icons/si";
 import { SIDEBAR_WIDTH } from "@/app/components/layoutConstants";
 
 type ExternalLink = {
-  label: string;
+  label?: string;
   href: string;
   extra_info: string;
   icon?: React.ComponentType<any>;
@@ -28,12 +28,12 @@ export default function ProfileSidebar({
   name_en = "Kazuma Yamasaki",
   affiliation = "Nara Institute of Science and Technology (NAIST)",
   links = [
-    { label: "E-mail",
+    {
       href: "mailto:yamasaki.kazuma.yj9@naist.ac.jp",
       extra_info: "yamasaki.kazuma.yj9@naist.ac.jp",
-      icon: Email },
+      icon: Email
+    },
     {
-      label: "GitHub",
       href: "https://github.com/hietan",
       extra_info: "@Hietan",
       icon: LogoGithub
@@ -51,10 +51,10 @@ export default function ProfileSidebar({
     },
   ],
   sns = [
-    { href: "#", ariaLabel: "X (Twitter)", icon: FaXTwitter },
-    { href: "#", ariaLabel: "Instagram", icon: FaInstagram },
-    { href: "#", ariaLabel: "Facebook", icon: FaFacebook },
-    { href: "#", ariaLabel: "LinkedIn", icon: FaLinkedin },
+    { href: "https://x.com/hietan622", ariaLabel: "X", icon: FaXTwitter },
+    { href: "https://www.instagram.com/hietan622/", ariaLabel: "Instagram", icon: FaInstagram },
+    { href: "https://www.facebook.com/profile.php?id=100011491658795&locale=ja_JP", ariaLabel: "Facebook", icon: FaFacebook },
+    { href: "https://www.linkedin.com/in/kazumayamasaki/", ariaLabel: "LinkedIn", icon: FaLinkedin },
   ],
 }: Props) {
   return (
@@ -129,7 +129,12 @@ export default function ProfileSidebar({
                 <Link key={l.href} href={l.href} target="_blank" rel="noopener noreferrer">
                   <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
                     <Icon size={20} />
-                    {l.label}<br/>
+                    {l.label && (
+                      <>
+                        {l.label}
+                        {l.extra_info ? <br /> : null}
+                      </>
+                    )}
                     {l.extra_info}
                   </span>
                 </Link>
