@@ -14,6 +14,7 @@ type Props = {
   photoSrc?: string;
   name_ja?: string;
   name_en?: string;
+  role?: string;
   affiliation?: string;
   links?: LinkLabel[];
   sns?: LinkSns[];
@@ -23,6 +24,7 @@ export default function ProfileSidebar({
   photoSrc = "/img/Kazuma_Yamasaki.png",
   name_ja = "山﨑 和真",
   name_en = "Kazuma Yamasaki",
+  role = "Ph.D. Student",
   affiliation = "Nara Institute of Science and Technology (NAIST)",
   links = linksResearch,
   sns = linksSns,
@@ -87,12 +89,13 @@ export default function ProfileSidebar({
             >
               {name_en}
             </div>
-            <div className="cds--label-01" style={{ color: "var(--cds-text-secondary)" }}>
-              {affiliation}
+            <div className="cds--label-01" style={{ color: "var(--cds-text-secondary)", marginTop: "0.5rem" }}>
+              <p style={{lineHeight: 2}}><span style={{fontWeight: 600}}>{role}</span> <small>of</small></p>
+              <p style={{lineHeight: 1.2}}><span style={{fontWeight: 600}}>{affiliation}</span></p>
             </div>
           </div>
 
-          <nav aria-label="External links" style={{ display: "grid", gap: "0.5rem" }}>
+          <nav aria-label="External links" style={{ display: "grid", gap: "0.5rem", marginTop: "1rem" }}>
             {links.map((l) => (
               <LinkIconLabel key={l.label} {...l} />
             ))}
