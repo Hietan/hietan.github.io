@@ -1,28 +1,21 @@
 import Image from "next/image";
-import { Link, Tile } from "@carbon/react";
-import { LogoGithub, Email, Link as LinkIcon } from "@carbon/icons-react";
-import * as Fa6 from "react-icons/fa6";
-import { SiGooglescholar } from "react-icons/si";
+import { Tile } from "@carbon/react";
 import { SIDEBAR_WIDTH } from "@/app/components/layoutConstants";
 
 import linksSns from "@/app/data/general/link_sns";
-import {LinkSns} from "@/type/data/link_sns";
 
 import LinkIconSns from "@/app/components/LinkIconSns";
+import LinkIconLabel from "@/app/components/LinkIconLabel";
 
-type ExternalLink = {
-  label?: string;
-  href: string;
-  extra_info: string;
-  icon?: React.ComponentType<any>;
-};
+import linksResearch from "@/app/data/research/link_research";
+import {LinkSns, LinkLabel } from "@/type/data";
 
 type Props = {
   photoSrc?: string;
   name_ja?: string;
   name_en?: string;
   affiliation?: string;
-  links?: ExternalLink[];
+  links?: LinkLabel[];
   sns?: LinkSns[];
 };
 
@@ -31,29 +24,7 @@ export default function ProfileSidebar({
   name_ja = "山﨑 和真",
   name_en = "Kazuma Yamasaki",
   affiliation = "Nara Institute of Science and Technology (NAIST)",
-  links = [
-    {
-      href: "mailto:yamasaki.kazuma.yj9@naist.ac.jp",
-      extra_info: "yamasaki.kazuma.yj9@naist.ac.jp",
-      icon: Email
-    },
-    {
-      href: "https://github.com/hietan",
-      extra_info: "@Hietan",
-      icon: LogoGithub
-    },
-    {
-      label: "ORCID",
-      href: "https://orcid.org/0009-0001-2657-8682",
-      extra_info: "0009-0001-2657-8682",
-    },
-    {
-      label: "Google Scholar",
-      href: "https://scholar.google.co.jp/citations?user=BpMVjB8AAAAJ&hl=ja",
-      extra_info: "",
-      icon: ((Fa6 as any).FaGoogleScholar ?? SiGooglescholar) as React.ComponentType<any>,
-    },
-  ],
+  links = linksResearch,
   sns = linksSns,
 }: Props) {
   return (
@@ -122,23 +93,9 @@ export default function ProfileSidebar({
           </div>
 
           <nav aria-label="External links" style={{ display: "grid", gap: "0.5rem" }}>
-            {links.map((l) => {
-              const Icon = l.icon ?? LinkIcon;
-              return (
-                <Link key={l.href} href={l.href} target="_blank" rel="noopener noreferrer">
-                  <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-                    <Icon size={20} />
-                    {l.label && (
-                      <>
-                        {l.label}
-                        {l.extra_info ? <br /> : null}
-                      </>
-                    )}
-                    {l.extra_info}
-                  </span>
-                </Link>
-              );
-            })}
+            {links.map((l) => (
+              <LinkIconLabel key={l.label} {...l} />
+            ))}
           </nav>
           <div
             role="navigation"

@@ -1,5 +1,5 @@
-import {LinkSns} from "@/type/data/link_sns";
 import {Link} from "@carbon/react";
+import {LinkSns} from "@/type/data";
 
 type LinkIconSnsProps = LinkSns;
 

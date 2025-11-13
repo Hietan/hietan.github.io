@@ -1,6 +1,7 @@
 import {FaFacebook, FaInstagram, FaLinkedin, FaXTwitter} from "react-icons/fa6";
 
-import type {LinkSns} from "@/type/data/link_sns";
+
+import {LinkSns} from "@/type/data";
 
 const linksSns: LinkSns[] = [
   {
