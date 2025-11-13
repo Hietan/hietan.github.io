@@ -23,7 +23,7 @@ type Props = {
 };
 
 export default function ProfileSidebar({
-  photoSrc = "/Kazuma_Yamasaki.png",
+  photoSrc = "/img/Kazuma_Yamasaki.png",
   name_ja = "山﨑 和真",
   name_en = "Kazuma Yamasaki",
   affiliation = "Nara Institute of Science and Technology (NAIST)",
