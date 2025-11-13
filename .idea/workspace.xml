@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="style: update color of Table">
-      <change afterPath="$PROJECT_DIR$/app/components/Section.tsx" afterDir="false" />
+    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="feat: implement &quot;Section&quot; Component">
+      <change afterPath="$PROJECT_DIR$/app/data/research/education.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/research/papers.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/type/table.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PapersSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PapersSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PresentationsSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PresentationsSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PublicationsExtraSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PublicationsExtraSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/WorksSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/WorksSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PapersSection.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PresentationsSection.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +96,7 @@
       <workItem from="1761379989881" duration="574000" />
       <workItem from="1761380566423" duration="6614000" />
       <workItem from="1761731766301" duration="2061000" />
-      <workItem from="1763010438909" duration="8540000" />
+      <workItem from="1763010438909" duration="11041000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init IDEA project">
       <option name="closed" value="true" />
@@ -274,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763019281981</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feat: implement &quot;Section&quot; Component">
+      <option name="closed" value="true" />
+      <created>1763020463060</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1763020463060</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +319,7 @@
     <MESSAGE value="feat: implement &quot;LinkIconSns&quot; Component" />
     <MESSAGE value="style: update style" />
     <MESSAGE value="style: update color of Table" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: update color of Table" />
+    <MESSAGE value="feat: implement &quot;Section&quot; Component" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implement &quot;Section&quot; Component" />
   </component>
 </project>

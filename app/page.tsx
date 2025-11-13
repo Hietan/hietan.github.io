@@ -1,12 +1,14 @@
 import Image from "next/image";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme} from "@carbon/react";
+import { Table as CarbonTable, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme } from "@carbon/react";
 import ProfileSidebar from "@/app/components/ProfileSidebar";
-import { SIDEBAR_WIDTH } from "@/app/components/layoutConstants";
-import PapersSection from "@/app/components/PapersSection";
-import PresentationsSection from "@/app/components/PresentationsSection";
+import { SIDEBAR_WIDTH } from "@/app/components/layoutConstants"
 import WorksSection from "@/app/components/WorksSection";
 import PublicationsExtraSection from "@/app/components/PublicationsExtraSection";
 import Section from "@/app/components/Section";
+import Table from "@/app/components/Table";
+import dataEducation from "@/app/data/research/education";
+import dataPapers from "@/app/data/research/papers";
+import dataPresentations from "@/app/data/research/presentations";
 
 export default function Home() {
   return (
@@ -15,7 +17,7 @@ export default function Home() {
       <main className="p-5" style={{ marginLeft: SIDEBAR_WIDTH }}>
         <Section title="Profile Information" style={{ marginBottom: "1rem" }}>
           <Theme theme="g10">
-            <Table>
+            <CarbonTable>
               <TableBody>
                 <TableRow>
                   <TableHeader>Name</TableHeader>
@@ -38,12 +40,12 @@ export default function Home() {
                   <TableCell>yamasaki.kazuma.yj9@naist.ac.jp</TableCell>
                 </TableRow>
               </TableBody>
-            </Table>
+            </CarbonTable>
           </Theme>
         </Section>
         <Section title="Research Interest" style={{ marginBottom: "1rem" }}>
           <Theme theme="g10">
-            <Table>
+            <CarbonTable>
               <TableBody>
                 <TableRow>
                   <TableHeader>Research Area</TableHeader>
@@ -65,41 +67,18 @@ export default function Home() {
                   </TableCell>
                 </TableRow>
               </TableBody>
-            </Table>
+            </CarbonTable>
           </Theme>
         </Section>
         <Section title="Education" style={{ marginBottom: "1rem" }}>
-          <Theme theme="g10">
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableHeader>Period</TableHeader>
-                  <TableHeader>Degree</TableHeader>
-                  <TableHeader>Institution</TableHeader>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                <TableRow>
-                  <TableCell>2020-04 ~ 2024-03</TableCell>
-                  <TableCell>Bachelor</TableCell>
-                  <TableCell>Doshisha University</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>2024-04 ~ 2025-09</TableCell>
-                  <TableCell>Master</TableCell>
-                  <TableCell>Nara Institute of Science and Technology (NAIST)</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>2025-09 ~ Present</TableCell>
-                  <TableCell>Doctor</TableCell>
-                  <TableCell>Nara Institute of Science and Technology (NAIST)</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </Theme>
+          <Table data={dataEducation} />
         </Section>
-        <PapersSection />
-        <PresentationsSection />
+        <Section title="Papers" style={{ marginBottom: "1rem" }}>
+          <Table data={dataPapers} />
+        </Section>
+        <Section title="Presentations" style={{ marginBottom: "1rem" }}>
+          <Table data={dataPresentations} />
+        </Section>
         <WorksSection />
         <PublicationsExtraSection />
       </main>
