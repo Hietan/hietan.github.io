@@ -1,4 +1,4 @@
-import { Link, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Tile } from "@carbon/react";
+import { Link, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme, Tile } from "@carbon/react";
 
 type Work = {
   date: string; // YYYY-MM
@@ -49,36 +49,38 @@ export default function WorksSection({
       <h2 className="cds--type-productive-heading-02" style={{ marginBottom: "1rem" }}>
         Works
       </h2>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableHeader>Year / Month</TableHeader>
-            <TableHeader>Title</TableHeader>
-            <TableHeader>Venue</TableHeader>
-            
-            <TableHeader>Link</TableHeader>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {items.map((w, idx) => (
-            <TableRow key={`${w.title}-${w.date}-${idx}`}>
-              <TableCell>{w.date}</TableCell>
-              <TableCell>{w.title}</TableCell>
-              <TableCell>{w.venue ?? ""}</TableCell>
+      <Theme theme="g10">
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableHeader>Year / Month</TableHeader>
+              <TableHeader>Title</TableHeader>
+              <TableHeader>Venue</TableHeader>
               
-              <TableCell>
-                {w.link ? (
-                  <Link href={w.link} target="_blank" rel="noopener noreferrer">
-                    {w.link_tag ?? "View"}
-                  </Link>
-                ) : (
-                  ""
-                )}
-              </TableCell>
+              <TableHeader>Link</TableHeader>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHead>
+          <TableBody>
+            {items.map((w, idx) => (
+              <TableRow key={`${w.title}-${w.date}-${idx}`}>
+                <TableCell>{w.date}</TableCell>
+                <TableCell>{w.title}</TableCell>
+                <TableCell>{w.venue ?? ""}</TableCell>
+                
+                <TableCell>
+                  {w.link ? (
+                    <Link href={w.link} target="_blank" rel="noopener noreferrer">
+                      {w.link_tag ?? "View"}
+                    </Link>
+                  ) : (
+                    ""
+                  )}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Theme>
     </Tile>
   );
 }

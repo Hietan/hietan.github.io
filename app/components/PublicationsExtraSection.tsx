@@ -1,4 +1,4 @@
-import { Link, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Tile } from "@carbon/react";
+import { Link, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme, Tile } from "@carbon/react";
 
 type PubItem = {
   date: string; // YYYY-MM
@@ -36,36 +36,38 @@ export default function PublicationsExtraSection({
       <h2 className="cds--type-productive-heading-02" style={{ marginBottom: "1rem" }}>
         Publications
       </h2>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableHeader>Year / Month</TableHeader>
-            <TableHeader>Tag</TableHeader>
-            <TableHeader>Title</TableHeader>
-            <TableHeader>Info</TableHeader>
-            <TableHeader>Link</TableHeader>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {items.map((p, idx) => (
-            <TableRow key={`${p.title}-${p.date}-${idx}`}>
-              <TableCell>{p.date}</TableCell>
-              <TableCell>{p.tag ?? ""}</TableCell>
-              <TableCell>{p.title}</TableCell>
-              <TableCell>{p.info ?? ""}</TableCell>
-              <TableCell>
-                {p.link ? (
-                  <Link href={p.link} target="_blank" rel="noopener noreferrer">
-                    {p.link_tag ?? "View"}
-                  </Link>
-                ) : (
-                  ""
-                )}
-              </TableCell>
+      <Theme theme="g10">
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableHeader>Year / Month</TableHeader>
+              <TableHeader>Tag</TableHeader>
+              <TableHeader>Title</TableHeader>
+              <TableHeader>Info</TableHeader>
+              <TableHeader>Link</TableHeader>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHead>
+          <TableBody>
+            {items.map((p, idx) => (
+              <TableRow key={`${p.title}-${p.date}-${idx}`}>
+                <TableCell>{p.date}</TableCell>
+                <TableCell>{p.tag ?? ""}</TableCell>
+                <TableCell>{p.title}</TableCell>
+                <TableCell>{p.info ?? ""}</TableCell>
+                <TableCell>
+                  {p.link ? (
+                    <Link href={p.link} target="_blank" rel="noopener noreferrer">
+                      {p.link_tag ?? "View"}
+                    </Link>
+                  ) : (
+                    ""
+                  )}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Theme>
     </Tile>
   );
 }

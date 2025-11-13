@@ -1,4 +1,4 @@
-import { Link, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Tile } from "@carbon/react";
+import { Link, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme, Tile } from "@carbon/react";
 
 type Publication = {
   date: string; // YYYY-MM
@@ -64,55 +64,57 @@ export default function PapersSection({
       <h2 className="cds--type-productive-heading-02" style={{ marginBottom: "1rem" }}>
         Papers
       </h2>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableHeader>Year / Month</TableHeader>
-            <TableHeader>Title</TableHeader>
-            <TableHeader>Authors</TableHeader>
-            <TableHeader>Venue</TableHeader>
-            <TableHeader>Link</TableHeader>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {items.map((p, idx) => {
-            const authorsArr = Array.isArray(p.authors) ? p.authors : null;
-            return (
-              <TableRow key={`${p.title}-${idx}`}>
-                <TableCell>{p.date}</TableCell>
-                <TableCell>{p.title}</TableCell>
-                <TableCell>
-                  {authorsArr
-                    ? authorsArr.map((name, i) => {
-                        const isSelf = selfNamesLower.includes(name.toLowerCase());
-                        return (
-                          <span key={`${name}-${i}`}>
-                            {isSelf ? (
-                              <span style={{ textDecoration: "underline" }}>{name}</span>
-                            ) : (
-                              name
-                            )}
-                            {i < authorsArr.length - 1 ? ", " : ""}
-                          </span>
-                        );
-                      })
-                    : underlineInString(p.authors as string | undefined)}
-                </TableCell>
-                <TableCell>{p.venue ?? ""}</TableCell>
-                <TableCell>
-                  {p.link ? (
-                    <Link href={p.link} target="_blank" rel="noopener noreferrer">
-                      {p.link_tag ?? "View"}
-                    </Link>
-                  ) : (
-                    ""
-                  )}
-                </TableCell>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
+      <Theme theme="g10">
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableHeader>Year / Month</TableHeader>
+              <TableHeader>Title</TableHeader>
+              <TableHeader>Authors</TableHeader>
+              <TableHeader>Venue</TableHeader>
+              <TableHeader>Link</TableHeader>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {items.map((p, idx) => {
+              const authorsArr = Array.isArray(p.authors) ? p.authors : null;
+              return (
+                <TableRow key={`${p.title}-${idx}`}>
+                  <TableCell>{p.date}</TableCell>
+                  <TableCell>{p.title}</TableCell>
+                  <TableCell>
+                    {authorsArr
+                      ? authorsArr.map((name, i) => {
+                          const isSelf = selfNamesLower.includes(name.toLowerCase());
+                          return (
+                            <span key={`${name}-${i}`}>
+                              {isSelf ? (
+                                <span style={{ textDecoration: "underline" }}>{name}</span>
+                              ) : (
+                                name
+                              )}
+                              {i < authorsArr.length - 1 ? ", " : ""}
+                            </span>
+                          );
+                        })
+                      : underlineInString(p.authors as string | undefined)}
+                  </TableCell>
+                  <TableCell>{p.venue ?? ""}</TableCell>
+                  <TableCell>
+                    {p.link ? (
+                      <Link href={p.link} target="_blank" rel="noopener noreferrer">
+                        {p.link_tag ?? "View"}
+                      </Link>
+                    ) : (
+                      ""
+                    )}
+                  </TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </Theme>
     </Tile>
   );
 }

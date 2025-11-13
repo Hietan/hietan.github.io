@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="feat: implement &quot;LinkIconSns&quot; Component">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ProfileSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProfileSidebar.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="style: update style" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +88,7 @@
       <workItem from="1761379989881" duration="574000" />
       <workItem from="1761380566423" duration="6614000" />
       <workItem from="1761731766301" duration="2061000" />
-      <workItem from="1763010438909" duration="6745000" />
+      <workItem from="1763010438909" duration="7221000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init IDEA project">
       <option name="closed" value="true" />
@@ -253,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763018061404</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="style: update style">
+      <option name="closed" value="true" />
+      <created>1763018575874</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1763018575874</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +293,7 @@
     <MESSAGE value="feat: add &quot;LinkSns&quot;" />
     <MESSAGE value="feat: implement component &quot;LinkIconSns&quot;" />
     <MESSAGE value="feat: implement &quot;LinkIconSns&quot; Component" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implement &quot;LinkIconSns&quot; Component" />
+    <MESSAGE value="style: update style" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: update style" />
   </component>
 </project>
