@@ -1,4 +1,5 @@
-import { Link, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme, Tile } from "@carbon/react";
+import { Link, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme } from "@carbon/react";
+import Section from "@/app/components/Section";
 
 type PubItem = {
   date: string; // YYYY-MM
@@ -20,7 +21,7 @@ export default function PublicationsExtraSection({
       tag: "Book",
       title: "高校生のデータサイエンス・Python でも 77 本ノック: NAIST STELLA プログラム\"「共創」 が育む主体性の未来\" 学習教材",
       info: "著者：金谷 重彦，平尾 俊貴，小笠原 司，松本 健一，嶋利 一真，工藤 拓斗，田中 英武，山﨑 和真，張 凡",
-      link:"https://naist.repo.nii.ac.jp/record/2000576/files/DLPDF0056115_P1-184.pdf"
+      link:"https://naist.repo.nii.ac.jp/records/2000576"
     },
     {
       date: "2024-10",
@@ -32,10 +33,7 @@ export default function PublicationsExtraSection({
   ],
 }: Props) {
   return (
-    <Tile style={{ marginBottom: "1rem" }}>
-      <h2 className="cds--type-productive-heading-02" style={{ marginBottom: "1rem" }}>
-        Publications
-      </h2>
+    <Section title="Publications" style={{ marginBottom: "1rem" }}>
       <Theme theme="g10">
         <Table>
           <TableHead>
@@ -68,6 +66,6 @@ export default function PublicationsExtraSection({
           </TableBody>
         </Table>
       </Theme>
-    </Tile>
+    </Section>
   );
 }

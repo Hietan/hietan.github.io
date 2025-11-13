@@ -1,4 +1,5 @@
-import { Link, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme, Tile } from "@carbon/react";
+import { Link, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme } from "@carbon/react";
+import Section from "@/app/components/Section";
 
 type Presentation = {
   date: string; // YYYY-MM
@@ -58,10 +59,7 @@ export default function PresentationsSection({
     );
   };
   return (
-    <Tile style={{ marginBottom: "1rem" }}>
-      <h2 className="cds--type-productive-heading-02" style={{ marginBottom: "1rem" }}>
-        Presentations
-      </h2>
+    <Section title="Presentations" style={{ marginBottom: "1rem" }}>
       <Theme theme="g10">
         <Table>
           <TableHead>
@@ -113,6 +111,6 @@ export default function PresentationsSection({
           </TableBody>
         </Table>
       </Theme>
-    </Tile>
+    </Section>
   );
 }

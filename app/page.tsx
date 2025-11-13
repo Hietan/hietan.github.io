@@ -1,19 +1,19 @@
 import Image from "next/image";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme, Tile} from "@carbon/react";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme} from "@carbon/react";
 import ProfileSidebar from "@/app/components/ProfileSidebar";
 import { SIDEBAR_WIDTH } from "@/app/components/layoutConstants";
 import PapersSection from "@/app/components/PapersSection";
 import PresentationsSection from "@/app/components/PresentationsSection";
 import WorksSection from "@/app/components/WorksSection";
 import PublicationsExtraSection from "@/app/components/PublicationsExtraSection";
+import Section from "@/app/components/Section";
 
 export default function Home() {
   return (
     <>
       <ProfileSidebar />
       <main className="p-5" style={{ marginLeft: SIDEBAR_WIDTH }}>
-        <Tile style={{ marginBottom: "1rem" }}>
-          <h2 className="cds--type-productive-heading-02" style={{marginBottom: "1rem"}}>Profile Information</h2>
+        <Section title="Profile Information" style={{ marginBottom: "1rem" }}>
           <Theme theme="g10">
             <Table>
               <TableBody>
@@ -40,9 +40,8 @@ export default function Home() {
               </TableBody>
             </Table>
           </Theme>
-        </Tile>
-        <Tile style={{ marginBottom: "1rem" }}>
-          <h2 className="cds--type-productive-heading-02" style={{marginBottom: "1rem"}}>Research Interest</h2>
+        </Section>
+        <Section title="Research Interest" style={{ marginBottom: "1rem" }}>
           <Theme theme="g10">
             <Table>
               <TableBody>
@@ -68,9 +67,8 @@ export default function Home() {
               </TableBody>
             </Table>
           </Theme>
-        </Tile>
-        <Tile style={{ marginBottom: "1rem" }}>
-          <h2 className="cds--type-productive-heading-02" style={{marginBottom: "1rem"}}>Education</h2>
+        </Section>
+        <Section title="Education" style={{ marginBottom: "1rem" }}>
           <Theme theme="g10">
             <Table>
               <TableHead>
@@ -99,7 +97,7 @@ export default function Home() {
               </TableBody>
             </Table>
           </Theme>
-        </Tile>
+        </Section>
         <PapersSection />
         <PresentationsSection />
         <WorksSection />

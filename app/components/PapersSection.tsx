@@ -1,4 +1,5 @@
-import { Link, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme, Tile } from "@carbon/react";
+import { Link, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme } from "@carbon/react";
+import Section from "@/app/components/Section";
 
 type Publication = {
   date: string; // YYYY-MM
@@ -60,10 +61,7 @@ export default function PapersSection({
     );
   };
   return (
-    <Tile style={{ marginBottom: "1rem" }}>
-      <h2 className="cds--type-productive-heading-02" style={{ marginBottom: "1rem" }}>
-        Papers
-      </h2>
+    <Section title="Papers" style={{ marginBottom: "1rem" }}>
       <Theme theme="g10">
         <Table>
           <TableHead>
@@ -115,6 +113,6 @@ export default function PapersSection({
           </TableBody>
         </Table>
       </Theme>
-    </Tile>
+    </Section>
   );
 }

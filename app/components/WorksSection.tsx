@@ -1,4 +1,5 @@
-import { Link, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme, Tile } from "@carbon/react";
+import { Link, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Theme } from "@carbon/react";
+import Section from "@/app/components/Section";
 
 type Work = {
   date: string; // YYYY-MM
@@ -45,10 +46,7 @@ export default function WorksSection({
   ],
 }: Props) {
   return (
-    <Tile style={{ marginBottom: "1rem" }}>
-      <h2 className="cds--type-productive-heading-02" style={{ marginBottom: "1rem" }}>
-        Works
-      </h2>
+    <Section title="Works" style={{ marginBottom: "1rem" }}>
       <Theme theme="g10">
         <Table>
           <TableHead>
@@ -81,6 +79,6 @@ export default function WorksSection({
           </TableBody>
         </Table>
       </Theme>
-    </Tile>
+    </Section>
   );
 }
