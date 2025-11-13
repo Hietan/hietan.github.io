@@ -2,9 +2,11 @@ import Image from "next/image";
 import { Link, Tile } from "@carbon/react";
 import { LogoGithub, Email, Link as LinkIcon } from "@carbon/icons-react";
 import * as Fa6 from "react-icons/fa6";
-import { FaXTwitter, FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa6";
 import { SiGooglescholar } from "react-icons/si";
 import { SIDEBAR_WIDTH } from "@/app/components/layoutConstants";
+
+import linksSns from "@/app/data/general/link_sns";
+import {LinkSns} from "@/type/data/link_sns";
 
 type ExternalLink = {
   label?: string;
@@ -19,7 +21,7 @@ type Props = {
   name_en?: string;
   affiliation?: string;
   links?: ExternalLink[];
-  sns?: { href: string; ariaLabel: string; icon: React.ComponentType<any> }[];
+  sns?: LinkSns[];
 };
 
 export default function ProfileSidebar({
@@ -50,12 +52,7 @@ export default function ProfileSidebar({
       icon: ((Fa6 as any).FaGoogleScholar ?? SiGooglescholar) as React.ComponentType<any>,
     },
   ],
-  sns = [
-    { href: "https://x.com/hietan622", ariaLabel: "X", icon: FaXTwitter },
-    { href: "https://www.instagram.com/hietan622/", ariaLabel: "Instagram", icon: FaInstagram },
-    { href: "https://www.facebook.com/profile.php?id=100011491658795&locale=ja_JP", ariaLabel: "Facebook", icon: FaFacebook },
-    { href: "https://www.linkedin.com/in/kazumayamasaki/", ariaLabel: "LinkedIn", icon: FaLinkedin },
-  ],
+  sns = linksSns,
 }: Props) {
   return (
     <aside
