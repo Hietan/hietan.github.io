@@ -8,6 +8,8 @@ import { SIDEBAR_WIDTH } from "@/app/components/layoutConstants";
 import linksSns from "@/app/data/general/link_sns";
 import {LinkSns} from "@/type/data/link_sns";
 
+import LinkIconSns from "@/app/components/LinkIconSns";
+
 type ExternalLink = {
   label?: string;
   href: string;
@@ -143,31 +145,9 @@ export default function ProfileSidebar({
             aria-label="Social media"
             style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginTop: "auto" }}
           >
-            {sns.map((s) => {
-              const Icon = s.icon;
-              return (
-                <Link
-                  key={s.ariaLabel}
-                  href={s.href}
-                  aria-label={s.ariaLabel}
-                  title={s.ariaLabel}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span
-                    style={{
-                      width: 32,
-                      height: 32,
-                      display: "inline-flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <Icon size={20} />
-                  </span>
-                </Link>
-              );
-            })}
+            {sns.map((s) => (
+              <LinkIconSns key={s.ariaLabel} {...s} />
+            ))}
           </div>
         </div>
       </Tile>
