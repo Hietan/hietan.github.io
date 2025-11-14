@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Tile } from "@carbon/react";
-import { SIDEBAR_WIDTH } from "@/app/components/layoutConstants";
+import {Tile} from "@carbon/react";
+import {LAYOUT_PADDING, SIDEBAR_WIDTH} from "@/app/components/layoutConstants";
 
 import linksSns from "@/app/data/general/link_sns";
 
@@ -37,7 +37,7 @@ export default function ProfileSidebar({
         left: 0,
         height: "100vh",
         width: SIDEBAR_WIDTH,
-        padding: "1rem",
+        padding: LAYOUT_PADDING,
         background: "var(--cds-layer)",
         borderRight: "1px solid var(--cds-border-subtle)",
         boxSizing: "border-box",
@@ -45,7 +45,7 @@ export default function ProfileSidebar({
       }}
       aria-label="Profile sidebar"
     >
-      <Tile style={{ height: "100%" }}>
+      <Tile style={{height: "100%", padding: 0}}>
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem", minHeight: "100%" }}>
           <div
             style={{

@@ -2,7 +2,7 @@ import type {Metadata} from "next";
 import "@carbon/styles/css/styles.css";
 import "./globals.css";
 import ProfileSidebar from "@/app/components/ProfileSidebar";
-import {SIDEBAR_WIDTH} from "@/app/components/layoutConstants";
+import {LAYOUT_PADDING, SIDEBAR_WIDTH} from "@/app/components/layoutConstants";
 
 export const metadata: Metadata = {
   title: "Kazuma Yamasaki | Research Profile",
@@ -21,10 +21,7 @@ export default function RootLayout({
         data-carbon-theme="g10"
       >
         <ProfileSidebar />
-        <main
-          className="p-5"
-          style={{marginLeft: SIDEBAR_WIDTH, display: "grid", gap: "1rem"}}
-        >
+        <main style={{marginLeft: SIDEBAR_WIDTH, display: "grid", gap: "1rem", padding: LAYOUT_PADDING}}>
           {children}
         </main>
       </body>
