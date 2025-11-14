@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+.cds--data-table tbody th .cds--table-header-label {
+    color: var(--cds-text-primary);
+    font-weight: bold;
+}
+
+.cds--data-table tbody tr:first-child th {
+    border-block-start: none;
+}
+
+.cds--data-table tbody tr:first-child td {
+    border-block-start: none;
+}
