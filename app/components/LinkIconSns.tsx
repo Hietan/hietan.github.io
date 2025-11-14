@@ -13,8 +13,8 @@ const LinkIconSns = ({ href, ariaLabel, icon: Icon }: LinkIconSnsProps) => (
   >
     <span
       style={{
-        width: 32,
-        height: 32,
+        width: 20,
+        height: 20,
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",

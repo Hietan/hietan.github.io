@@ -1,3 +1,4 @@
+import ProfileCard from "@/app/components/ProfileCard";
 import Section from "@/app/components/Section";
 import Table from "@/app/components/Table";
 import TableRowHeader from "@/app/components/TableRowHeader";
@@ -12,6 +13,9 @@ import dataPublications from "@/app/data/research/publications";
 export default function Home() {
   return (
     <>
+      <Section className="profile-hero-section">
+        <ProfileCard variant="hero" />
+      </Section>
       <Section title="Profile Information">
         <TableRowHeader data={dataProfileInformation} />
       </Section>

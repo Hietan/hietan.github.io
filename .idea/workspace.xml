@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="refactor: move raw data to json files" />
+    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="feat: implement SnsList component">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/LinkIconSns.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/LinkIconSns.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ProfileSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ProfileSidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/layoutConstants.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +99,7 @@
       <workItem from="1761380566423" duration="6614000" />
       <workItem from="1761731766301" duration="2061000" />
       <workItem from="1763010438909" duration="11186000" />
-      <workItem from="1763113538732" duration="6326000" />
+      <workItem from="1763113538732" duration="14091000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init IDEA project">
       <option name="closed" value="true" />
@@ -357,7 +365,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763120073958</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="refactor: refactor databuilder">
+      <option name="closed" value="true" />
+      <created>1763120611601</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1763120611601</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat: implement SnsList component">
+      <option name="closed" value="true" />
+      <created>1763126381106</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1763126381106</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,8 +399,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: add Carbon style" />
-    <MESSAGE value="feat: add &quot;Education&quot; section" />
     <MESSAGE value="chore: init Codex setting files" />
     <MESSAGE value="chore: change IDEA settings" />
     <MESSAGE value="feat: Add &quot;ProfileSidebar&quot; component" />
@@ -400,6 +422,8 @@
     <MESSAGE value="reafactor: refactor type CarbonThemeName" />
     <MESSAGE value="feat: add datas" />
     <MESSAGE value="refactor: move raw data to json files" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: move raw data to json files" />
+    <MESSAGE value="refactor: refactor databuilder" />
+    <MESSAGE value="feat: implement SnsList component" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implement SnsList component" />
   </component>
 </project>

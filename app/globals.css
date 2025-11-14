@@ -12,3 +12,30 @@
 .cds--data-table tbody tr:first-child td {
     border-block-start: none;
 }
+
+.profile-hero-section {
+    display: none;
+}
+
+.layout__sidebar {
+    display: block;
+}
+
+.layout__main {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (max-width: 1312px) {
+    .layout__sidebar {
+        display: none;
+    }
+
+    .layout__main {
+        margin-left: 0 !important;
+    }
+
+    .profile-hero-section {
+        display: block;
+    }
+}

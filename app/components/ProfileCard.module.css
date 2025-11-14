@@ -1,0 +1,85 @@
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar {
+  height: 100%;
+}
+
+.hero {
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid var(--cds-border-subtle);
+}
+
+.heroMedia {
+  width: 9rem;
+  flex: 0 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.heroContent {
+  flex: 1;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nameJa {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+.nameEn {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.meta {
+  color: var(--cds-text-secondary);
+  line-height: 1.5;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebarSns {
+  margin-top: auto;
+}
+
+.heroMedia,
+.heroContent,
+.heroLinks,
+.heroSns {
+  flex: 0 0 auto;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heroLinks {
+  margin-left: auto;
+}

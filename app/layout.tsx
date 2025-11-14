@@ -21,7 +21,10 @@ export default function RootLayout({
         data-carbon-theme="g10"
       >
         <ProfileSidebar />
-        <main style={{marginLeft: SIDEBAR_WIDTH, display: "grid", gap: "1rem", padding: LAYOUT_PADDING}}>
+        <main
+          className="layout__main"
+          style={{marginLeft: SIDEBAR_WIDTH, display: "grid", gap: "1rem", padding: LAYOUT_PADDING}}
+        >
           {children}
         </main>
       </body>
