@@ -1,33 +1,9 @@
 import {Link} from "@carbon/react";
 
 import ListComma from "@/app/components/ListComma";
-import {formatYearMonth} from "@/app/data/research/papers";
+import {formatYearMonth} from "@/app/data/research/papers/papers";
 import type {DataTable} from "@/type/table";
-
-const presentations = [
-  {
-    year: 2025,
-    month: 7,
-    title: "マークル木を用いたライブラリ後方非互換性特定手法の大規模有用性評価に向けた自動化",
-    authors: ["山﨑 和真", "嶋利 一真", "松本 健一"],
-    index_presenter: 1,
-    index_me: 1,
-    event: "第220回 情報処理学会 ソフトウェア研究発表会 (IPSJ/SIGSE)",
-    link_href: "https://ipsj.ixsq.nii.ac.jp/records/2003067",
-    link_label: "View"
-  },
-  {
-    year: 2025,
-    month: 9,
-    title: "破壊的変更を伴うライブラリ更新における移行ガイドの構成要素の分析",
-    authors: ["門埜 孝拓", "嶋利 一真", "神田 哲也", "山﨑 和真", "松本 健一"],
-    index_presenter: 1,
-    index_me: 4,
-    event: "ソフトウェアエンジニアリングシンポジウム2025 (SES 2025)",
-    link_href: "https://ipsj.ixsq.nii.ac.jp/records/2004382",
-    link_label: "View"
-  }
-];
+import presentations from "./presentations.json";
 
 const dataPresentations: DataTable = {
   header: ["Year / Month", "Title", "Authors", "Event", "Link"],

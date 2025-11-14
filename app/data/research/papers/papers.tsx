@@ -2,45 +2,7 @@ import {Link} from "@carbon/react";
 
 import ListComma from "@/app/components/ListComma";
 import type {DataTable} from "@/type/table";
-
-const papers = [
-  {
-    year: 2025,
-    month: 4,
-    title: "Mining for lags in updating critical security threats: a case study of Log4j library",
-    authors: [
-      "Hidetake Tanaka",
-      "Kazuma Yamasaki",
-      "Momoka Hirose",
-      "Takashi Nakano",
-      "Youmei Fan",
-      "Kazumasa Shimari",
-      "Raula Gaikovina Kula",
-      "Kenichi Matsumoto"
-    ],
-    index_me: 2,
-    venue: "2025 IEEE/ACM 22nd International Conference on Mining Software Repositories (MSR 2025)",
-    link_href: "https://arxiv.org/abs/2504.09834",
-    link_label: "arXiv"
-  },
-  {
-    year: 2025,
-    month: 8,
-    title: "Round Outcome Prediction in VALORANT Using Tactical Features from Video Analysis",
-    authors: [
-      "Nirai Hayakawa",
-      "Kazumasa Shimari",
-      "Kazuma Yamasaki",
-      "Hirotatsu Hoshikawa",
-      "Rikuto Tsuchida",
-      "Kenichi Matsumoto",
-    ],
-    index_me: 3,
-    venue: "2025 IEEE Conference on Games (CoG 2025)",
-    link_href: "https://arxiv.org/abs/2510.17199",
-    link_label: "arXiv"
-  }
-];
+import papers from "./papers.json";
 
 export const formatYearMonth = (year: number, month: number) => {
   const paddedMonth = month.toString().padStart(2, "0");
