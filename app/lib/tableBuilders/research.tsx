@@ -2,47 +2,8 @@ import {Link} from "@carbon/react";
 import type {ReactNode} from "react";
 
 import ListComma from "@/app/components/ListComma";
+import type {JsonPapers, JsonPresentations, JsonPublications, JsonWorks} from "@/type/data";
 import type {DataTable} from "@/type/table";
-
-export type WorksJson = {
-  date: string;
-  title: string;
-  venue?: string;
-  link?: string;
-  link_tag?: string;
-};
-
-export type PublicationsJson = {
-  date: string;
-  tag?: string;
-  title: string;
-  info?: string;
-  link?: string;
-  link_tag?: string;
-};
-
-export type PapersJson = {
-  year: number;
-  month: number;
-  title: string;
-  authors: string[];
-  index_me?: number;
-  venue?: string;
-  link_href?: string;
-  link_label?: string;
-};
-
-export type PresentationsJson = {
-  year: number;
-  month: number;
-  title: string;
-  authors: string[];
-  index_presenter: number;
-  index_me: number;
-  event?: string;
-  link_href?: string;
-  link_label?: string;
-};
 
 const buildLinkCell = (href?: string, label?: string, key?: string) =>
   href ? (
@@ -58,7 +19,7 @@ const formatYearMonth = (year: number, month: number) => {
   return `${year}-${paddedMonth}`;
 };
 
-export const buildWorksTable = (works: WorksJson[]): DataTable => ({
+export const buildWorksTable = (works: JsonWorks[]): DataTable => ({
   header: ["Year / Month", "Title", "Venue", "Link"],
   body: works.map((work, index) => [
     work.date,
@@ -68,7 +29,7 @@ export const buildWorksTable = (works: WorksJson[]): DataTable => ({
   ]),
 });
 
-export const buildPublicationsTable = (publications: PublicationsJson[]): DataTable => ({
+export const buildPublicationsTable = (publications: JsonPublications[]): DataTable => ({
   header: ["Year / Month", "Tag", "Title", "Info", "Link"],
   body: publications.map((publication, index) => [
     publication.date,
@@ -118,7 +79,7 @@ const buildAuthors = (
     return <span key={key}>{author}</span>;
   });
 
-export const buildPapersTable = (papers: PapersJson[]): DataTable => ({
+export const buildPapersTable = (papers: JsonPapers[]): DataTable => ({
   header: ["Year / Month", "Title", "Authors", "Venue", "Link"],
   body: papers.map((paper, paperIndex) => {
     const authorsNodes = buildAuthors(paper.authors, paper.index_me, undefined, `paper-${paperIndex}`);
@@ -132,7 +93,7 @@ export const buildPapersTable = (papers: PapersJson[]): DataTable => ({
   }),
 });
 
-export const buildPresentationsTable = (presentations: PresentationsJson[]): DataTable => ({
+export const buildPresentationsTable = (presentations: JsonPresentations[]): DataTable => ({
   header: ["Year / Month", "Title", "Authors", "Event", "Link"],
   body: presentations.map((presentation, presentationIndex) => {
     const authorsNodes = buildAuthors(

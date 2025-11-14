@@ -3,11 +3,11 @@ import Table from "@/app/components/Table";
 import TableRowHeader from "@/app/components/TableRowHeader";
 import dataProfileInformation from "@/app/data/profile/information";
 import dataResearchInterest from "@/app/data/profile/researchInterest";
-import dataEducation from "@/app/data/research/education/education";
-import dataPapers from "@/app/data/research/papers/papers";
-import dataPresentations from "@/app/data/research/presentations/presentations";
-import dataWorks from "@/app/data/research/works/works";
-import dataPublications from "@/app/data/research/publications/publications";
+import dataEducation from "@/app/data/research/education";
+import dataPapers from "@/app/data/research/papers";
+import dataPresentations from "@/app/data/research/presentations";
+import dataWorks from "@/app/data/research/works";
+import dataPublications from "@/app/data/research/publications";
 
 export default function Home() {
   return (
