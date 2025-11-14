@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="feat: add datas">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/research/education.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/research/education/education.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/research/papers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/research/papers/papers.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/research/presentations.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/research/publication.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/research/publication.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="refactor: move raw data to json files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +91,7 @@
       <workItem from="1761380566423" duration="6614000" />
       <workItem from="1761731766301" duration="2061000" />
       <workItem from="1763010438909" duration="11186000" />
-      <workItem from="1763113538732" duration="5794000" />
+      <workItem from="1763113538732" duration="6326000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init IDEA project">
       <option name="closed" value="true" />
@@ -356,7 +349,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763119178304</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="refactor: move raw data to json files">
+      <option name="closed" value="true" />
+      <created>1763120073958</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1763120073958</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +375,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chore: add dependencies for build" />
     <MESSAGE value="feat: add Carbon style" />
     <MESSAGE value="feat: add &quot;Education&quot; section" />
     <MESSAGE value="chore: init Codex setting files" />
@@ -399,6 +399,7 @@
     <MESSAGE value="feat: implement TableRowHeader component" />
     <MESSAGE value="reafactor: refactor type CarbonThemeName" />
     <MESSAGE value="feat: add datas" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add datas" />
+    <MESSAGE value="refactor: move raw data to json files" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: move raw data to json files" />
   </component>
 </project>
