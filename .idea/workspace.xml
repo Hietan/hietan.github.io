@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="feat: implement &quot;Section&quot; Component">
-      <change afterPath="$PROJECT_DIR$/app/data/research/education.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/research/papers.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/type/table.d.ts" afterDir="false" />
+    <list default="true" id="95df5180-6462-4068-b2a6-f7550ac8b209" name="Changes" comment="refactor: refactor layout.tsx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PapersSection.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PresentationsSection.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PublicationsExtraSection.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/WorksSection.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,28 +28,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "last_opened_file_path": "C:/Users/hieta/WebstormProjects/hietan.github.io/public",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "npm.Next.js: server-side.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/lab/ghq/GitHub/Hietan/hietan.github.io/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hieta/WebstormProjects/hietan.github.io/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/lab/ghq/GitHub/Hietan/hietan.github.io/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hieta\WebstormProjects\hietan.github.io\public" />
@@ -96,7 +94,8 @@
       <workItem from="1761379989881" duration="574000" />
       <workItem from="1761380566423" duration="6614000" />
       <workItem from="1761731766301" duration="2061000" />
-      <workItem from="1763010438909" duration="11041000" />
+      <workItem from="1763010438909" duration="11186000" />
+      <workItem from="1763113538732" duration="5180000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init IDEA project">
       <option name="closed" value="true" />
@@ -282,7 +281,39 @@
       <option name="project" value="LOCAL" />
       <updated>1763020463060</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="refactor: refactor sections">
+      <option name="closed" value="true" />
+      <created>1763022968021</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1763022968021</updated>
+    </task>
+    <task id="LOCAL-00025" summary="refactor: refactor sections">
+      <option name="closed" value="true" />
+      <created>1763022973510</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1763022973510</updated>
+    </task>
+    <task id="LOCAL-00026" summary="refactor: refactor page.tsx">
+      <option name="closed" value="true" />
+      <created>1763117607764</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1763117607764</updated>
+    </task>
+    <task id="LOCAL-00027" summary="refactor: refactor layout.tsx">
+      <option name="closed" value="true" />
+      <created>1763117869606</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1763117869606</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +351,9 @@
     <MESSAGE value="style: update style" />
     <MESSAGE value="style: update color of Table" />
     <MESSAGE value="feat: implement &quot;Section&quot; Component" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implement &quot;Section&quot; Component" />
+    <MESSAGE value="refactor: refactor sections" />
+    <MESSAGE value="refactor: refactor page.tsx" />
+    <MESSAGE value="refactor: refactor layout.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: refactor layout.tsx" />
   </component>
 </project>

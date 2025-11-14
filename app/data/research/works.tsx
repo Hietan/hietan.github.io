@@ -1,0 +1,52 @@
+import {Link} from "@carbon/react";
+
+import type {DataTable} from "@/type/table";
+
+const works = [
+  {
+    date: "2024-11",
+    title: "Organizing Committee (Wakate Team)",
+    venue: "The First International Workshop on Intertwining Research & Education on Software (WIREDS 2024)",
+    link: "https://wireds2024.github.io/",
+    link_tag: "WIREDS 2024",
+  },
+  {
+    date: "2025-10",
+    title: "Program Committee in Technical Papers (Junior-PC)",
+    venue: "2026 IEEE/ACM 23nd International Conference on Mining Software Repositories (MSR 2026)",
+    link: "https://2026.msrconf.org/committee/msr-2026-junior-pc-technical-papers---junior-program-committee",
+    link_tag: "MSR 2026",
+  },
+  {
+    date: "2025-11",
+    title: "Organizing Committee (Student Volunteer)",
+    venue: "AI-Driven Software Engineering Summit for Fostering Next-Generation Researchers",
+    link: "https://posl.ait.kyushu-u.ac.jp/~aidriven2025/",
+    link_tag: "AI-Driven 2025",
+  },
+  {
+    date: "2025-12",
+    title: "Organizing Committee",
+    venue: "1st Workshop for Green AI Application (GAIA) & 6th Workshop for Next-Generation Software Ecosystems (ECO)",
+    link: "https://naist-se.github.io/HP_Workshop_GAIA_ECO/",
+    link_tag: "GAIA 2025, ECO 2025",
+  },
+];
+
+const dataWorks: DataTable = {
+  header: ["Year / Month", "Title", "Venue", "Link"],
+  body: works.map((work, index) => [
+    work.date,
+    work.title,
+    work.venue ?? "",
+    work.link ? (
+      <Link key={`work-link-${index}`} href={work.link} target="_blank" rel="noopener noreferrer">
+        {work.link_tag ?? "View"}
+      </Link>
+    ) : (
+      ""
+    ),
+  ]),
+};
+
+export default dataWorks;
