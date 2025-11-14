@@ -10,12 +10,11 @@ import {
 } from "@carbon/react";
 
 import type {DataTable} from "@/type/table";
-
-type ThemeName = "white" | "g10" | "g90" | "g100";
+import type {CarbonThemeName} from "@/type/carbon";
 
 export type TableProps = ComponentProps<typeof CarbonTable> & {
   data: DataTable;
-  theme?: ThemeName | null;
+  theme?: CarbonThemeName | null;
 };
 
 const renderHeader = (header: DataTable["header"]) => {
