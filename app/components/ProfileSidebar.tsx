@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {Tile} from "@carbon/react";
-import {LAYOUT_PADDING, SIDEBAR_WIDTH} from "@/app/components/layoutConstants";
+import {LAYOUT_PADDING, SIDEBAR_WIDTH} from "@/app/lib/layout/constants";
 
 import linksSns from "@/app/data/general/link_sns";
 

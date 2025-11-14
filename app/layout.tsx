@@ -2,7 +2,7 @@ import type {Metadata} from "next";
 import "@carbon/styles/css/styles.css";
 import "./globals.css";
 import ProfileSidebar from "@/app/components/ProfileSidebar";
-import {LAYOUT_PADDING, SIDEBAR_WIDTH} from "@/app/components/layoutConstants";
+import {LAYOUT_PADDING, SIDEBAR_WIDTH} from "@/app/lib/layout/constants";
 
 export const metadata: Metadata = {
   title: "Kazuma Yamasaki | Research Profile",
