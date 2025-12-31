@@ -2,7 +2,7 @@ import {Link} from "@carbon/react";
 import type {ReactNode} from "react";
 
 import ListComma from "@/app/components/ListComma";
-import type {JsonPapers, JsonPresentations, JsonPublications, JsonWorks} from "@/type/data";
+import type {JsonAwards, JsonPapers, JsonPresentations, JsonPublications, JsonWorks} from "@/type/data";
 import type {DataTable} from "@/type/table";
 
 const buildLinkCell = (href?: string, label?: string, key?: string) =>
@@ -37,6 +37,17 @@ export const buildPublicationsTable = (publications: JsonPublications[]): DataTa
     publication.title,
     publication.info ?? "",
     buildLinkCell(publication.link, publication.link_tag, `publication-link-${index}`),
+  ]),
+});
+
+export const buildAwardsTable = (awards: JsonAwards[]): DataTable => ({
+  header: ["Year / Month", "Award", "Work Title", "Event", "Link"],
+  body: awards.map((award, index) => [
+    award.date,
+    award.title,
+    award.work_title,
+    award.event ?? "",
+    buildLinkCell(award.link, award.link_tag, `award-link-${index}`),
   ]),
 });
 

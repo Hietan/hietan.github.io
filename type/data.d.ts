@@ -53,3 +53,12 @@ export type JsonPresentations = {
   link_href?: string;
   link_label?: string;
 };
+
+export type JsonAwards = {
+  date: string;
+  title: string;
+  work_title: string;
+  event?: string;
+  link?: string;
+  link_tag?: string;
+};

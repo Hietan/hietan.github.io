@@ -5,6 +5,7 @@ import TableRowHeader from "@/app/components/TableRowHeader";
 import dataProfileInformation from "@/app/data/profile/information";
 import dataResearchInterest from "@/app/data/profile/researchInterest";
 import dataEducation from "@/app/data/research/education";
+import dataAwards from "@/app/data/research/awards";
 import dataPapers from "@/app/data/research/papers";
 import dataPresentations from "@/app/data/research/presentations";
 import dataWorks from "@/app/data/research/works";
@@ -27,6 +28,9 @@ export default function Home() {
       </Section>
       <Section title="Papers">
         <Table data={dataPapers} />
+      </Section>
+      <Section title="Awards">
+        <Table data={dataAwards} />
       </Section>
       <Section title="Presentations">
         <Table data={dataPresentations} />
