@@ -12,13 +12,24 @@
   },
   {
     "year": 2025,
-    "month": 9,
-    "title": "破壊的変更を伴うライブラリ更新における移行ガイドの構成要素の分析",
-    "authors": ["門埜 孝拓", "嶋利 一真", "神田 哲也", "山﨑 和真", "松本 健一"],
+    "month": 11,
+    "title": "AI-oriented Programming Language: Proposal for Reconstructing Ecosystems for AI",
+    "authors": ["Kazuma Yamasaki", "Kazumasa Shimari", "Kenichi Matsumoto"],
     "index_presenter": 1,
-    "index_me": 4,
-    "event": "ソフトウェアエンジニアリングシンポジウム2025 (SES 2025)",
-    "link_href": "https://ipsj.ixsq.nii.ac.jp/records/2004382",
+    "index_me": 1,
+    "event": "AI-Driven Software Engineering Summit for Fostering Next-Generation Researchers",
+    "link_href": "https://posl.ait.kyushu-u.ac.jp/~aidriven2025/",
+    "link_label": "View"
+  },
+  {
+    "year": 2025,
+    "month": 12,
+    "title": "Do LLMs Need Type Annotations?",
+    "authors": ["Kazuma Yamasaki", "Kazumasa Shimari", "Kenichi Matsumoto"],
+    "index_presenter": 1,
+    "index_me": 1,
+    "event": "1st Workshop for Green AI Application",
+    "link_href": "https://naist-se.github.io/HP_Workshop_GAIA_ECO/",
     "link_label": "View"
   }
 ]
