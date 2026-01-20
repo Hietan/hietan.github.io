@@ -34,5 +34,37 @@
     "venue": "2025 IEEE Conference on Games (CoG 2025)",
     "link_href": "https://arxiv.org/abs/2510.17199",
     "link_label": "arXiv"
+  },
+  {
+    "year": 2026,
+    "month": 4,
+    "title": "Who Writes the Docs in SE 3.0? Agent vs. Human Documentation Pull Requests",
+    "authors": [
+      "Kazuma Yamasaki",
+      "Ayobami Joshua",
+      "Tasha Settewong",
+      "Mahmoud Alfadel",
+      "Kazumasa Shimari",
+      "Kenichi Matsumoto"
+    ],
+    "index_me": 1,
+    "venue": "2026 IEEE/ACM 23rd International Conference on Mining Software Repositories (MSR 2026)"
+  },
+  {
+    "year": 2026,
+    "month": 4,
+    "title": "How AI Coding Agents Communicate: A Study of Pull Request Characteristics and Human Review Responses",
+    "authors": [
+      "Kan Watanabe",
+      "Rikuto Tsuchida",
+      "Takahiro Monno",
+      "Bin Huang",
+      "Kazuma Yamasaki",
+      "Youmei Fan",
+      "Kazumasa Shimari",
+      "Kenichi Matsumoto"
+    ],
+    "index_me": 5,
+    "venue": "2026 IEEE/ACM 23rd International Conference on Mining Software Repositories (MSR 2026)"
   }
 ]
