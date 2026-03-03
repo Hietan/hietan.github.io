@@ -35,7 +35,7 @@ export default function Home() {
       <Section title="Presentations">
         <Table data={dataPresentations} />
       </Section>
-      <Section title="Works">
+      <Section title="Activities">
         <Table data={dataWorks} />
       </Section>
       <Section title="Publications">
