@@ -54,6 +54,22 @@ export const TAG_STYLES: Record<string, TagStyle> = {
     background: "#d5e0e8",
     color: "#1a1a1a",
   },
+  msr: {
+    background: "#dde8d8",
+    color: "#1a1a1a",
+  },
+  ease: {
+    background: "#d8e4e8",
+    color: "#1a1a1a",
+  },
+  cog: {
+    background: "#e8ddd8",
+    color: "#1a1a1a",
+  },
+  core_a: {
+    background: "#d0e0d8",
+    color: "#1a1a1a",
+  },
 };
 
 export const DEFAULT_TAG_STYLE: TagStyle = {

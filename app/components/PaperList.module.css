@@ -43,32 +43,6 @@
   margin-bottom: 0.25rem;
 }
 
-.venueMeta {
-  font-style: normal;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  margin-left: 0.5rem;
-}
-
-.venueShort {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--cds-text-primary);
-  background: #e8f0eb;
-  padding: 0.05rem 0.35rem;
-  border-radius: 2px;
-}
-
-.coreRank {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #2d5a3d;
-  background: #d6e8db;
-  padding: 0.05rem 0.35rem;
-  border-radius: 2px;
-}
-
 .actions {
   display: flex;
   align-items: center;

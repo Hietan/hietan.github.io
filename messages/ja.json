@@ -66,7 +66,11 @@
     "grant": "助成金",
     "scholarship": "奨学金",
     "award": "受賞",
-    "scholarship_exemption": "奨学金免除"
+    "scholarship_exemption": "奨学金免除",
+    "msr": "MSR",
+    "ease": "EASE",
+    "cog": "CoG",
+    "core_a": "CORE A"
   },
   "table": {
     "yearMonth": "年 / 月",
