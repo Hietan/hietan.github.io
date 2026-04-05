@@ -16,7 +16,7 @@
     "researchInterest": "研究内容",
     "education": "学歴",
     "papers": "論文",
-    "awards": "受賞",
+    "awards": "受賞・助成",
     "presentations": "発表",
     "activities": "活動",
     "publications": "出版物"
@@ -61,7 +61,9 @@
     "international": "国際",
     "domestic": "国内",
     "oral": "口頭発表",
-    "poster": "ポスター"
+    "poster": "ポスター",
+    "grant": "助成金",
+    "scholarship": "奨学金"
   },
   "table": {
     "yearMonth": "年 / 月",

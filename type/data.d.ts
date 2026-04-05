@@ -57,9 +57,15 @@ export type JsonPresentations = {
 
 export type JsonAwards = {
   date: string;
+  category?: "award" | "grant" | "scholarship";
   title: string;
-  work_title: string;
+  title_en?: string;
+  work_title?: string;
   event?: string;
+  organization?: string;
+  organization_en?: string;
+  amount?: string;
   link?: string;
   link_tag?: string;
+  tags?: string[];
 };

@@ -38,6 +38,14 @@ export const TAG_STYLES: Record<string, TagStyle> = {
     background: "#dfe8d3",
     color: "#1a1a1a",
   },
+  grant: {
+    background: "#e8e4d0",
+    color: "#1a1a1a",
+  },
+  scholarship: {
+    background: "#d8e4e0",
+    color: "#1a1a1a",
+  },
 };
 
 export const DEFAULT_TAG_STYLE: TagStyle = {

@@ -1,3 +1,6 @@
-import awards from "@/app/data/json/research/awards.json";
+import type {JsonAwards} from "@/type/data";
+import awardsJson from "@/app/data/json/research/awards.json";
+
+const awards = awardsJson as JsonAwards[];
 
 export default awards;

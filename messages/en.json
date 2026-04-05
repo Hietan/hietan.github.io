@@ -16,7 +16,7 @@
     "researchInterest": "Research Interest",
     "education": "Education",
     "papers": "Papers",
-    "awards": "Awards",
+    "awards": "Awards & Funding",
     "presentations": "Presentations",
     "activities": "Activities",
     "publications": "Publications"
@@ -61,7 +61,9 @@
     "international": "International",
     "domestic": "Domestic",
     "oral": "Oral",
-    "poster": "Poster"
+    "poster": "Poster",
+    "grant": "Grant",
+    "scholarship": "Scholarship"
   },
   "table": {
     "yearMonth": "Year / Month",
