@@ -54,10 +54,10 @@ const ProfileCard = ({
           <div className={styles.nameEn}>{nameEn}</div>
           <div className={styles.meta}>
             <p>
-              <strong>{role}</strong>{ofText ? <> <small>{ofText}</small></> : null}
+              <strong>{role}</strong>
             </p>
             <p>
-              <strong>{affiliation}</strong>
+              {ofText ? <><small>{ofText}</small>{" "}</> : null}<strong>{affiliation}</strong>
             </p>
           </div>
         </div>
