@@ -55,4 +55,6 @@
 
 .date {
   white-space: nowrap;
+  font-weight: 700;
+  color: var(--cds-text-primary);
 }
