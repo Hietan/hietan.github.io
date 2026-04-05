@@ -9,7 +9,7 @@
     "event": "第18回 ソフトウェア信頼性研究会ワークショップ (FORCE) / 第10回 ソフトウェア情報学研究会 (SIG-SI) / 第6回 次世代ソフトウェアエコシステムワークショップ",
     "link_href": "https://www.sea.jp/force/",
     "link_label": "View",
-    "tags": ["presenter"]
+    "tags": ["presenter", "oral"]
   },
   {
     "year": 2025,
@@ -21,7 +21,7 @@
     "event": "第220回 情報処理学会 ソフトウェア研究発表会 (IPSJ/SIGSE)",
     "link_href": "https://ipsj.ixsq.nii.ac.jp/records/2003067",
     "link_label": "View",
-    "tags": ["presenter"]
+    "tags": ["presenter", "oral"]
   },
   {
     "year": 2025,
@@ -33,7 +33,7 @@
     "event": "AI-Driven Software Engineering Summit for Fostering Next-Generation Researchers (AI-Driven)",
     "link_href": "https://posl.ait.kyushu-u.ac.jp/~aidriven2025/",
     "link_label": "View",
-    "tags": ["presenter"]
+    "tags": ["presenter", "poster"]
   },
   {
     "year": 2025,
@@ -45,6 +45,6 @@
     "event": "1st Workshop for Green AI Application (GAIA)",
     "link_href": "https://naist-se.github.io/HP_Workshop_GAIA_ECO/",
     "link_label": "View",
-    "tags": ["presenter"]
+    "tags": ["presenter", "oral"]
   }
 ]

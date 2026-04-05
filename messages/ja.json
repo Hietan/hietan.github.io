@@ -62,7 +62,7 @@
     "international": "国際会議",
     "domestic": "国内",
     "oral": "口頭発表",
-    "poster": "ポスター",
+    "poster": "ポスター発表",
     "grant": "助成金",
     "scholarship": "奨学金",
     "award": "受賞",
@@ -71,7 +71,7 @@
     "ease": "EASE",
     "cog": "CoG",
     "core_a": "CORE A",
-    "presenter": "登壇発表"
+    "presenter": "発表者"
   },
   "table": {
     "yearMonth": "年 / 月",
