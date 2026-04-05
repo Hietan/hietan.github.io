@@ -1,4 +1,5 @@
 import type {Metadata} from "next";
+import Script from "next/script";
 import {NextIntlClientProvider} from "next-intl";
 import {getLocale, getMessages, getTranslations} from "next-intl/server";
 import "@carbon/styles/css/styles.css";
@@ -26,6 +27,15 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-P20XDMBG1D" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-P20XDMBG1D');
+        `}</Script>
+      </head>
       <body data-carbon-theme="g10">
         <NextIntlClientProvider messages={messages}>
           <SiteHeader />

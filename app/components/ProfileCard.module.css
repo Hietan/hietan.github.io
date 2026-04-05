@@ -46,12 +46,14 @@
   font-weight: 700;
   font-size: 2rem;
   line-height: 1.4;
+  overflow-wrap: break-word;
 }
 
 .nameEn {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.4;
+  overflow-wrap: break-word;
 }
 
 .meta {
@@ -82,4 +84,35 @@
 
 .heroLinks {
   margin-left: auto;
+}
+
+@media (max-width: 672px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .heroMedia,
+  .heroContent,
+  .heroLinks,
+  .heroSns {
+    height: auto;
+    flex: unset;
+  }
+
+  .heroMedia {
+    width: 7rem;
+    align-self: flex-start;
+  }
+
+  .heroLinks {
+    margin-left: 0;
+  }
+
+  .nameJa {
+    font-size: 1.5rem;
+  }
+
+  .nameEn {
+    font-size: 1.125rem;
+  }
 }

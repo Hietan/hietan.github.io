@@ -23,6 +23,7 @@
   line-height: 1.4;
   margin-bottom: 0.2rem;
   color: var(--cds-text-primary);
+  overflow-wrap: break-word;
 }
 
 .venue {
@@ -30,6 +31,7 @@
   font-style: italic;
   color: var(--cds-text-secondary);
   margin-bottom: 0.1rem;
+  overflow-wrap: break-word;
 }
 
 .actions {

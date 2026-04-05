@@ -87,6 +87,11 @@ body,
     gap: 1rem;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 @media (max-width: 1312px) {
     .layout__sidebar {
         display: none;
@@ -98,6 +103,12 @@ body,
 
     .profile-hero-section {
         display: block;
+    }
+}
+
+@media (max-width: 672px) {
+    .layout__main {
+        padding: 1rem !important;
     }
 }
 
