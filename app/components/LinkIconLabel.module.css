@@ -1,0 +1,11 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 1080px) {
+  .label {
+    display: none;
+  }
+}
