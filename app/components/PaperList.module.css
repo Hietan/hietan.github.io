@@ -8,9 +8,21 @@
 }
 
 .item {
+  position: relative;
   padding: 1rem 0.5rem;
   border-bottom: 1px solid var(--cds-border-subtle);
   background: var(--cds-layer);
+}
+
+.blockLink {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.badge {
+  position: relative;
+  z-index: 1;
 }
 
 .item:first-child {

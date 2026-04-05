@@ -32,6 +32,15 @@ const PaperList = ({papers, t}: Props) => (
       const authorNodes = buildAuthors(paper.authors, paper.index_me);
       return (
         <li key={i} className={styles.item}>
+          {paper.link_href && (
+            <a
+              href={paper.link_href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.blockLink}
+              aria-label={paper.title}
+            />
+          )}
           <div className={styles.title}>{paper.title}</div>
           <div className={styles.authors}>
             <ListComma items={authorNodes} />
@@ -40,7 +49,7 @@ const PaperList = ({papers, t}: Props) => (
             {paper.venue && <span className={styles.venue}>{paper.venue}</span>}
             <span className={styles.date}>{formatYearMonth(paper.year, paper.month)}</span>
             {paper.link_href && paper.link_label && (
-              <Link href={paper.link_href} target="_blank" rel="noopener noreferrer">
+              <Link href={paper.link_href} target="_blank" rel="noopener noreferrer" className={styles.badge}>
                 [{paper.link_label}]
               </Link>
             )}
