@@ -1,4 +1,4 @@
-import {Link} from "@carbon/react";
+import {Link, Theme} from "@carbon/react";
 import type {ReactNode} from "react";
 
 import ListComma from "@/app/components/ListComma";
@@ -26,6 +26,7 @@ const formatYearMonth = (year: number, month: number) =>
   `${year}-${month.toString().padStart(2, "0")}`;
 
 const PaperList = ({papers, t}: Props) => (
+  <Theme theme="g10">
   <ol className={styles.list}>
     {papers.map((paper, i) => {
       const authorNodes = buildAuthors(paper.authors, paper.index_me);
@@ -48,6 +49,7 @@ const PaperList = ({papers, t}: Props) => (
       );
     })}
   </ol>
+  </Theme>
 );
 
 export default PaperList;

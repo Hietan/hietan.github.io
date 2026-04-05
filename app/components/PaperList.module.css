@@ -8,7 +8,7 @@
 }
 
 .item {
-  padding: 1rem 1rem;
+  padding: 1rem 0.5rem;
   border-bottom: 1px solid var(--cds-border-subtle);
   background: var(--cds-layer);
 }
