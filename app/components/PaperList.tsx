@@ -31,7 +31,7 @@ const PaperList = ({papers, t}: Props) => (
     {papers.map((paper, i) => {
       const authorNodes = buildAuthors(paper.authors, paper.index_me);
       return (
-        <li key={i} className={styles.item}>
+        <li key={i} className={`${styles.item}${paper.link_href ? ` ${styles.linked}` : ""}`}>
           {paper.link_href && (
             <a
               href={paper.link_href}

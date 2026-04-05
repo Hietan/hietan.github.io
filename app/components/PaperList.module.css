@@ -15,7 +15,7 @@
   transition: background-color 70ms cubic-bezier(0, 0, 0.38, 0.9);
 }
 
-.item:hover {
+.item.linked:hover {
   background-color: var(--cds-layer-hover);
 }
 
