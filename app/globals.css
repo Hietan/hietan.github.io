@@ -6,9 +6,9 @@
    ============================================= */
 
 :root {
-  --color-accent:        #3d6349; /* 抹茶 matcha */
-  --color-accent-hover:  #2d4a37; /* 深緑 dark */
-  --color-accent-active: #1e3325; /* 最深緑 deepest */
+  --color-accent:        #2d5a3d; /* 深抹茶 deep matcha */
+  --color-accent-hover:  #1e3f2b; /* 深緑 dark */
+  --color-accent-active: #142b1e; /* 最深緑 deepest */
   --color-accent-subtle: #eff4f1; /* 薄萌葱 pale green for hovers */
 }
 
@@ -17,20 +17,20 @@ body,
 [data-carbon-theme="g10"],
 [data-carbon-theme="white"] {
   /* Links */
-  --cds-link-primary:            #3d6349;
-  --cds-link-primary-hover:      #2d4a37;
-  --cds-link-visited:            #3d6349;
-  --cds-link-inverse:            #8ab89a;
+  --cds-link-primary:            #2d5a3d;
+  --cds-link-primary-hover:      #1e3f2b;
+  --cds-link-visited:            #2d5a3d;
+  --cds-link-inverse:            #7ab898;
 
   /* Interactive / Focus */
-  --cds-interactive:             #3d6349;
-  --cds-focus:                   #3d6349;
-  --cds-border-interactive:      #3d6349;
+  --cds-interactive:             #2d5a3d;
+  --cds-focus:                   #2d5a3d;
+  --cds-border-interactive:      #2d5a3d;
 
   /* Primary Button */
-  --cds-button-primary:          #3d6349;
-  --cds-button-primary-hover:    #2d4a37;
-  --cds-button-primary-active:   #1e3325;
+  --cds-button-primary:          #2d5a3d;
+  --cds-button-primary-hover:    #1e3f2b;
+  --cds-button-primary-active:   #142b1e;
 
   /* Layer hover — subtle green tint */
   --cds-layer-hover:    #eff4f1;
@@ -42,15 +42,15 @@ body,
 /* Theme コンポーネント内でも適用 */
 .cds--white,
 .cds--g10 {
-  --cds-link-primary:            #3d6349;
-  --cds-link-primary-hover:      #2d4a37;
-  --cds-link-visited:            #3d6349;
-  --cds-interactive:             #3d6349;
-  --cds-focus:                   #3d6349;
-  --cds-border-interactive:      #3d6349;
-  --cds-button-primary:          #3d6349;
-  --cds-button-primary-hover:    #2d4a37;
-  --cds-button-primary-active:   #1e3325;
+  --cds-link-primary:            #2d5a3d;
+  --cds-link-primary-hover:      #1e3f2b;
+  --cds-link-visited:            #2d5a3d;
+  --cds-interactive:             #2d5a3d;
+  --cds-focus:                   #2d5a3d;
+  --cds-border-interactive:      #2d5a3d;
+  --cds-button-primary:          #2d5a3d;
+  --cds-button-primary-hover:    #1e3f2b;
+  --cds-button-primary-active:   #142b1e;
   --cds-layer-hover:    #eff4f1;
   --cds-layer-hover-01: #eff4f1;
   --cds-layer-hover-02: #e5ede8;
