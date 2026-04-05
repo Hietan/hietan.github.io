@@ -1,6 +1,7 @@
 import {Theme} from "@carbon/react";
 import type {ReactNode} from "react";
 
+import CiteButton from "@/app/components/CiteButton";
 import ListComma from "@/app/components/ListComma";
 import type {JsonPapers} from "@/type/data";
 
@@ -25,27 +26,11 @@ const buildAuthors = (items: string[], highlightIndex?: number): ReactNode[] =>
 const formatYearMonth = (year: number, month: number) =>
   `${year}-${month.toString().padStart(2, "0")}`;
 
-const PaperList = ({papers, t}: Props) => (
+const PaperList = ({papers}: Props) => (
   <Theme theme="g10">
   <ol className={styles.list}>
     {papers.map((paper, i) => {
       const authorNodes = buildAuthors(paper.authors, paper.index_me);
-      const inner = (
-        <>
-          <div className={styles.title}>{paper.title}</div>
-          <div className={styles.authors}>
-            <ListComma items={authorNodes} />
-          </div>
-          <div className={styles.meta}>
-            {paper.venue && <span className={styles.venue}>{paper.venue}</span>}
-            <span className={styles.date}>{formatYearMonth(paper.year, paper.month)}</span>
-            {paper.link_label && (
-              <span className={styles.badge}>[{paper.link_label}]</span>
-            )}
-          </div>
-        </>
-      );
-
       return (
         <li key={i} className={`${styles.item}${paper.link_href ? ` ${styles.linked}` : ""}`}>
           {paper.link_href ? (
@@ -55,9 +40,39 @@ const PaperList = ({papers, t}: Props) => (
               rel="noopener noreferrer"
               className={styles.blockLink}
             >
-              {inner}
+              <div className={styles.title}>{paper.title}</div>
+              <div className={styles.authors}>
+                <ListComma items={authorNodes} />
+              </div>
+              <div className={styles.venue}>
+                {paper.venue && <span>{paper.venue}</span>}
+              </div>
             </a>
-          ) : inner}
+          ) : (
+            <div className={styles.blockLink}>
+              <div className={styles.title}>{paper.title}</div>
+              <div className={styles.authors}>
+                <ListComma items={authorNodes} />
+              </div>
+              <div className={styles.venue}>
+                {paper.venue && <span>{paper.venue}</span>}
+              </div>
+            </div>
+          )}
+          <div className={styles.actions}>
+            <span className={styles.date}>{formatYearMonth(paper.year, paper.month)}</span>
+            {paper.link_href && paper.link_label && (
+              <a
+                href={paper.link_href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.badge}
+              >
+                [{paper.link_label}]
+              </a>
+            )}
+            <CiteButton paper={paper} />
+          </div>
         </li>
       );
     })}
