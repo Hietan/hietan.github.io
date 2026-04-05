@@ -1,4 +1,4 @@
-import {Link, Theme} from "@carbon/react";
+import {Theme} from "@carbon/react";
 import type {ReactNode} from "react";
 
 import ListComma from "@/app/components/ListComma";
@@ -30,17 +30,8 @@ const PaperList = ({papers, t}: Props) => (
   <ol className={styles.list}>
     {papers.map((paper, i) => {
       const authorNodes = buildAuthors(paper.authors, paper.index_me);
-      return (
-        <li key={i} className={`${styles.item}${paper.link_href ? ` ${styles.linked}` : ""}`}>
-          {paper.link_href && (
-            <a
-              href={paper.link_href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.blockLink}
-              aria-label={paper.title}
-            />
-          )}
+      const inner = (
+        <>
           <div className={styles.title}>{paper.title}</div>
           <div className={styles.authors}>
             <ListComma items={authorNodes} />
@@ -48,12 +39,25 @@ const PaperList = ({papers, t}: Props) => (
           <div className={styles.meta}>
             {paper.venue && <span className={styles.venue}>{paper.venue}</span>}
             <span className={styles.date}>{formatYearMonth(paper.year, paper.month)}</span>
-            {paper.link_href && paper.link_label && (
-              <Link href={paper.link_href} target="_blank" rel="noopener noreferrer" className={styles.badge}>
-                [{paper.link_label}]
-              </Link>
+            {paper.link_label && (
+              <span className={styles.badge}>[{paper.link_label}]</span>
             )}
           </div>
+        </>
+      );
+
+      return (
+        <li key={i} className={`${styles.item}${paper.link_href ? ` ${styles.linked}` : ""}`}>
+          {paper.link_href ? (
+            <a
+              href={paper.link_href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.blockLink}
+            >
+              {inner}
+            </a>
+          ) : inner}
         </li>
       );
     })}
