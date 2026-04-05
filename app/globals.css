@@ -66,6 +66,12 @@ body,
     font-weight: bold;
 }
 
+.cds--data-table td,
+.cds--data-table tbody th {
+    line-height: 1.8;
+    padding-block: 1rem;
+}
+
 .cds--data-table tbody tr:first-child th {
     border-block-start: none;
 }
