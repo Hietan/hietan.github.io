@@ -4,7 +4,8 @@ import {getLocale, getMessages, getTranslations} from "next-intl/server";
 import "@carbon/styles/css/styles.css";
 import "./globals.css";
 import ProfileSidebar from "@/app/components/ProfileSidebar";
-import {LAYOUT_PADDING, SIDEBAR_WIDTH} from "@/app/lib/layout/constants";
+import SiteHeader from "@/app/components/SiteHeader";
+import {HEADER_HEIGHT, LAYOUT_PADDING, SIDEBAR_WIDTH} from "@/app/lib/layout/constants";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("metadata");
@@ -27,6 +28,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body data-carbon-theme="g10">
         <NextIntlClientProvider messages={messages}>
+          <SiteHeader />
           <ProfileSidebar
             role={t("profile.role")}
             affiliation={t("profile.affiliation")}
@@ -34,7 +36,7 @@ export default async function RootLayout({
           />
           <main
             className="layout__main"
-            style={{marginLeft: SIDEBAR_WIDTH, display: "grid", gap: "1rem", padding: LAYOUT_PADDING}}
+            style={{marginLeft: SIDEBAR_WIDTH, marginTop: HEADER_HEIGHT, display: "grid", gap: "1rem", padding: LAYOUT_PADDING}}
           >
             {children}
           </main>

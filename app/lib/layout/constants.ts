@@ -1,5 +1,6 @@
 export const SIDEBAR_WIDTH = 300; // px
 export const LAYOUT_PADDING = "2rem";
+export const HEADER_HEIGHT = "3rem";
 export const BREAKPOINTS = {
   sm: 672,
   md: 1056,
