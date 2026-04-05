@@ -1,10 +1,18 @@
 import {getRequestConfig} from "next-intl/server";
-import {headers} from "next/headers";
+import {cookies, headers} from "next/headers";
 
 export default getRequestConfig(async () => {
-  const headersList = await headers();
-  const acceptLanguage = headersList.get("accept-language") ?? "";
-  const locale = /\bja\b/i.test(acceptLanguage) ? "ja" : "en";
+  const cookieStore = await cookies();
+  const cookieLang = cookieStore.get("locale")?.value;
+
+  let locale: string;
+  if (cookieLang === "ja" || cookieLang === "en") {
+    locale = cookieLang;
+  } else {
+    const headersList = await headers();
+    const acceptLanguage = headersList.get("accept-language") ?? "";
+    locale = /\bja\b/i.test(acceptLanguage) ? "ja" : "en";
+  }
 
   return {
     locale,

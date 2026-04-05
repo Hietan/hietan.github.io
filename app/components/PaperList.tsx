@@ -34,7 +34,7 @@ const PaperList = ({papers, tTags}: Props) => (
     {papers.map((paper, i) => {
       const authorNodes = buildAuthors(paper.authors, paper.index_me);
       return (
-        <li key={i} className={`${styles.item}${paper.link_href ? ` ${styles.linked}` : ""}`}>
+        <li key={i} className={styles.item}>
           <div className={styles.content}>
             <div className={styles.title}>{paper.title}</div>
             <div className={styles.authors}>
