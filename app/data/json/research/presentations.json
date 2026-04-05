@@ -12,6 +12,16 @@
     "tags": ["oral"]
   },
   {
+    "year": 2026,
+    "month": 3,
+    "title": "CWE 別特化型 LLM のアンサンブルによるソースコード脆弱性検出手法の提案",
+    "authors": ["上田 優", "山﨑 和真", "土田 陸斗", "嶋利 一真", "松本 健一"],
+    "index_presenter": 1,
+    "index_me": 2,
+    "event": "情報処理学会 全国大会 2026",
+    "tags": ["oral"]
+  },
+  {
     "year": 2025,
     "month": 12,
     "title": "Do LLMs Need Type Annotations?",
