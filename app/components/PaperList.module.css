@@ -12,6 +12,11 @@
   padding: 1rem 0.5rem;
   border-bottom: 1px solid var(--cds-border-subtle);
   background: var(--cds-layer);
+  transition: background-color 70ms cubic-bezier(0, 0, 0.38, 0.9);
+}
+
+.item:hover {
+  background-color: var(--cds-layer-hover);
 }
 
 .blockLink {
