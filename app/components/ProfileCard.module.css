@@ -83,7 +83,10 @@
 }
 
 .heroLinks {
-  margin-left: auto;
+  margin-left: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 672px) {

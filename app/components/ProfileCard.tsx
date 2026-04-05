@@ -63,7 +63,7 @@ const ProfileCard = ({
         </div>
       </div>
       {(links?.length ?? 0) > 0 && (
-        <LinkList items={links} className={cx(styles.links, isHero ? styles.heroLinks : undefined)} />
+        <LinkList items={links} orientation={isHero ? "horizontal" : "vertical"} className={cx(styles.links, isHero ? styles.heroLinks : undefined)} />
       )}
       {(sns?.length ?? 0) > 0 && (
         <SnsList
