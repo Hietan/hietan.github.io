@@ -63,7 +63,9 @@
     "oral": "口頭発表",
     "poster": "ポスター",
     "grant": "助成金",
-    "scholarship": "奨学金"
+    "scholarship": "奨学金",
+    "award": "受賞",
+    "scholarship_exemption": "奨学金免除"
   },
   "table": {
     "yearMonth": "年 / 月",

@@ -26,15 +26,22 @@ const AwardList = ({awards, locale, tTags}: Props) => (
       return (
         <li key={i} className={styles.item}>
           <div className={styles.content}>
-            <div className={styles.title}>{title}</div>
-            {organization && (
-              <div className={styles.organization}>{organization}</div>
-            )}
-            {award.work_title && (
-              <div className={styles.sub}>{award.work_title}</div>
-            )}
-            {award.event && (
-              <div className={styles.sub}>{award.event}</div>
+            {award.category === "award" ? (
+              <>
+                <div className={styles.title}>
+                  &ldquo;{title}&rdquo;{award.event && <>, @ {award.event}</>}
+                </div>
+                {award.work_title && (
+                  <div className={styles.sub}>{award.work_title}</div>
+                )}
+              </>
+            ) : (
+              <>
+                <div className={styles.title}>{title}</div>
+                {organization && (
+                  <div className={styles.organization}>{organization}</div>
+                )}
+              </>
             )}
           </div>
           <div className={styles.actions}>

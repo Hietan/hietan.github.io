@@ -63,7 +63,9 @@
     "oral": "Oral",
     "poster": "Poster",
     "grant": "Grant",
-    "scholarship": "Scholarship"
+    "scholarship": "Scholarship",
+    "award": "Award",
+    "scholarship_exemption": "Scholarship Exemption"
   },
   "table": {
     "yearMonth": "Year / Month",

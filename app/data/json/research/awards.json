@@ -5,29 +5,29 @@
     "title": "Distinguished Poster Awards",
     "work_title": "AI-oriented Programming Language: Proposal for Reconstructing Ecosystems for AI",
     "event": "AI-Driven Software Engineering Summit for Fostering Next-Generation Researchers",
-    "link": "https://naist-se.github.io/ja/news/2025/11/25/2025-11-25-aidriven/",
-    "link_tag": "News",
-    "tags": ["international"]
+    "link": "https://posl.ait.kyushu-u.ac.jp/~aidriven2025/",
+    "link_tag": "Link",
+    "tags": ["award"]
   },
   {
-    "date": "2025-09",
+    "date": "2025-10",
     "category": "scholarship",
-    "title": "第一種奨学金 採用時返還免除内定制度",
-    "title_en": "Type I Scholarship, Advance Repayment Exemption Provisional System",
+    "title": "第一種奨学金 返還免除 内定",
+    "title_en": "JASSO Type I Scholarship, Repayment Exemption (Provisional Adoption)",
     "organization": "独立行政法人日本学生支援機構（JASSO）",
     "organization_en": "Japan Student Services Organization (JASSO)",
-    "tags": ["scholarship"]
+    "tags": ["scholarship_exemption"]
   },
   {
     "date": "2025-04",
     "category": "grant",
-    "title": "海外渡航費援助",
-    "title_en": "Travel Grant for Overseas Research",
+    "title": "海外渡航旅費援助（援助決定）",
+    "title_en": "Travel Expense Assistance for Overseas Research (Awarded)",
     "organization": "公益財団法人電気通信普及財団",
     "organization_en": "The Telecommunications Advancement Foundation (TAF)",
     "amount": "¥320,000",
     "link": "https://www.taf.or.jp/files/items/2253/File/2025%E5%B9%B4%E5%BA%A6%E6%B5%B7%E5%A4%96%E6%B8%A1%E8%88%AA%E6%97%85%E8%B2%BB%E6%8F%B4%E5%8A%A9%E5%AE%9F%E7%B8%BE.pdf",
-    "link_tag": "PDF",
+    "link_tag": "Link",
     "tags": ["grant"]
   }
 ]

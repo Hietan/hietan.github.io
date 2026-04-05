@@ -46,6 +46,14 @@ export const TAG_STYLES: Record<string, TagStyle> = {
     background: "#d8e4e0",
     color: "#1a1a1a",
   },
+  award: {
+    background: "#e8e0d5",
+    color: "#1a1a1a",
+  },
+  scholarship_exemption: {
+    background: "#d5e0e8",
+    color: "#1a1a1a",
+  },
 };
 
 export const DEFAULT_TAG_STYLE: TagStyle = {
