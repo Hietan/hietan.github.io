@@ -2,8 +2,8 @@
   {
     "date": "2026-02",
     "category": "grant",
-    "title": "海外渡航旅費援助（援助決定）",
-    "title_en": "Travel Expense Assistance for Overseas Research (Awarded)",
+    "title": "海外渡航旅費援助 援助決定",
+    "title_en": "Travel Expense Assistance for Overseas Research, Awarded",
     "organization": "公益財団法人電気通信普及財団",
     "organization_en": "The Telecommunications Advancement Foundation (TAF)",
     "amount": "¥320,000",
@@ -24,8 +24,8 @@
   {
     "date": "2025-10",
     "category": "scholarship",
-    "title": "第一種奨学金 返還免除 内定",
-    "title_en": "JASSO Type I Scholarship, Repayment Exemption (Provisional Adoption)",
+    "title": "第一種奨学金　採用時返還免除内定制度　内定",
+    "title_en": "JASSO Type I Scholarship, Advance Repayment Exemption Provisional System (Provisional Adoption)",
     "organization": "独立行政法人日本学生支援機構（JASSO）",
     "organization_en": "Japan Student Services Organization (JASSO)",
     "tags": ["scholarship_exemption"]

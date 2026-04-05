@@ -28,11 +28,13 @@ const AwardList = ({awards, locale, tTags}: Props) => (
           <div className={styles.content}>
             {award.category === "award" ? (
               <>
-                <div className={styles.title}>
-                  &ldquo;{title}&rdquo;{award.event && <>, @ {award.event}</>}
-                </div>
-                {award.work_title && (
-                  <div className={styles.sub}>{award.work_title}</div>
+                <div className={styles.title}>{title}</div>
+                {(award.event || award.work_title) && (
+                  <div className={styles.sub}>
+                    {award.event}
+                    {award.event && award.work_title && ", Title: "}
+                    {award.work_title}
+                  </div>
                 )}
               </>
             ) : (
