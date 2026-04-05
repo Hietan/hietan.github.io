@@ -1,4 +1,4 @@
-import {Theme} from "@carbon/react";
+import {Link, Theme} from "@carbon/react";
 import type {ReactNode} from "react";
 
 import CiteButton from "@/app/components/CiteButton";
@@ -33,43 +33,19 @@ const PaperList = ({papers}: Props) => (
       const authorNodes = buildAuthors(paper.authors, paper.index_me);
       return (
         <li key={i} className={`${styles.item}${paper.link_href ? ` ${styles.linked}` : ""}`}>
-          {paper.link_href ? (
-            <a
-              href={paper.link_href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.blockLink}
-            >
-              <div className={styles.title}>{paper.title}</div>
-              <div className={styles.authors}>
-                <ListComma items={authorNodes} />
-              </div>
-              <div className={styles.venue}>
-                {paper.venue && <span>{paper.venue}</span>}
-              </div>
-            </a>
-          ) : (
-            <div className={styles.blockLink}>
-              <div className={styles.title}>{paper.title}</div>
-              <div className={styles.authors}>
-                <ListComma items={authorNodes} />
-              </div>
-              <div className={styles.venue}>
-                {paper.venue && <span>{paper.venue}</span>}
-              </div>
+          <div className={styles.content}>
+            <div className={styles.title}>{paper.title}</div>
+            <div className={styles.authors}>
+              <ListComma items={authorNodes} />
             </div>
-          )}
+            {paper.venue && <div className={styles.venue}>{paper.venue}</div>}
+          </div>
           <div className={styles.actions}>
             <span className={styles.date}>{formatYearMonth(paper.year, paper.month)}</span>
             {paper.link_href && paper.link_label && (
-              <a
-                href={paper.link_href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.badge}
-              >
+              <Link href={paper.link_href} target="_blank" rel="noopener noreferrer">
                 [{paper.link_label}]
-              </a>
+              </Link>
             )}
             <CiteButton paper={paper} />
           </div>
