@@ -3,6 +3,7 @@ import type {ReactNode} from "react";
 
 import CiteButton from "@/app/components/CiteButton";
 import ListComma from "@/app/components/ListComma";
+import PaperTag from "@/app/components/PaperTag";
 import type {JsonPapers} from "@/type/data";
 
 import styles from "./PaperList.module.css";
@@ -12,6 +13,7 @@ type TranslateFn = (key: string) => string;
 type Props = {
   papers: JsonPapers[];
   t: TranslateFn;
+  tTags: TranslateFn;
 };
 
 const buildAuthors = (items: string[], highlightIndex?: number): ReactNode[] =>
@@ -26,7 +28,7 @@ const buildAuthors = (items: string[], highlightIndex?: number): ReactNode[] =>
 const formatYearMonth = (year: number, month: number) =>
   `${year}-${month.toString().padStart(2, "0")}`;
 
-const PaperList = ({papers}: Props) => (
+const PaperList = ({papers, tTags}: Props) => (
   <Theme theme="g10">
   <ol className={styles.list}>
     {papers.map((paper, i) => {
@@ -34,6 +36,13 @@ const PaperList = ({papers}: Props) => (
       return (
         <li key={i} className={`${styles.item}${paper.link_href ? ` ${styles.linked}` : ""}`}>
           <div className={styles.content}>
+            {paper.tags && paper.tags.length > 0 && (
+              <div className={styles.tags}>
+                {paper.tags.map(tag => (
+                  <PaperTag key={tag} tag={tag} t={tTags} />
+                ))}
+              </div>
+            )}
             <div className={styles.title}>{paper.title}</div>
             <div className={styles.authors}>
               <ListComma items={authorNodes} />

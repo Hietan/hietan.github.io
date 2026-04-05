@@ -22,6 +22,7 @@ import {
 export default async function Home() {
   const t = await getTranslations();
   const tTable = await getTranslations("table");
+  const tTags = await getTranslations("tags");
   const tInfo = await getTranslations("information");
   const tResearch = await getTranslations("researchInterest");
   const tEducation = await getTranslations("education");
@@ -46,7 +47,7 @@ export default async function Home() {
         <Table data={buildEducation(tEducation)} />
       </Section>
       <Section title={t("sections.papers")}>
-        <PaperList papers={papers} t={tTable} />
+        <PaperList papers={papers} t={tTable} tTags={tTags} />
       </Section>
       <Section title={t("sections.awards")}>
         <Table data={buildAwardsTable(awards, tTable)} />

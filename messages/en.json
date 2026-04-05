@@ -55,6 +55,14 @@
     "naist": "Nara Institute of Science and Technology (NAIST)",
     "present": "Present"
   },
+  "tags": {
+    "first_author": "First Author",
+    "peer_reviewed": "Peer-reviewed",
+    "international": "International",
+    "domestic": "Domestic",
+    "oral": "Oral",
+    "poster": "Poster"
+  },
   "table": {
     "yearMonth": "Year / Month",
     "title": "Title",

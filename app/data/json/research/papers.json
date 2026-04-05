@@ -16,7 +16,8 @@
     "index_me": 2,
     "venue": "2025 IEEE/ACM 22nd International Conference on Mining Software Repositories (MSR 2025)",
     "link_href": "https://arxiv.org/abs/2504.09834",
-    "link_label": "arXiv"
+    "link_label": "arXiv",
+    "tags": ["peer_reviewed", "international"]
   },
   {
     "year": 2025,
@@ -33,7 +34,8 @@
     "index_me": 3,
     "venue": "2025 IEEE Conference on Games (CoG 2025)",
     "link_href": "https://arxiv.org/abs/2510.17199",
-    "link_label": "arXiv"
+    "link_label": "arXiv",
+    "tags": ["peer_reviewed", "international"]
   },
   {
     "year": 2026,
@@ -49,8 +51,9 @@
     ],
     "index_me": 1,
     "venue": "2026 IEEE/ACM 23rd International Conference on Mining Software Repositories (MSR 2026)",
-		"link_href": "https://arxiv.org/abs/2601.20171",
-		"link_label": "arXiv"
+    "link_href": "https://arxiv.org/abs/2601.20171",
+    "link_label": "arXiv",
+    "tags": ["first_author", "peer_reviewed", "international"]
   },
   {
     "year": 2026,
@@ -64,7 +67,8 @@
       "Kenichi Matsumoto"
     ],
     "index_me": 4,
-    "venue": "The 30th International Conference on Evaluation and Assessment in Software Engineering (EASE 2026)"
+    "venue": "The 30th International Conference on Evaluation and Assessment in Software Engineering (EASE 2026)",
+    "tags": ["peer_reviewed", "international"]
   },
   {
     "year": 2026,
@@ -83,6 +87,7 @@
     "index_me": 5,
     "venue": "2026 IEEE/ACM 23rd International Conference on Mining Software Repositories (MSR 2026)",
     "link_href": "https://arxiv.org/abs/2602.17084",
-    "link_label": "arXiv"
+    "link_label": "arXiv",
+    "tags": ["peer_reviewed", "international"]
   }
 ]

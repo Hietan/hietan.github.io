@@ -40,6 +40,7 @@ export type JsonPapers = {
   venue?: string;
   link_href?: string;
   link_label?: string;
+  tags?: string[];
 };
 
 export type JsonPresentations = {
