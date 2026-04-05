@@ -71,7 +71,8 @@
     "ease": "EASE",
     "cog": "CoG",
     "core_a": "CORE A",
-    "presenter": "Presenter"
+    "presenter": "Presenter",
+    "force": "FORCE"
   },
   "table": {
     "yearMonth": "Year / Month",
