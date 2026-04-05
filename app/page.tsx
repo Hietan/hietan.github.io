@@ -3,6 +3,7 @@ import ProfileCard from "@/app/components/ProfileCard";
 import Section from "@/app/components/Section";
 import Table from "@/app/components/Table";
 import TableRowHeader from "@/app/components/TableRowHeader";
+import PaperList from "@/app/components/PaperList";
 import {buildProfileInformation} from "@/app/data/profile/information";
 import {buildResearchInterest} from "@/app/data/profile/researchInterest";
 import {buildEducation} from "@/app/data/research/education";
@@ -12,7 +13,6 @@ import presentations from "@/app/data/research/presentations";
 import works from "@/app/data/research/works";
 import publications from "@/app/data/research/publications";
 import {
-  buildPapersTable,
   buildAwardsTable,
   buildPresentationsTable,
   buildWorksTable,
@@ -46,7 +46,7 @@ export default async function Home() {
         <Table data={buildEducation(tEducation)} />
       </Section>
       <Section title={t("sections.papers")}>
-        <Table data={buildPapersTable(papers, tTable)} />
+        <PaperList papers={papers} t={tTable} />
       </Section>
       <Section title={t("sections.awards")}>
         <Table data={buildAwardsTable(awards, tTable)} />
