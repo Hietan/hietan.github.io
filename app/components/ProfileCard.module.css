@@ -84,12 +84,16 @@
 
 .heroLinks {
   margin-left: 0;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
 }
 
 @media (max-width: 672px) {
+  .heroLinks {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+
   .heroSns {
     flex-direction: row !important;
     height: auto !important;
