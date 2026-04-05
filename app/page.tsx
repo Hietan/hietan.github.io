@@ -3,6 +3,8 @@ import AwardList from "@/app/components/AwardList";
 import PaperList from "@/app/components/PaperList";
 import PresentationList from "@/app/components/PresentationList";
 import ProfileCard from "@/app/components/ProfileCard";
+import PublicationList from "@/app/components/PublicationList";
+import WorkList from "@/app/components/WorkList";
 import Section from "@/app/components/Section";
 import Table from "@/app/components/Table";
 import TableRowHeader from "@/app/components/TableRowHeader";
@@ -14,11 +16,6 @@ import papers from "@/app/data/research/papers";
 import presentations from "@/app/data/research/presentations";
 import works from "@/app/data/research/works";
 import publications from "@/app/data/research/publications";
-import {
-  buildPresentationsTable,
-  buildWorksTable,
-  buildPublicationsTable,
-} from "@/app/lib/tableBuilders/research";
 
 export default async function Home() {
   const locale = await getLocale();
@@ -58,10 +55,10 @@ export default async function Home() {
         <PresentationList presentations={presentations} tTags={tTags} />
       </Section>
       <Section title={t("sections.activities")}>
-        <Table data={buildWorksTable(works, tTable)} />
+        <WorkList works={works} />
       </Section>
       <Section title={t("sections.publications")}>
-        <Table data={buildPublicationsTable(publications, tTable)} />
+        <PublicationList publications={publications} />
       </Section>
     </>
   );
