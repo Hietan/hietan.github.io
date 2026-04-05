@@ -74,10 +74,6 @@ export const TAG_STYLES: Record<string, TagStyle> = {
     background: "#e0dcd5",
     color: "#1a1a1a",
   },
-  force: {
-    background: "#dde8d8",
-    color: "#1a1a1a",
-  },
 };
 
 export const DEFAULT_TAG_STYLE: TagStyle = {
