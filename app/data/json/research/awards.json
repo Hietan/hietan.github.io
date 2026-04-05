@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-02",
+    "category": "grant",
+    "title": "海外渡航旅費援助（援助決定）",
+    "title_en": "Travel Expense Assistance for Overseas Research (Awarded)",
+    "organization": "公益財団法人電気通信普及財団",
+    "organization_en": "The Telecommunications Advancement Foundation (TAF)",
+    "amount": "¥320,000",
+    "link": "https://www.taf.or.jp/files/items/2253/File/2025%E5%B9%B4%E5%BA%A6%E6%B5%B7%E5%A4%96%E6%B8%A1%E8%88%AA%E6%97%85%E8%B2%BB%E6%8F%B4%E5%8A%A9%E5%AE%9F%E7%B8%BE.pdf",
+    "link_tag": "Link",
+    "tags": ["grant"]
+  },
+  {
     "date": "2025-11",
     "category": "award",
     "title": "Distinguished Poster Awards",
@@ -17,17 +29,5 @@
     "organization": "独立行政法人日本学生支援機構（JASSO）",
     "organization_en": "Japan Student Services Organization (JASSO)",
     "tags": ["scholarship_exemption"]
-  },
-  {
-    "date": "2025-04",
-    "category": "grant",
-    "title": "海外渡航旅費援助（援助決定）",
-    "title_en": "Travel Expense Assistance for Overseas Research (Awarded)",
-    "organization": "公益財団法人電気通信普及財団",
-    "organization_en": "The Telecommunications Advancement Foundation (TAF)",
-    "amount": "¥320,000",
-    "link": "https://www.taf.or.jp/files/items/2253/File/2025%E5%B9%B4%E5%BA%A6%E6%B5%B7%E5%A4%96%E6%B8%A1%E8%88%AA%E6%97%85%E8%B2%BB%E6%8F%B4%E5%8A%A9%E5%AE%9F%E7%B8%BE.pdf",
-    "link_tag": "Link",
-    "tags": ["grant"]
   }
 ]
