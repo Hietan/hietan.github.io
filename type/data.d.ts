@@ -55,6 +55,7 @@ export type JsonPresentations = {
   event?: string;
   link_href?: string;
   link_label?: string;
+  tags?: string[];
 };
 
 export type JsonAwards = {

@@ -1,6 +1,7 @@
 import {getLocale, getTranslations} from "next-intl/server";
 import AwardList from "@/app/components/AwardList";
 import PaperList from "@/app/components/PaperList";
+import PresentationList from "@/app/components/PresentationList";
 import ProfileCard from "@/app/components/ProfileCard";
 import Section from "@/app/components/Section";
 import Table from "@/app/components/Table";
@@ -54,7 +55,7 @@ export default async function Home() {
         <PaperList papers={papers} t={tTable} tTags={tTags} />
       </Section>
       <Section title={t("sections.presentations")}>
-        <Table data={buildPresentationsTable(presentations, tTable)} />
+        <PresentationList presentations={presentations} tTags={tTags} />
       </Section>
       <Section title={t("sections.activities")}>
         <Table data={buildWorksTable(works, tTable)} />
