@@ -1,5 +1,66 @@
 @import "tailwindcss";
 
+/* =============================================
+   和風グリーン カラーテーマ
+   抹茶・深緑・苔・竹をベースとした配色
+   ============================================= */
+
+:root {
+  --color-accent:        #3d6349; /* 抹茶 matcha */
+  --color-accent-hover:  #2d4a37; /* 深緑 dark */
+  --color-accent-active: #1e3325; /* 最深緑 deepest */
+  --color-accent-subtle: #eff4f1; /* 薄萌葱 pale green for hovers */
+}
+
+/* Carbon トークン上書き（body / g10 テーマと同レベル） */
+body,
+[data-carbon-theme="g10"],
+[data-carbon-theme="white"] {
+  /* Links */
+  --cds-link-primary:            #3d6349;
+  --cds-link-primary-hover:      #2d4a37;
+  --cds-link-visited:            #3d6349;
+  --cds-link-inverse:            #8ab89a;
+
+  /* Interactive / Focus */
+  --cds-interactive:             #3d6349;
+  --cds-focus:                   #3d6349;
+  --cds-border-interactive:      #3d6349;
+
+  /* Primary Button */
+  --cds-button-primary:          #3d6349;
+  --cds-button-primary-hover:    #2d4a37;
+  --cds-button-primary-active:   #1e3325;
+
+  /* Layer hover — subtle green tint */
+  --cds-layer-hover:    #eff4f1;
+  --cds-layer-hover-01: #eff4f1;
+  --cds-layer-hover-02: #e5ede8;
+  --cds-layer-hover-03: #dce7e0;
+}
+
+/* Theme コンポーネント内でも適用 */
+.cds--white,
+.cds--g10 {
+  --cds-link-primary:            #3d6349;
+  --cds-link-primary-hover:      #2d4a37;
+  --cds-link-visited:            #3d6349;
+  --cds-interactive:             #3d6349;
+  --cds-focus:                   #3d6349;
+  --cds-border-interactive:      #3d6349;
+  --cds-button-primary:          #3d6349;
+  --cds-button-primary-hover:    #2d4a37;
+  --cds-button-primary-active:   #1e3325;
+  --cds-layer-hover:    #eff4f1;
+  --cds-layer-hover-01: #eff4f1;
+  --cds-layer-hover-02: #e5ede8;
+  --cds-layer-hover-03: #dce7e0;
+}
+
+/* =============================================
+   Layout
+   ============================================= */
+
 .cds--data-table tbody th .cds--table-header-label {
     color: var(--cds-text-primary);
     font-weight: bold;
