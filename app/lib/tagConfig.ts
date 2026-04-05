@@ -86,6 +86,10 @@ export const TAG_STYLES: Record<string, TagStyle> = {
     background: "#e8e4d8",
     color: "#1a1a1a",
   },
+  book: {
+    background: "#e0d8e8",
+    color: "#1a1a1a",
+  },
 };
 
 export const DEFAULT_TAG_STYLE: TagStyle = {

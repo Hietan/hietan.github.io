@@ -25,11 +25,11 @@ export type JsonWorks = {
 
 export type JsonPublications = {
   date: string;
-  tag?: string;
   title: string;
   info?: string;
   link?: string;
   link_tag?: string;
+  tags?: string[];
 };
 
 export type JsonPapers = {

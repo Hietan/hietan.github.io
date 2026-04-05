@@ -35,7 +35,7 @@ export const buildPublicationsTable = (publications: JsonPublications[], t: Tran
   header: [t("yearMonth"), t("tag"), t("title"), t("info"), t("link")],
   body: publications.map((publication, index) => [
     publication.date,
-    publication.tag ?? "",
+    publication.tags?.join(", ") ?? "",
     publication.title,
     publication.info ?? "",
     buildLinkCell(publication.link, publication.link_tag, `publication-link-${index}`, t("view")),

@@ -58,7 +58,7 @@ export default async function Home() {
         <WorkList works={works} tTags={tTags} />
       </Section>
       <Section title={t("sections.publications")}>
-        <PublicationList publications={publications} />
+        <PublicationList publications={publications} tTags={tTags} />
       </Section>
     </>
   );

@@ -74,7 +74,8 @@
     "presenter": "Presenter",
     "lecture": "Talk",
     "review": "Review",
-    "organizing": "Organizing"
+    "organizing": "Organizing",
+    "book": "Book"
   },
   "table": {
     "yearMonth": "Year / Month",
