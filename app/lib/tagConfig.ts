@@ -15,32 +15,32 @@ export type TagStyle = {
  */
 export const TAG_STYLES: Record<string, TagStyle> = {
   first_author: {
-    background: "#1e3325",
-    color: "#ffffff",
+    background: "#d6e8db",
+    color: "#1a1a1a",
   },
   peer_reviewed: {
-    background: "#3d6349",
-    color: "#ffffff",
+    background: "#dde8d8",
+    color: "#1a1a1a",
   },
   international: {
-    background: "#4a5e35",
-    color: "#ffffff",
+    background: "#dfe8d0",
+    color: "#1a1a1a",
   },
   domestic: {
-    background: "#6b5c35",
-    color: "#ffffff",
+    background: "#e8e0d0",
+    color: "#1a1a1a",
   },
   oral: {
-    background: "#3b5248",
-    color: "#ffffff",
+    background: "#d5e4de",
+    color: "#1a1a1a",
   },
   poster: {
-    background: "#5a6e40",
-    color: "#ffffff",
+    background: "#dfe8d3",
+    color: "#1a1a1a",
   },
 };
 
 export const DEFAULT_TAG_STYLE: TagStyle = {
-  background: "#3d4a3e",
-  color: "#ffffff",
+  background: "#dde8dc",
+  color: "#1a1a1a",
 };

@@ -15,7 +15,7 @@ const PaperTag = ({tag, t}: Props) => {
   return (
     <span
       className={styles.tag}
-      style={{background: style.background, color: style.color, borderColor: style.background}}
+      style={{background: style.background, color: style.color, borderColor: "rgba(0,0,0,0.15)"}}
     >
       {label}
     </span>
