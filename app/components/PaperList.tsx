@@ -36,13 +36,6 @@ const PaperList = ({papers, tTags}: Props) => (
       return (
         <li key={i} className={`${styles.item}${paper.link_href ? ` ${styles.linked}` : ""}`}>
           <div className={styles.content}>
-            {paper.tags && paper.tags.length > 0 && (
-              <div className={styles.tags}>
-                {paper.tags.map(tag => (
-                  <PaperTag key={tag} tag={tag} t={tTags} />
-                ))}
-              </div>
-            )}
             <div className={styles.title}>{paper.title}</div>
             <div className={styles.authors}>
               <ListComma items={authorNodes} />
@@ -57,6 +50,9 @@ const PaperList = ({papers, tTags}: Props) => (
               </Link>
             )}
             <CiteButton paper={paper} />
+            {paper.tags && paper.tags.map(tag => (
+              <PaperTag key={tag} tag={tag} t={tTags} />
+            ))}
           </div>
         </li>
       );
