@@ -70,6 +70,10 @@ export const TAG_STYLES: Record<string, TagStyle> = {
     background: "#d0e0d8",
     color: "#1a1a1a",
   },
+  presenter: {
+    background: "#e0dcd5",
+    color: "#1a1a1a",
+  },
 };
 
 export const DEFAULT_TAG_STYLE: TagStyle = {

@@ -70,7 +70,8 @@
     "msr": "MSR",
     "ease": "EASE",
     "cog": "CoG",
-    "core_a": "CORE A"
+    "core_a": "CORE A",
+    "presenter": "登壇発表"
   },
   "table": {
     "yearMonth": "年 / 月",
