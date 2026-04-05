@@ -4,17 +4,17 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 0;
 }
 
 .item {
-  padding-bottom: 1.25rem;
+  padding: 1rem 1rem;
   border-bottom: 1px solid var(--cds-border-subtle);
+  background: var(--cds-layer);
 }
 
-.item:last-child {
-  padding-bottom: 0;
-  border-bottom: none;
+.item:first-child {
+  border-top: 1px solid var(--cds-border-subtle);
 }
 
 .title {
@@ -22,6 +22,7 @@
   font-size: 0.9375rem;
   line-height: 1.4;
   margin-bottom: 0.25rem;
+  color: var(--cds-text-primary);
 }
 
 .authors {

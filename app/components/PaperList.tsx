@@ -31,15 +31,7 @@ const PaperList = ({papers, t}: Props) => (
       const authorNodes = buildAuthors(paper.authors, paper.index_me);
       return (
         <li key={i} className={styles.item}>
-          <div className={styles.title}>
-            {paper.link_href ? (
-              <Link href={paper.link_href} target="_blank" rel="noopener noreferrer">
-                {paper.title}
-              </Link>
-            ) : (
-              paper.title
-            )}
-          </div>
+          <div className={styles.title}>{paper.title}</div>
           <div className={styles.authors}>
             <ListComma items={authorNodes} />
           </div>
