@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import cx from "@/app/lib/cx";
 import LinkList from "@/app/components/LinkList";
 import SnsList from "@/app/components/SnsList";
 import linksResearch from "@/app/data/research/link_research";
@@ -7,8 +8,6 @@ import linksSns from "@/app/data/general/link_sns";
 import type {LinkLabel, LinkSns} from "@/type/data";
 
 import styles from "./ProfileCard.module.css";
-
-const cx = (...classes: Array<string | false | undefined>) => classes.filter(Boolean).join(" ");
 
 type Variant = "sidebar" | "hero";
 

@@ -1,9 +1,8 @@
+import cx from "@/app/lib/cx";
 import LinkIconLabel from "@/app/components/LinkIconLabel";
 import type {LinkLabel} from "@/type/data";
 
 import styles from "./LinkList.module.css";
-
-const cx = (...classes: Array<string | false | undefined>) => classes.filter(Boolean).join(" ");
 
 type Orientation = "vertical" | "horizontal";
 

@@ -1,9 +1,9 @@
 import {Link} from "@carbon/react";
-import {LinkSns} from "@/type/data";
+import type {LinkSns} from "@/type/data";
 
 type LinkIconSnsProps = LinkSns;
 
-const LinkIconSns = ({ href, ariaLabel, icon: Icon }: LinkIconSnsProps) => (
+const LinkIconSns = ({href, ariaLabel, icon: Icon}: LinkIconSnsProps) => (
   <Link
     href={href}
     aria-label={ariaLabel}

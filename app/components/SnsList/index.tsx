@@ -1,3 +1,4 @@
+import cx from "@/app/lib/cx";
 import LinkIconSns from "@/app/components/LinkIconSns";
 import type {LinkSns} from "@/type/data";
 
@@ -10,8 +11,6 @@ type Props = {
   orientation?: Orientation;
   className?: string;
 };
-
-const cx = (...classes: Array<string | false | undefined>) => classes.filter(Boolean).join(" ");
 
 const SnsList = ({items, orientation = "horizontal", className}: Props) => {
   const isVertical = orientation === "vertical";

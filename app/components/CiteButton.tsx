@@ -1,8 +1,10 @@
 "use client";
 
 import {useState} from "react";
-import {Button, CodeSnippet, Modal, Tab, TabList, TabPanel, TabPanels, Tabs} from "@carbon/react";
+import {CodeSnippet, Modal, Tab, TabList, TabPanel, TabPanels, Tabs} from "@carbon/react";
 import type {JsonPapers} from "@/type/data";
+
+import styles from "./CiteButton.module.css";
 
 type Props = {
   paper: JsonPapers;
@@ -41,9 +43,9 @@ export default function CiteButton({paper}: Props) {
 
   return (
     <>
-      <Button kind="ghost" size="sm" onClick={() => setOpen(true)}>
-        Cite
-      </Button>
+      <button className={styles.citeLink} onClick={() => setOpen(true)}>
+        [Cite]
+      </button>
       <Modal
         open={open}
         onRequestClose={() => setOpen(false)}
