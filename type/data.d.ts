@@ -38,6 +38,8 @@ export type JsonPapers = {
   authors: string[];
   index_me?: number;
   venue?: string;
+  venue_short?: string;
+  core_rank?: string;
   link_href?: string;
   link_label?: string;
   tags?: string[];

@@ -40,7 +40,17 @@ const PaperList = ({papers, tTags}: Props) => (
             <div className={styles.authors}>
               <ListComma items={authorNodes} />
             </div>
-            {paper.venue && <div className={styles.venue}>{paper.venue}</div>}
+            {paper.venue && (
+              <div className={styles.venue}>
+                {paper.venue}
+                {(paper.venue_short || paper.core_rank) && (
+                  <span className={styles.venueMeta}>
+                    {paper.venue_short && <span className={styles.venueShort}>{paper.venue_short}</span>}
+                    {paper.core_rank && <span className={styles.coreRank}>CORE {paper.core_rank}</span>}
+                  </span>
+                )}
+              </div>
+            )}
           </div>
           <div className={styles.actions}>
             <span className={styles.date}>{formatYearMonth(paper.year, paper.month)}</span>
