@@ -52,6 +52,12 @@
 @media (max-width: 672px) {
   .header {
     padding: 0 0.75rem;
+    justify-content: center;
+  }
+
+  .nav {
+    margin-left: 0;
+    justify-content: center;
   }
 
   .navItem {
