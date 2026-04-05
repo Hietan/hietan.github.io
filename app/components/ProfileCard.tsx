@@ -68,7 +68,7 @@ const ProfileCard = ({
       {(sns?.length ?? 0) > 0 && (
         <SnsList
           items={sns ?? []}
-          orientation="horizontal"
+          orientation={isHero ? "vertical" : "horizontal"}
           className={isHero ? styles.heroSns : styles.sidebarSns}
         />
       )}

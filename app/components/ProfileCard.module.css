@@ -90,6 +90,15 @@
 }
 
 @media (max-width: 672px) {
+  .heroSns {
+    flex-direction: row !important;
+    height: auto !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 672px) {
   .hero {
     flex-direction: column;
   }
