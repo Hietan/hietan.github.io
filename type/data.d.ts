@@ -20,6 +20,7 @@ export type JsonWorks = {
   venue?: string;
   link?: string;
   link_tag?: string;
+  tags?: string[];
 };
 
 export type JsonPublications = {

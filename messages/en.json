@@ -71,7 +71,10 @@
     "ease": "EASE",
     "cog": "CoG",
     "core_a": "CORE A",
-    "presenter": "Presenter"
+    "presenter": "Presenter",
+    "lecture": "Talk",
+    "review": "Review",
+    "organizing": "Organizing"
   },
   "table": {
     "yearMonth": "Year / Month",

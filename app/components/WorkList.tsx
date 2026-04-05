@@ -1,14 +1,18 @@
 import {Link, Theme} from "@carbon/react";
 
+import PaperTag from "@/app/components/PaperTag";
 import type {JsonWorks} from "@/type/data";
 
 import styles from "./WorkList.module.css";
 
+type TranslateFn = (key: string) => string;
+
 type Props = {
   works: JsonWorks[];
+  tTags: TranslateFn;
 };
 
-const WorkList = ({works}: Props) => (
+const WorkList = ({works, tTags}: Props) => (
   <Theme theme="g10">
   <ol className={styles.list}>
     {works.map((work, i) => (
@@ -24,6 +28,9 @@ const WorkList = ({works}: Props) => (
               [{work.link_tag}]
             </Link>
           )}
+          {work.tags && work.tags.map(tag => (
+            <PaperTag key={tag} tag={tag} t={tTags} />
+          ))}
         </div>
       </li>
     ))}
