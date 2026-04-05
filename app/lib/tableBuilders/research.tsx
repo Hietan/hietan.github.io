@@ -5,10 +5,12 @@ import ListComma from "@/app/components/ListComma";
 import type {JsonAwards, JsonPapers, JsonPresentations, JsonPublications, JsonWorks} from "@/type/data";
 import type {DataTable} from "@/type/table";
 
-const buildLinkCell = (href?: string, label?: string, key?: string) =>
+type TranslateFn = (key: string) => string;
+
+const buildLinkCell = (href?: string, label?: string, key?: string, viewText = "View") =>
   href ? (
     <Link key={key} href={href} target="_blank" rel="noopener noreferrer">
-      {label ?? "View"}
+      {label ?? viewText}
     </Link>
   ) : (
     ""
@@ -19,35 +21,35 @@ const formatYearMonth = (year: number, month: number) => {
   return `${year}-${paddedMonth}`;
 };
 
-export const buildWorksTable = (works: JsonWorks[]): DataTable => ({
-  header: ["Year / Month", "Title", "Venue", "Link"],
+export const buildWorksTable = (works: JsonWorks[], t: TranslateFn): DataTable => ({
+  header: [t("yearMonth"), t("title"), t("venue"), t("link")],
   body: works.map((work, index) => [
     work.date,
     work.title,
     work.venue ?? "",
-    buildLinkCell(work.link, work.link_tag, `work-link-${index}`),
+    buildLinkCell(work.link, work.link_tag, `work-link-${index}`, t("view")),
   ]),
 });
 
-export const buildPublicationsTable = (publications: JsonPublications[]): DataTable => ({
-  header: ["Year / Month", "Tag", "Title", "Info", "Link"],
+export const buildPublicationsTable = (publications: JsonPublications[], t: TranslateFn): DataTable => ({
+  header: [t("yearMonth"), t("tag"), t("title"), t("info"), t("link")],
   body: publications.map((publication, index) => [
     publication.date,
     publication.tag ?? "",
     publication.title,
     publication.info ?? "",
-    buildLinkCell(publication.link, publication.link_tag, `publication-link-${index}`),
+    buildLinkCell(publication.link, publication.link_tag, `publication-link-${index}`, t("view")),
   ]),
 });
 
-export const buildAwardsTable = (awards: JsonAwards[]): DataTable => ({
-  header: ["Year / Month", "Award", "Work Title", "Event", "Link"],
+export const buildAwardsTable = (awards: JsonAwards[], t: TranslateFn): DataTable => ({
+  header: [t("yearMonth"), t("award"), t("workTitle"), t("event"), t("link")],
   body: awards.map((award, index) => [
     award.date,
     award.title,
     award.work_title,
     award.event ?? "",
-    buildLinkCell(award.link, award.link_tag, `award-link-${index}`),
+    buildLinkCell(award.link, award.link_tag, `award-link-${index}`, t("view")),
   ]),
 });
 
@@ -90,8 +92,8 @@ const buildAuthors = (
     return <span key={key}>{author}</span>;
   });
 
-export const buildPapersTable = (papers: JsonPapers[]): DataTable => ({
-  header: ["Year / Month", "Title", "Authors", "Venue", "Link"],
+export const buildPapersTable = (papers: JsonPapers[], t: TranslateFn): DataTable => ({
+  header: [t("yearMonth"), t("title"), t("authors"), t("venue"), t("link")],
   body: papers.map((paper, paperIndex) => {
     const authorsNodes = buildAuthors(paper.authors, paper.index_me, undefined, `paper-${paperIndex}`);
     return [
@@ -99,13 +101,13 @@ export const buildPapersTable = (papers: JsonPapers[]): DataTable => ({
       paper.title,
       <ListComma key={`paper-authors-${paperIndex}`} items={authorsNodes} />,
       paper.venue ?? "",
-      buildLinkCell(paper.link_href, paper.link_label, `paper-link-${paperIndex}`),
+      buildLinkCell(paper.link_href, paper.link_label, `paper-link-${paperIndex}`, t("view")),
     ];
   }),
 });
 
-export const buildPresentationsTable = (presentations: JsonPresentations[]): DataTable => ({
-  header: ["Year / Month", "Title", "Authors", "Event", "Link"],
+export const buildPresentationsTable = (presentations: JsonPresentations[], t: TranslateFn): DataTable => ({
+  header: [t("yearMonth"), t("title"), t("authors"), t("event"), t("link")],
   body: presentations.map((presentation, presentationIndex) => {
     const authorsNodes = buildAuthors(
       presentation.authors,
@@ -119,7 +121,7 @@ export const buildPresentationsTable = (presentations: JsonPresentations[]): Dat
       presentation.title,
       <ListComma key={`presentation-authors-${presentationIndex}`} items={authorsNodes} />,
       presentation.event ?? "",
-      buildLinkCell(presentation.link_href, presentation.link_label, `presentation-link-${presentationIndex}`),
+      buildLinkCell(presentation.link_href, presentation.link_label, `presentation-link-${presentationIndex}`, t("view")),
     ];
   }),
 });

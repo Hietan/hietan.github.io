@@ -12,10 +12,11 @@
     "@carbon/icons-react": "^11.70.0",
     "@carbon/react": "^1.94.1",
     "@carbon/styles": "^1.93.1",
-    "react-icons": "^4",
     "next": "16.0.10",
+    "next-intl": "^4.9.0",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "react-icons": "^4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

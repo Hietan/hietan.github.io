@@ -1,32 +1,44 @@
 import type {Metadata} from "next";
+import {NextIntlClientProvider} from "next-intl";
+import {getLocale, getMessages, getTranslations} from "next-intl/server";
 import "@carbon/styles/css/styles.css";
 import "./globals.css";
 import ProfileSidebar from "@/app/components/ProfileSidebar";
 import {LAYOUT_PADDING, SIDEBAR_WIDTH} from "@/app/lib/layout/constants";
 
-export const metadata: Metadata = {
-  title: "Kazuma Yamasaki | Research Profile",
-  description:
-    "Research Profile of Kazuma Yamasaki — Ph.D. Student at the Software Engineering Lab., Nara Institute of Science and Technology (NAIST)",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("metadata");
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+  const t = await getTranslations();
+
   return (
-    <html lang="en">
-      <body
-        data-carbon-theme="g10"
-      >
-        <ProfileSidebar />
-        <main
-          className="layout__main"
-          style={{marginLeft: SIDEBAR_WIDTH, display: "grid", gap: "1rem", padding: LAYOUT_PADDING}}
-        >
-          {children}
-        </main>
+    <html lang={locale}>
+      <body data-carbon-theme="g10">
+        <NextIntlClientProvider messages={messages}>
+          <ProfileSidebar
+            role={t("profile.role")}
+            affiliation={t("profile.affiliation")}
+            ofText={t("profile.of")}
+          />
+          <main
+            className="layout__main"
+            style={{marginLeft: SIDEBAR_WIDTH, display: "grid", gap: "1rem", padding: LAYOUT_PADDING}}
+          >
+            {children}
+          </main>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

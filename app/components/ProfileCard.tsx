@@ -18,6 +18,7 @@ export type ProfileCardProps = {
   nameEn?: string;
   role?: string;
   affiliation?: string;
+  ofText?: string;
   links?: LinkLabel[];
   sns?: LinkSns[];
   variant?: Variant;
@@ -29,6 +30,7 @@ const ProfileCard = ({
   nameEn = "Kazuma Yamasaki",
   role = "Ph.D. Student",
   affiliation = "Nara Institute of Science and Technology (NAIST)",
+  ofText = "of",
   links = linksResearch,
   sns = linksSns,
   variant = "sidebar",
@@ -52,7 +54,7 @@ const ProfileCard = ({
           <div className={styles.nameEn}>{nameEn}</div>
           <div className={styles.meta}>
             <p>
-              <strong>{role}</strong> <small>of</small>
+              <strong>{role}</strong>{ofText ? <> <small>{ofText}</small></> : null}
             </p>
             <p>
               <strong>{affiliation}</strong>

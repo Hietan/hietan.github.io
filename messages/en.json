@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "title": "Kazuma Yamasaki | Research Profile",
+    "description": "Research Profile of Kazuma Yamasaki — Ph.D. Student at the Software Engineering Lab., Nara Institute of Science and Technology (NAIST)"
+  },
+  "layout": {
+    "profileSidebar": "Profile sidebar"
+  },
+  "profile": {
+    "role": "Ph.D. Student",
+    "affiliation": "Nara Institute of Science and Technology (NAIST)",
+    "of": "of"
+  },
+  "sections": {
+    "profileInformation": "Profile Information",
+    "researchInterest": "Research Interest",
+    "education": "Education",
+    "papers": "Papers",
+    "awards": "Awards",
+    "presentations": "Presentations",
+    "activities": "Activities",
+    "publications": "Publications"
+  },
+  "information": {
+    "name": "Name",
+    "affiliation": "Affiliation",
+    "laboratory": "Laboratory",
+    "degree": "Degree",
+    "email": "Email",
+    "nameValue": "Kazuma Yamasaki (山﨑 和真)",
+    "affiliationValue": "Nara Institute of Science and Technology (NAIST), Japan",
+    "laboratoryValue": "Software Engineering Laboratory",
+    "degreeValue": "Ph.D. Student (Year 1)",
+    "emailValue": "yamasaki.kazuma.yj9@naist.ac.jp"
+  },
+  "researchInterest": {
+    "area": "Research Area",
+    "keywords": "Keywords",
+    "topics": "Research Topics",
+    "areaValue": "Software Engineering, Programming Language, Computer Science",
+    "keywordsValue": "AI (Artificial Intelligence), LLM (Large Language Model), Software Library, Breaking Change",
+    "topic1": "AI oriented Programming Language (AIoPL)",
+    "topic2": "Breaking Change Detection using Dynamic Analysis",
+    "topic3": "Vulnerability Detection using LLMs",
+    "topic4": "Analyzing Migration Guides in Software Libraries"
+  },
+  "education": {
+    "period": "Period",
+    "degree": "Degree",
+    "institution": "Institution",
+    "bachelor": "Bachelor",
+    "master": "Master",
+    "doctor": "Doctor",
+    "doshisha": "Doshisha University",
+    "naist": "Nara Institute of Science and Technology (NAIST)",
+    "present": "Present"
+  },
+  "table": {
+    "yearMonth": "Year / Month",
+    "title": "Title",
+    "authors": "Authors",
+    "venue": "Venue",
+    "link": "Link",
+    "tag": "Tag",
+    "info": "Info",
+    "award": "Award",
+    "workTitle": "Work Title",
+    "event": "Event",
+    "view": "View"
+  }
+}

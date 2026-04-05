@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "title": "山﨑 和真 | 研究プロフィール",
+    "description": "山﨑 和真の研究プロフィール — 奈良先端科学技術大学院大学（NAIST）ソフトウェア工学研究室 博士後期課程"
+  },
+  "layout": {
+    "profileSidebar": "プロフィールサイドバー"
+  },
+  "profile": {
+    "role": "博士後期課程",
+    "affiliation": "奈良先端科学技術大学院大学（NAIST）",
+    "of": "@"
+  },
+  "sections": {
+    "profileInformation": "プロフィール",
+    "researchInterest": "研究内容",
+    "education": "学歴",
+    "papers": "論文",
+    "awards": "受賞",
+    "presentations": "発表",
+    "activities": "活動",
+    "publications": "出版物"
+  },
+  "information": {
+    "name": "氏名",
+    "affiliation": "所属",
+    "laboratory": "研究室",
+    "degree": "学位",
+    "email": "メール",
+    "nameValue": "山﨑 和真（Kazuma Yamasaki）",
+    "affiliationValue": "奈良先端科学技術大学院大学（NAIST）",
+    "laboratoryValue": "ソフトウェア工学研究室",
+    "degreeValue": "博士後期課程（1年）",
+    "emailValue": "yamasaki.kazuma.yj9@naist.ac.jp"
+  },
+  "researchInterest": {
+    "area": "研究分野",
+    "keywords": "キーワード",
+    "topics": "研究トピック",
+    "areaValue": "ソフトウェア工学，プログラミング言語，コンピュータサイエンス",
+    "keywordsValue": "AI（人工知能），LLM（大規模言語モデル），ソフトウェアライブラリ，破壊的変更",
+    "topic1": "AI 指向プログラミング言語（AIoPL）",
+    "topic2": "動的解析による破壊的変更検出",
+    "topic3": "LLM を用いた脆弱性検出",
+    "topic4": "ソフトウェアライブラリにおけるマイグレーションガイドの分析"
+  },
+  "education": {
+    "period": "期間",
+    "degree": "学位",
+    "institution": "機関",
+    "bachelor": "学士",
+    "master": "修士",
+    "doctor": "博士（後期）",
+    "doshisha": "同志社大学",
+    "naist": "奈良先端科学技術大学院大学（NAIST）",
+    "present": "現在"
+  },
+  "table": {
+    "yearMonth": "年 / 月",
+    "title": "タイトル",
+    "authors": "著者",
+    "venue": "会場",
+    "link": "リンク",
+    "tag": "タグ",
+    "info": "情報",
+    "award": "受賞",
+    "workTitle": "タイトル",
+    "event": "イベント",
+    "view": "表示"
+  }
+}

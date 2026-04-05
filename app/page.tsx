@@ -1,45 +1,64 @@
+import {getTranslations} from "next-intl/server";
 import ProfileCard from "@/app/components/ProfileCard";
 import Section from "@/app/components/Section";
 import Table from "@/app/components/Table";
 import TableRowHeader from "@/app/components/TableRowHeader";
-import dataProfileInformation from "@/app/data/profile/information";
-import dataResearchInterest from "@/app/data/profile/researchInterest";
-import dataEducation from "@/app/data/research/education";
-import dataAwards from "@/app/data/research/awards";
-import dataPapers from "@/app/data/research/papers";
-import dataPresentations from "@/app/data/research/presentations";
-import dataWorks from "@/app/data/research/works";
-import dataPublications from "@/app/data/research/publications";
+import {buildProfileInformation} from "@/app/data/profile/information";
+import {buildResearchInterest} from "@/app/data/profile/researchInterest";
+import {buildEducation} from "@/app/data/research/education";
+import papers from "@/app/data/research/papers";
+import awards from "@/app/data/research/awards";
+import presentations from "@/app/data/research/presentations";
+import works from "@/app/data/research/works";
+import publications from "@/app/data/research/publications";
+import {
+  buildPapersTable,
+  buildAwardsTable,
+  buildPresentationsTable,
+  buildWorksTable,
+  buildPublicationsTable,
+} from "@/app/lib/tableBuilders/research";
 
-export default function Home() {
+export default async function Home() {
+  const t = await getTranslations();
+  const tTable = await getTranslations("table");
+  const tInfo = await getTranslations("information");
+  const tResearch = await getTranslations("researchInterest");
+  const tEducation = await getTranslations("education");
+
   return (
     <>
       <Section className="profile-hero-section">
-        <ProfileCard variant="hero" />
+        <ProfileCard
+          variant="hero"
+          role={t("profile.role")}
+          affiliation={t("profile.affiliation")}
+          ofText={t("profile.of")}
+        />
       </Section>
-      <Section title="Profile Information">
-        <TableRowHeader data={dataProfileInformation} />
+      <Section title={t("sections.profileInformation")}>
+        <TableRowHeader data={buildProfileInformation(tInfo)} />
       </Section>
-      <Section title="Research Interest">
-        <TableRowHeader data={dataResearchInterest} />
+      <Section title={t("sections.researchInterest")}>
+        <TableRowHeader data={buildResearchInterest(tResearch)} />
       </Section>
-      <Section title="Education">
-        <Table data={dataEducation} />
+      <Section title={t("sections.education")}>
+        <Table data={buildEducation(tEducation)} />
       </Section>
-      <Section title="Papers">
-        <Table data={dataPapers} />
+      <Section title={t("sections.papers")}>
+        <Table data={buildPapersTable(papers, tTable)} />
       </Section>
-      <Section title="Awards">
-        <Table data={dataAwards} />
+      <Section title={t("sections.awards")}>
+        <Table data={buildAwardsTable(awards, tTable)} />
       </Section>
-      <Section title="Presentations">
-        <Table data={dataPresentations} />
+      <Section title={t("sections.presentations")}>
+        <Table data={buildPresentationsTable(presentations, tTable)} />
       </Section>
-      <Section title="Activities">
-        <Table data={dataWorks} />
+      <Section title={t("sections.activities")}>
+        <Table data={buildWorksTable(works, tTable)} />
       </Section>
-      <Section title="Publications">
-        <Table data={dataPublications} />
+      <Section title={t("sections.publications")}>
+        <Table data={buildPublicationsTable(publications, tTable)} />
       </Section>
     </>
   );
