@@ -2,6 +2,18 @@
   {
     "year": 2025,
     "month": 12,
+    "title": "A Preliminary Study on Migration Guide Provisioning and Usage",
+    "authors": ["Takahiro Monno", "Kazumasa Shimari", "Tetsuya Kanda", "Kazuma Yamasaki", "Kenichi Matsumoto"],
+    "index_presenter": 1,
+    "index_me": 4,
+    "event": "6th Workshop for Next-Generation Software Ecosystems (ECO)",
+    "link_href": "https://naist-se.github.io/HP_Workshop_GAIA_ECO/",
+    "link_label": "View",
+    "tags": ["oral"]
+  },
+  {
+    "year": 2025,
+    "month": 12,
     "title": "Do LLMs Need Type Annotations?",
     "authors": ["Kazuma Yamasaki", "Kazumasa Shimari", "Kenichi Matsumoto"],
     "index_presenter": 1,
