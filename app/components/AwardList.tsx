@@ -11,9 +11,10 @@ type Props = {
   awards: JsonAwards[];
   locale: string;
   tTags: TranslateFn;
+  note?: string;
 };
 
-const AwardList = ({awards, locale, tTags}: Props) => (
+const AwardList = ({awards, locale, tTags, note}: Props) => (
   <Theme theme="g10">
   <ol className={styles.list}>
     {awards.map((award, i) => {
@@ -33,7 +34,7 @@ const AwardList = ({awards, locale, tTags}: Props) => (
                   <div className={styles.sub}>
                     {award.event}
                     {award.event && award.work_title && ", Title: "}
-                    {award.work_title}
+                    {award.work_title && `"${award.work_title}"`}
                   </div>
                 )}
               </>
@@ -64,6 +65,7 @@ const AwardList = ({awards, locale, tTags}: Props) => (
       );
     })}
   </ol>
+  {note && <p className={styles.note}>{note}</p>}
   </Theme>
 );
 

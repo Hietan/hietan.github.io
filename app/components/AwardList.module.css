@@ -57,3 +57,10 @@
   font-weight: 500;
   color: var(--cds-text-primary);
 }
+
+.note {
+  margin: 0.75rem 0.5rem 0;
+  font-size: 0.8125rem;
+  color: var(--cds-text-secondary);
+  font-style: italic;
+}

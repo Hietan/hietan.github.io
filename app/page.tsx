@@ -48,7 +48,7 @@ export default async function Home() {
         <Table data={buildEducation(tEducation)} />
       </Section>
       <Section title={t("sections.awards")}>
-        <AwardList awards={awards} locale={locale} tTags={tTags} />
+        <AwardList awards={awards} locale={locale} tTags={tTags} note={t("sections.awardsNote")} />
       </Section>
       <Section title={t("sections.papers")}>
         <PaperList papers={papers} t={tTable} tTags={tTags} />
