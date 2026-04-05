@@ -83,7 +83,7 @@
 }
 
 .heroLinks {
-  margin-left: 0;
+  margin-left: auto;
 }
 
 @media (max-width: 672px) {
