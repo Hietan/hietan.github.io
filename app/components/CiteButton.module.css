@@ -13,3 +13,66 @@
   color: var(--cds-link-primary-hover);
   text-decoration: underline;
 }
+
+.tabBar {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border-bottom: 1px solid var(--cds-border-subtle);
+  margin-bottom: 0.75rem;
+}
+
+.tabBtn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: var(--cds-text-secondary);
+  margin-bottom: -1px;
+}
+
+.tabBtn:hover {
+  color: var(--cds-text-primary);
+  background: var(--cds-layer-hover);
+}
+
+.tabActive {
+  color: var(--cds-text-primary);
+  border-bottom-color: var(--cds-interactive);
+  font-weight: 600;
+}
+
+.copyBtn {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--cds-border-subtle);
+  border-radius: 2px;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-family: inherit;
+  color: var(--cds-text-secondary);
+}
+
+.copyBtn:hover {
+  background: var(--cds-layer-hover);
+  color: var(--cds-text-primary);
+}
+
+.codeBlock {
+  cursor: pointer;
+  background: var(--cds-layer);
+  border: 1px solid var(--cds-border-subtle);
+  border-radius: 2px;
+  padding: 1rem;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 0;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  color: var(--cds-text-primary);
+}

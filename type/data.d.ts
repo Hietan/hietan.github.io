@@ -41,6 +41,9 @@ export type JsonPapers = {
   venue?: string;
   venue_short?: string;
   core_rank?: string;
+  doi?: string;
+  pages?: string;
+  address?: string;
   link_href?: string;
   link_label?: string;
   tags?: string[];

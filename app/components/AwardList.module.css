@@ -26,6 +26,7 @@
   white-space: nowrap;
   font-weight: 500;
   color: var(--cds-text-primary);
+  margin-left: 0.5rem;
 }
 
 .note {

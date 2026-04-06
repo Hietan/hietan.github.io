@@ -2,7 +2,7 @@
   {
     "year": 2025,
     "month": 4,
-    "title": "Mining for lags in updating critical security threats: a case study of Log4j library",
+    "title": "Mining for Lags in Updating Critical Security Threats: A Case Study of Log4j Library",
     "authors": [
       "Hidetake Tanaka",
       "Kazuma Yamasaki",
@@ -15,8 +15,12 @@
     ],
     "index_me": 2,
     "venue": "2025 IEEE/ACM 22nd International Conference on Mining Software Repositories (MSR 2025)",
-    "link_href": "https://arxiv.org/abs/2504.09834",
-    "link_label": "arXiv",
+    "venue_short": "22nd IEEE/ACM Int. Conf. Mining Software Repositories (MSR)",
+    "address": "Ottawa, ON, Canada",
+    "doi": "10.1109/MSR66628.2025.00058",
+    "pages": "319--323",
+    "link_href": "https://ieeexplore.ieee.org/document/11025604/",
+    "link_label": "IEEE Xplore",
     "tags": ["peer_reviewed", "international", "msr", "core_a"]
   },
   {
@@ -33,8 +37,11 @@
     ],
     "index_me": 3,
     "venue": "2025 IEEE Conference on Games (CoG 2025)",
-    "link_href": "https://arxiv.org/abs/2510.17199",
-    "link_label": "arXiv",
+    "venue_short": "2025 IEEE Conf. Games (CoG)",
+    "address": "Lisbon, Portugal",
+    "doi": "10.1109/CoG64752.2025.11114177",
+    "link_href": "https://ieeexplore.ieee.org/document/11114177",
+    "link_label": "IEEE Xplore",
     "tags": ["peer_reviewed", "international", "cog"]
   },
   {
@@ -51,8 +58,11 @@
     ],
     "index_me": 1,
     "venue": "2026 IEEE/ACM 23rd International Conference on Mining Software Repositories (MSR 2026)",
-    "link_href": "https://arxiv.org/abs/2601.20171",
-    "link_label": "arXiv",
+    "venue_short": "23rd IEEE/ACM Int. Conf. Mining Software Repositories (MSR)",
+    "address": "Rio de Janeiro, Brazil",
+    "doi": "10.1145/3793302.3793612",
+    "link_href": "https://dl.acm.org/doi/10.1145/3793302.3793612",
+    "link_label": "ACM DL",
     "tags": ["first_author", "peer_reviewed", "international", "msr", "core_a"]
   },
   {
@@ -68,12 +78,14 @@
     ],
     "index_me": 4,
     "venue": "The 30th International Conference on Evaluation and Assessment in Software Engineering (EASE 2026)",
+    "venue_short": "30th Int. Conf. Evaluation and Assessment in Software Engineering (EASE)",
+    "address": "Glasgow, Scotland, UK",
     "tags": ["peer_reviewed", "international", "ease", "core_a"]
   },
   {
     "year": 2026,
     "month": 4,
-    "title": "How AI Coding Agents Communicate: A Study of Pull Request Characteristics and Human Review Responses",
+    "title": "How AI Coding Agents Communicate: A Study of Pull Request Description Characteristics and Human Review Responses",
     "authors": [
       "Kan Watanabe",
       "Rikuto Tsuchida",
@@ -86,6 +98,8 @@
     ],
     "index_me": 5,
     "venue": "2026 IEEE/ACM 23rd International Conference on Mining Software Repositories (MSR 2026)",
+    "venue_short": "23rd IEEE/ACM Int. Conf. Mining Software Repositories (MSR)",
+    "address": "Rio de Janeiro, Brazil",
     "link_href": "https://arxiv.org/abs/2602.17084",
     "link_label": "arXiv",
     "tags": ["peer_reviewed", "international", "msr", "core_a"]

@@ -1,0 +1,248 @@
+/* Blue Note Tokyo — 新聞スタイル */
+
+.page {
+  min-height: calc(100vh - 3rem);
+  margin-top: 3rem;
+  background: #e8e4dc;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.paper {
+  background: #f2ede3;
+  max-width: 900px;
+  width: 100%;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "游明朝", "Noto Serif JP", Georgia, serif;
+  color: #1a1814;
+  box-sizing: border-box;
+}
+
+/* ── Masthead ─────────────────────────── */
+
+.masthead {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.mastheadTop {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.siteTitle {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "游明朝", Georgia, serif;
+  margin: 0.25rem 0;
+  line-height: 1;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  color: #444;
+  margin: 0.4rem 0 0.6rem;
+}
+
+.edition,
+.date {
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+}
+
+/* ── Rules ────────────────────────────── */
+
+.rule {
+  border: none;
+  border-top: 1px solid #1a1814;
+  margin: 0.4rem 0;
+}
+
+.ruleDouble {
+  border-top: 3px double #1a1814;
+  margin: 0.6rem 0;
+}
+
+/* ── Lead ─────────────────────────────── */
+
+.lead {
+  padding: 1.25rem 0;
+}
+
+.leadContent {
+  display: flex;
+  gap: 2rem;
+  align-items: baseline;
+}
+
+.leadHeadline {
+  font-size: 1.625rem;
+  font-weight: 900;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  flex: 0 0 auto;
+  margin: 0;
+  border-right: 1px solid #1a1814;
+  padding-right: 2rem;
+}
+
+.leadDeck {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #333;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ── Columns ──────────────────────────── */
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 1rem 0;
+}
+
+.col {
+  padding: 0 1.25rem;
+  border-right: 1px solid #c8c2b6;
+}
+
+.col:first-child {
+  padding-left: 0;
+}
+
+.col:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+/* ── Column content ───────────────────── */
+
+.colHead {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 0.3rem;
+}
+
+.colRule {
+  border-top: 1px solid #1a1814;
+  margin-bottom: 0.75rem;
+}
+
+.body {
+  font-size: 0.8125rem;
+  line-height: 1.85;
+  margin: 0 0 0.75rem;
+  text-align: justify;
+}
+
+.instrumentName {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.5rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.9;
+}
+
+.list li::before {
+  content: "— ";
+  color: #666;
+}
+
+/* ── Performances ─────────────────────── */
+
+.performanceItem {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+  align-items: flex-start;
+  font-size: 0.8125rem;
+}
+
+.perfDate {
+  flex-shrink: 0;
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: #555;
+  padding-top: 0.1rem;
+  min-width: 3.5rem;
+}
+
+.perfTitle {
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.perfVenue {
+  color: #555;
+  font-style: italic;
+  font-size: 0.75rem;
+  margin-top: 0.1rem;
+}
+
+/* ── Footer ───────────────────────────── */
+
+.footer {
+  text-align: center;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  color: #666;
+  margin-top: 0.75rem;
+}
+
+/* ── Responsive ───────────────────────── */
+
+@media (max-width: 700px) {
+  .paper {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+  }
+
+  .col {
+    padding: 0;
+    border-right: none;
+    border-bottom: 1px solid #c8c2b6;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .col:last-child {
+    border-bottom: none;
+  }
+
+  .leadContent {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .leadHeadline {
+    border-right: none;
+    border-bottom: 1px solid #1a1814;
+    padding-right: 0;
+    padding-bottom: 0.75rem;
+  }
+}

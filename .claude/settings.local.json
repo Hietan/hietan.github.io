@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(pnpm dev:*)",
-      "Bash(pnpm install:*)"
+      "Bash(pnpm install:*)",
+      "WebFetch(domain:ieeexplore.ieee.org)",
+      "WebSearch",
+      "WebFetch(domain:dl.acm.org)",
+      "WebFetch(domain:k-shimari.github.io)"
     ]
   }
 }

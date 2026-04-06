@@ -1,0 +1,6 @@
+.root {
+  min-height: calc(100vh - 3rem);
+  margin-top: 3rem;
+  background: #0d1117;
+  color: #e6edf3;
+}

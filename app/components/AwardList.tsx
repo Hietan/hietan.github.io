@@ -38,24 +38,20 @@ const AwardList = ({awards, locale, tTags, note}: Props) => {
           ) : (
             <>
               <div className={styles.title}>{title}</div>
-              {organization && (
-                <div className={styles.organization}>{organization}</div>
+              {(organization || award.amount) && (
+                <div className={styles.organization}>
+                  {organization}
+                  {award.amount && <span className={styles.amount}>{award.amount}</span>}
+                </div>
               )}
             </>
           )}
         </>
       ),
       date: award.date,
-      linkArea: (
-        <>
-          {award.amount && (
-            <span className={styles.amount}>{award.amount}</span>
-          )}
-          {award.link && award.link_tag && (
-            <ExternalLink href={award.link}>[{award.link_tag}]</ExternalLink>
-          )}
-        </>
-      ),
+      linkArea: award.link && award.link_tag ? (
+        <ExternalLink href={award.link}>[{award.link_tag}]</ExternalLink>
+      ) : undefined,
       tags: award.tags,
     };
   });

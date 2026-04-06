@@ -9,8 +9,8 @@ import styles from "./SiteHeader.module.css";
 
 const navItems = [
   {label: "Researcher", href: "/", icon: FaFlask},
-  {label: "Programmer", href: "https://github.com/Hietan", icon: FaCode},
-  {label: "Musician", href: "#", icon: FaMusic},
+  {label: "Programmer", href: "/programming", icon: FaCode},
+  {label: "Musician", href: "/music", icon: FaMusic},
 ];
 
 const SiteHeader = async () => {
