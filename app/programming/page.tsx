@@ -1,3 +1,4 @@
+import type {Metadata} from "next";
 import Box from "@mui/joy/Box";
 import Chip from "@mui/joy/Chip";
 import Card from "@mui/joy/Card";
@@ -8,8 +9,12 @@ import Button from "@mui/joy/Button";
 import Stack from "@mui/joy/Stack";
 import {FaGithub, FaExternalLinkAlt} from "react-icons/fa";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Programmer — Kazuma Yamasaki",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const skills = {
@@ -59,7 +64,7 @@ export default function ProgrammerPage() {
           <Typography level="body-md" sx={{color: "#8b949e", fontFamily: "var(--joy-fontFamily-code)"}}>
             <Typography component="span" sx={{color: "#7ee787"}}>const</Typography>
             {" role = "}
-            <Typography component="span" sx={{color: "#a5d6ff"}}>"Software Engineer & Researcher"</Typography>
+            <Typography component="span" sx={{color: "#a5d6ff"}}>&quot;Software Engineer & Researcher&quot;</Typography>
             {";"}
           </Typography>
         </Box>

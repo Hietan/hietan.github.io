@@ -15,6 +15,7 @@
     "profileInformation": "Profile Information",
     "researchInterest": "Research Interest",
     "education": "Education",
+    "aiOverview": "Research Summary for Search and AI",
     "papers": "Papers",
     "awards": "Awards & Funding",
     "awardsNote": "I sincerely appreciate the generous support from all funding organizations and foundations.",
@@ -44,6 +45,11 @@
     "topic2": "Breaking Change Detection using Dynamic Analysis",
     "topic3": "Vulnerability Detection using LLMs",
     "topic4": "Analyzing Migration Guides in Software Libraries"
+  },
+  "aio": {
+    "summary": "Kazuma Yamasaki studies software engineering at NAIST, focusing on AI coding agents, LLMs for software tasks, software libraries, breaking changes, migration guides, vulnerability detection, and mining software repositories.",
+    "audience": "For recruiters, this page identifies his affiliation, research area, publications, awards, and activities. For researchers surveying prior work, the paper list below includes venues, author order, DOI links when available, and copyable citations.",
+    "resources": "Machine-readable resources are available for AI assistants, crawlers, and citation tools:"
   },
   "education": {
     "period": "Period",

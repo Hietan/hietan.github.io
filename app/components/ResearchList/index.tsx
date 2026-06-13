@@ -10,6 +10,7 @@ type TranslateFn = (key: string) => string;
 export type ResearchListItem = {
   content: ReactNode;
   date: string;
+  id?: string;
   linkArea?: ReactNode;
   tags?: string[];
 };
@@ -23,7 +24,7 @@ const ResearchList = ({items, tTags}: Props) => (
   <Theme theme="g10">
     <ol className={styles.list}>
       {items.map((item, i) => (
-        <li key={i} className={styles.item}>
+        <li key={item.id ?? i} id={item.id} className={styles.item}>
           <div className={styles.content}>{item.content}</div>
           <div className={styles.actions}>
             <span className={styles.date}>{item.date}</span>

@@ -1,7 +1,12 @@
+import type {Metadata} from "next";
 import styles from "./page.module.css";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Musician — Kazuma Yamasaki",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function MusicianPage() {
