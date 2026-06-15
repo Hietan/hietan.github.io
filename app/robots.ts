@@ -11,13 +11,17 @@ const publicPaths = [
 ];
 
 const aiCrawlers = [
-  "GPTBot",
-  "ChatGPT-User",
   "OAI-SearchBot",
-  "ClaudeBot",
+  "ChatGPT-User",
   "Claude-User",
+  "Claude-SearchBot",
   "PerplexityBot",
+];
+
+const trainingCrawlers = [
+  "GPTBot",
   "Google-Extended",
+  "ClaudeBot",
 ];
 
 export default function robots(): MetadataRoute.Robots {
@@ -30,6 +34,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: aiCrawlers,
         allow: publicPaths,
+      },
+      {
+        userAgent: trainingCrawlers,
+        disallow: "/",
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

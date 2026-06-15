@@ -1,4 +1,5 @@
 export const SITE_URL = "https://hietan.com";
+export const SITE_LAST_MODIFIED = "2026-06-15";
 
 export const researcherProfile = {
   name: "Kazuma Yamasaki",

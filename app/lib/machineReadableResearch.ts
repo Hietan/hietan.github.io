@@ -13,6 +13,7 @@ import {
   researcherProfile,
   researchSummary,
   sameAsLinks,
+  SITE_LAST_MODIFIED,
   SITE_URL,
 } from "@/app/lib/researchProfile";
 import type {JsonPapers} from "@/type/data";
@@ -23,6 +24,12 @@ const paperKeywords = (paper: JsonPapers): string[] => [
   ...(paper.tags ?? []),
   ...researchKeywords.filter(keyword => paper.title.toLowerCase().includes(keyword.toLowerCase())),
 ];
+
+const paperSameAsUrls = (paper: JsonPapers): string[] => (
+  [getPaperCanonicalUrl(paper), paper.link_href]
+    .filter((url): url is string => Boolean(url))
+    .filter((url, index, urls) => urls.indexOf(url) === index)
+);
 
 export const publicationJson = papers.map(paper => ({
   citationKey: getPaperCitationKey(paper),
@@ -52,10 +59,10 @@ export const generateResearchMarkdown = (): string => {
     .join("\n");
 
   const paperList = papers.map(paper => {
-    const doi = paper.doi ? `\n  - DOI: https://doi.org/${paper.doi}` : "";
+    const doi = paper.doi ? `- DOI: https://doi.org/${paper.doi}` : undefined;
     const url = getPaperCanonicalUrl(paper);
-    const link = url ? `\n  - URL: ${url}` : "";
-    const tags = paper.tags?.length ? `\n  - Tags: ${paper.tags.join(", ")}` : "";
+    const link = url ? `- URL: ${url}` : undefined;
+    const tags = paper.tags?.length ? `- Tags: ${paper.tags.join(", ")}` : undefined;
     return [
       `### ${paper.title}`,
       `- Authors: ${paper.authors.join("; ")}`,
@@ -64,7 +71,9 @@ export const generateResearchMarkdown = (): string => {
       paper.pages ? `- Pages: ${paper.pages}` : undefined,
       `- Citation key: ${getPaperCitationKey(paper)}`,
       `- Citation: ${generateNaturalCitation(paper)}`,
-      `${doi}${link}${tags}`,
+      doi,
+      link,
+      tags,
     ].filter(Boolean).join("\n");
   }).join("\n\n");
 
@@ -128,6 +137,7 @@ export const generatePersonJsonLd = () => ({
       url: `${SITE_URL}/`,
       name: `${researcherProfile.name} | Research Profile`,
       description: researchSummary[1],
+      dateModified: SITE_LAST_MODIFIED,
       inLanguage: ["en", "ja"],
       about: {"@id": `${SITE_URL}/#person`},
       mainEntity: {"@id": `${SITE_URL}/#person`},
@@ -141,6 +151,12 @@ export const generatePersonJsonLd = () => ({
       familyName: "Yamasaki",
       jobTitle: researcherProfile.jobTitle,
       email: `mailto:${researcherProfile.email}`,
+      identifier: {
+        "@type": "PropertyValue",
+        propertyID: "ORCID",
+        value: researcherProfile.orcid.replace("https://orcid.org/", ""),
+        url: researcherProfile.orcid,
+      },
       image: absoluteUrl(researcherProfile.image),
       url: `${SITE_URL}/`,
       sameAs: sameAsLinks,
@@ -157,27 +173,31 @@ export const generatePersonJsonLd = () => ({
       mainEntityOfPage: {"@id": `${SITE_URL}/#profile-page`},
       subjectOf: papers.map(paper => ({"@id": `${SITE_URL}/#${getPaperAnchorId(paper)}`})),
     },
-    ...papers.map(paper => ({
-      "@type": "ScholarlyArticle",
-      "@id": `${SITE_URL}/#${getPaperAnchorId(paper)}`,
-      headline: paper.title,
-      name: paper.title,
-      author: paper.authors.map(author => ({
-        "@type": "Person",
-        name: author,
-      })),
-      datePublished: getPaperDatePublished(paper),
-      isPartOf: paper.venue ? {
-        "@type": "PublicationIssue",
-        name: paper.venue,
-      } : undefined,
-      pagination: paper.pages,
-      identifier: paper.doi ? `doi:${paper.doi}` : undefined,
-      sameAs: getPaperCanonicalUrl(paper),
-      url: getPaperCanonicalUrl(paper) ?? `${SITE_URL}/#${getPaperAnchorId(paper)}`,
-      keywords: paperKeywords(paper),
-      citation: generateNaturalCitation(paper),
-      mainEntityOfPage: {"@id": `${SITE_URL}/#profile-page`},
-    })),
+    ...papers.map(paper => {
+      const sameAs = paperSameAsUrls(paper);
+
+      return {
+        "@type": "ScholarlyArticle",
+        "@id": `${SITE_URL}/#${getPaperAnchorId(paper)}`,
+        headline: paper.title,
+        name: paper.title,
+        author: paper.authors.map(author => ({
+          "@type": "Person",
+          name: author,
+        })),
+        datePublished: getPaperDatePublished(paper),
+        isPartOf: paper.venue ? {
+          "@type": "PublicationIssue",
+          name: paper.venue,
+        } : undefined,
+        pagination: paper.pages,
+        identifier: paper.doi ? `doi:${paper.doi}` : undefined,
+        sameAs: sameAs.length ? sameAs : undefined,
+        url: getPaperCanonicalUrl(paper) ?? `${SITE_URL}/#${getPaperAnchorId(paper)}`,
+        keywords: paperKeywords(paper),
+        citation: generateNaturalCitation(paper),
+        mainEntityOfPage: {"@id": `${SITE_URL}/#profile-page`},
+      };
+    }),
   ],
 });

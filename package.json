@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --webpack",
+    "build": "pnpm check:machine-readable && next build --webpack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:machine-readable": "node scripts/check-machine-readable.mjs",
+    "generate:machine-readable": "node scripts/check-machine-readable.mjs --write"
   },
   "dependencies": {
     "@carbon/icons-react": "^11.70.0",
