@@ -1,4 +1,4 @@
-export const SITE_URL = "https://hietan.github.io";
+export const SITE_URL = "https://hietan.com";
 
 export const researcherProfile = {
   name: "Kazuma Yamasaki",

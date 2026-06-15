@@ -26,7 +26,7 @@ const skills = {
 
 const projects = [
   {
-    name: "hietan.github.io",
+    name: "hietan.com",
     description: "このポートフォリオサイト。Next.js 16 App Router + Carbon Design System + Joy UI で構築。",
     lang: "TypeScript",
     langColor: "#3178c6",

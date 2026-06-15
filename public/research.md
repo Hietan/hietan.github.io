@@ -36,10 +36,10 @@ For citation and research discovery, this site exposes machine-readable publicat
 
 ## Machine-Readable Resources
 
-- [LLM guide](https://hietan.github.io/llms.txt): A short guide for AI assistants and crawlers.
-- [Research profile Markdown](https://hietan.github.io/research.md): A Markdown profile with research summary and paper list.
-- [Publication BibTeX](https://hietan.github.io/publications.bib): BibTeX entries for peer-reviewed papers.
-- [Publication JSON](https://hietan.github.io/publications.json): Structured publication metadata for tools and AI systems.
+- [LLM guide](https://hietan.com/llms.txt): A short guide for AI assistants and crawlers.
+- [Research profile Markdown](https://hietan.com/research.md): A Markdown profile with research summary and paper list.
+- [Publication BibTeX](https://hietan.com/publications.bib): BibTeX entries for peer-reviewed papers.
+- [Publication JSON](https://hietan.com/publications.json): Structured publication metadata for tools and AI systems.
 
 ## Peer-Reviewed Papers
 
