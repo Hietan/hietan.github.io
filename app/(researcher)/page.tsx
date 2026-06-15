@@ -17,12 +17,10 @@ import presentations from "@/app/data/research/presentations";
 import works from "@/app/data/research/works";
 import publications from "@/app/data/research/publications";
 import {generatePersonJsonLd} from "@/app/lib/machineReadableResearch";
-import {machineReadableResources, researchKeywords} from "@/app/lib/researchProfile";
 
 export default async function Home() {
   const locale = await getLocale();
   const t = await getTranslations();
-  const tAio = await getTranslations("aio");
   const tTable = await getTranslations("table");
   const tTags = await getTranslations("tags");
   const tInfo = await getTranslations("information");
@@ -48,27 +46,6 @@ export default async function Home() {
       </Section>
       <Section title={t("sections.researchInterest")}>
         <TableRowHeader data={buildResearchInterest(tResearch)} />
-      </Section>
-      <Section title={t("sections.aiOverview")}>
-        <div className="aio-overview">
-          <p>{tAio("summary")}</p>
-          <p>{tAio("audience")}</p>
-          <ul>
-            {researchKeywords.map(keyword => (
-              <li key={keyword}>{keyword}</li>
-            ))}
-          </ul>
-          <p>{tAio("resources")}</p>
-          <ul>
-            {machineReadableResources.map(resource => (
-              <li key={resource.href}>
-                <a href={resource.href} type={resource.type}>{resource.label}</a>
-                {": "}
-                {resource.description}
-              </li>
-            ))}
-          </ul>
-        </div>
       </Section>
       <Section title={t("sections.education")}>
         <Table data={buildEducation(tEducation)} />
