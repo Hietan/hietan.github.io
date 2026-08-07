@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08",
+    "title": "Sub Reviewer in Technical Track",
+    "venue": "The 33rd Asia-Pacific Software Engineering Conference (APSEC 2026)",
+    "link": "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track",
+    "link_tag": "APSEC 2026",
+    "tags": ["review"]
+  },
+  {
     "date": "2026-03",
     "title": "特別講義",
     "venue": "「人間はもう不要!? AI × プログラミング時代に人間がすべきこと」，NAIST STELLA プログラム ラップアップ合宿",
