@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-07",
+    "category": "award",
+    "title": "情報処理学会 2026年度コンピュータサイエンス領域奨励賞",
+    "title_en": "2026 IPSJ Computer Science Research Award for Young Scientists",
+    "work_title": "マークル木を用いたライブラリ後方非互換性特定手法の大規模有用性評価に向けた自動化",
+    "event": "2025-SE-220",
+    "link": "https://www.ipsj.or.jp/award/cs-awardee-2026.html",
+    "link_tag": "Link",
+    "tags": ["award"]
+  },
+  {
     "date": "2026-02",
     "category": "grant",
     "title": "海外渡航旅費援助 援助決定",
