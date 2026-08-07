@@ -1,5 +1,17 @@
 [
   {
+    "year": 2026,
+    "month": 8,
+    "title": "LLMを用いた誤概念推定に基づくC言語ポインタ学習支援のための動的メモリ可視化システムの提案",
+    "authors": ["柴垣 琉生", "土田 陸斗", "山﨑 和真", "嶋利 一真", "松本 健一"],
+    "index_presenter": 1,
+    "index_me": 3,
+    "event": "NEURO2026 高校生ポスター発表",
+    "link_href": "https://neuro2026.jnss.org/highschool.html",
+    "link_label": "View",
+    "tags": ["poster"]
+  },
+  {
     "year": 2025,
     "month": 12,
     "title": "A Preliminary Study on Migration Guide Provisioning and Usage",
