@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>和</title>
+  <style>
+    .badge {
+      fill: #0e4424;
+    }
+
+    .keyline,
+    .wa {
+      fill: #f7f4e8;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .badge {
+        fill: #1a7a40;
+      }
+    }
+  </style>
+  <rect class="badge" x="2" y="2" width="60" height="60" rx="13" />
+  <path
+    class="keyline"
+    fill-rule="evenodd"
+    d="M15 5h34a10 10 0 0 1 10 10v34a10 10 0 0 1-10 10H15A10 10 0 0 1 5 49V15A10 10 0 0 1 15 5Zm0 3a7 7 0 0 0-7 7v34a7 7 0 0 0 7 7h34a7 7 0 0 0 7-7V15a7 7 0 0 0-7-7Z"
+  />
+  <path
+    class="wa"
+    transform="translate(10.065 49.6) scale(.046759 -.046759)"
+    d="M508 761V-44H650V34H776V-37H926V761ZM650 173V622H776V173ZM403 847C309 810 170 777 40 759C56 728 74 678 80 646C122 651 166 657 210 664V556H40V422H175C140 321 84 217 20 147C44 110 78 52 92 10C137 61 177 132 210 210V-94H356V234C380 196 404 158 419 128L501 249C481 274 397 369 356 410V422H486V556H356V693C405 705 453 718 496 733Z"
+  />
+</svg>
