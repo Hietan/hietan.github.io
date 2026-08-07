@@ -3,7 +3,7 @@ import {dirname, join} from "node:path";
 import {fileURLToPath} from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const SITE_URL = "https://hietan.com";
+const SITE_URL = "https://www.hietan.com";
 
 const researcherProfile = {
   name: "Kazuma Yamasaki",

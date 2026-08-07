@@ -1,4 +1,4 @@
-export const SITE_URL = "https://hietan.com";
+export const SITE_URL = "https://www.hietan.com";
 export const SITE_LAST_MODIFIED = "2026-08-07";
 
 export const researcherProfile = {

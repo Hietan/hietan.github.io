@@ -4,7 +4,7 @@
   "publications": [
     {
       "citationKey": "monno2026how",
-      "anchor": "https://hietan.com/#paper-monno2026how",
+      "anchor": "https://www.hietan.com/#paper-monno2026how",
       "title": "How Do Developers Use Migration Guides? A Case Study of Log4j",
       "authors": ["Takahiro Monno", "Kazumasa Shimari", "Tetsuya Kanda", "Kazuma Yamasaki", "Kenichi Matsumoto"],
       "authorPosition": 4,
@@ -19,7 +19,7 @@
     },
     {
       "citationKey": "yamasaki2026who",
-      "anchor": "https://hietan.com/#paper-yamasaki2026who",
+      "anchor": "https://www.hietan.com/#paper-yamasaki2026who",
       "title": "Who Writes the Docs in SE 3.0? Agent vs. Human Documentation Pull Requests",
       "authors": ["Kazuma Yamasaki", "Ayobami Joshua", "Tasha Settewong", "Mahmoud Alfadel", "Kazumasa Shimari", "Kenichi Matsumoto"],
       "authorPosition": 1,
@@ -37,7 +37,7 @@
     },
     {
       "citationKey": "watanabe2026how",
-      "anchor": "https://hietan.com/#paper-watanabe2026how",
+      "anchor": "https://www.hietan.com/#paper-watanabe2026how",
       "title": "How AI Coding Agents Communicate: A Study of Pull Request Description Characteristics and Human Review Responses",
       "authors": ["Kan Watanabe", "Rikuto Tsuchida", "Takahiro Monno", "Bin Huang", "Kazuma Yamasaki", "Youmei Fan", "Kazumasa Shimari", "Kenichi Matsumoto"],
       "authorPosition": 5,
@@ -54,7 +54,7 @@
     },
     {
       "citationKey": "hayakawa2025round",
-      "anchor": "https://hietan.com/#paper-hayakawa2025round",
+      "anchor": "https://www.hietan.com/#paper-hayakawa2025round",
       "title": "Round Outcome Prediction in VALORANT Using Tactical Features from Video Analysis",
       "authors": ["Nirai Hayakawa", "Kazumasa Shimari", "Kazuma Yamasaki", "Hirotatsu Hoshikawa", "Rikuto Tsuchida", "Kenichi Matsumoto"],
       "authorPosition": 3,
@@ -72,7 +72,7 @@
     },
     {
       "citationKey": "tanaka2025mining",
-      "anchor": "https://hietan.com/#paper-tanaka2025mining",
+      "anchor": "https://www.hietan.com/#paper-tanaka2025mining",
       "title": "Mining for Lags in Updating Critical Security Threats: A Case Study of Log4j Library",
       "authors": ["Hidetake Tanaka", "Kazuma Yamasaki", "Momoka Hirose", "Takashi Nakano", "Youmei Fan", "Kazumasa Shimari", "Raula Gaikovina Kula", "Kenichi Matsumoto"],
       "authorPosition": 2,
