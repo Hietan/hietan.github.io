@@ -3,6 +3,8 @@ import {SITE_URL} from "@/app/lib/researchProfile";
 
 const publicPaths = [
   "/",
+  "/en",
+  "/ja",
   "/llms.txt",
   "/research.md",
   "/publications.bib",

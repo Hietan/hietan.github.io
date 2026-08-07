@@ -7,6 +7,7 @@ import {
   getPaperCitationKey,
   getPaperDatePublished,
 } from "@/app/lib/citations";
+import type {SiteLocale} from "@/app/lib/i18n";
 import {
   machineReadableResources,
   researchKeywords,
@@ -128,76 +129,99 @@ Citation guidance:
 - Japanese name: ${researcherProfile.nameJa}; English name: ${researcherProfile.name}.
 `;
 
-export const generatePersonJsonLd = () => ({
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ProfilePage",
-      "@id": `${SITE_URL}/#profile-page`,
-      url: `${SITE_URL}/`,
-      name: `${researcherProfile.name} | Research Profile`,
-      description: researchSummary[1],
-      dateModified: SITE_LAST_MODIFIED,
-      inLanguage: ["en", "ja"],
-      about: {"@id": `${SITE_URL}/#person`},
-      mainEntity: {"@id": `${SITE_URL}/#person`},
-    },
-    {
-      "@type": "Person",
-      "@id": `${SITE_URL}/#person`,
-      name: researcherProfile.name,
-      alternateName: researcherProfile.alternateNames,
-      givenName: "Kazuma",
-      familyName: "Yamasaki",
-      jobTitle: researcherProfile.jobTitle,
-      email: `mailto:${researcherProfile.email}`,
-      identifier: {
-        "@type": "PropertyValue",
-        propertyID: "ORCID",
-        value: researcherProfile.orcid.replace("https://orcid.org/", ""),
-        url: researcherProfile.orcid,
-      },
-      image: absoluteUrl(researcherProfile.image),
-      url: `${SITE_URL}/`,
-      sameAs: sameAsLinks,
-      affiliation: {
-        "@type": "CollegeOrUniversity",
-        name: researcherProfile.affiliation,
-        url: "https://www.naist.jp/en/",
-      },
-      memberOf: {
-        "@type": "ResearchOrganization",
-        name: researcherProfile.laboratory,
-      },
-      knowsAbout: researchKeywords,
-      mainEntityOfPage: {"@id": `${SITE_URL}/#profile-page`},
-      subjectOf: papers.map(paper => ({"@id": `${SITE_URL}/#${getPaperAnchorId(paper)}`})),
-    },
-    ...papers.map(paper => {
-      const sameAs = paperSameAsUrls(paper);
+type ProfilePageText = {
+  description: string;
+  title: string;
+};
 
-      return {
-        "@type": "ScholarlyArticle",
-        "@id": `${SITE_URL}/#${getPaperAnchorId(paper)}`,
-        headline: paper.title,
-        name: paper.title,
-        author: paper.authors.map(author => ({
-          "@type": "Person",
-          name: author,
-        })),
-        datePublished: getPaperDatePublished(paper),
-        isPartOf: paper.venue ? {
-          "@type": "PublicationIssue",
-          name: paper.venue,
-        } : undefined,
-        pagination: paper.pages,
-        identifier: paper.doi ? `doi:${paper.doi}` : undefined,
-        sameAs: sameAs.length ? sameAs : undefined,
-        url: getPaperCanonicalUrl(paper) ?? `${SITE_URL}/#${getPaperAnchorId(paper)}`,
-        keywords: paperKeywords(paper),
-        citation: generateNaturalCitation(paper),
-        mainEntityOfPage: {"@id": `${SITE_URL}/#profile-page`},
-      };
-    }),
-  ],
-});
+export const generatePersonJsonLd = (locale: SiteLocale, text: ProfilePageText) => {
+  const profilePageUrl = `${SITE_URL}/${locale}`;
+  const profilePageId = `${profilePageUrl}#profile-page`;
+  const personId = `${SITE_URL}/#person`;
+  const websiteId = `${SITE_URL}/#website`;
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": websiteId,
+        url: `${SITE_URL}/`,
+        name: researcherProfile.name,
+        alternateName: researcherProfile.alternateNames,
+        inLanguage: ["en", "ja"],
+        publisher: {"@id": personId},
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": profilePageId,
+        url: profilePageUrl,
+        name: text.title,
+        description: text.description,
+        dateModified: SITE_LAST_MODIFIED,
+        inLanguage: locale,
+        isPartOf: {"@id": websiteId},
+        about: {"@id": personId},
+        mainEntity: {"@id": personId},
+      },
+      {
+        "@type": "Person",
+        "@id": personId,
+        name: researcherProfile.name,
+        alternateName: researcherProfile.alternateNames,
+        givenName: "Kazuma",
+        familyName: "Yamasaki",
+        jobTitle: researcherProfile.jobTitle,
+        email: `mailto:${researcherProfile.email}`,
+        identifier: {
+          "@type": "PropertyValue",
+          propertyID: "ORCID",
+          value: researcherProfile.orcid.replace("https://orcid.org/", ""),
+          url: researcherProfile.orcid,
+        },
+        image: absoluteUrl(researcherProfile.image),
+        url: `${SITE_URL}/`,
+        sameAs: sameAsLinks,
+        affiliation: {
+          "@type": "CollegeOrUniversity",
+          name: researcherProfile.affiliation,
+          url: "https://www.naist.jp/en/",
+        },
+        memberOf: {
+          "@type": "ResearchOrganization",
+          name: researcherProfile.laboratory,
+        },
+        knowsAbout: researchKeywords,
+        mainEntityOfPage: {"@id": profilePageId},
+        subjectOf: papers.map(paper => ({"@id": `${SITE_URL}/#${getPaperAnchorId(paper)}`})),
+      },
+      ...papers.map(paper => {
+        const sameAs = paperSameAsUrls(paper);
+
+        return {
+          "@type": "ScholarlyArticle",
+          "@id": `${SITE_URL}/#${getPaperAnchorId(paper)}`,
+          headline: paper.title,
+          name: paper.title,
+          author: paper.authors.map(author => (
+            author === researcherProfile.name
+              ? {"@id": personId}
+              : {"@type": "Person", name: author}
+          )),
+          datePublished: getPaperDatePublished(paper),
+          isPartOf: paper.venue ? {
+            "@type": "PublicationIssue",
+            name: paper.venue,
+          } : undefined,
+          pagination: paper.pages,
+          identifier: paper.doi ? `doi:${paper.doi}` : undefined,
+          sameAs: sameAs.length ? sameAs : undefined,
+          url: getPaperCanonicalUrl(paper) ?? `${SITE_URL}/#${getPaperAnchorId(paper)}`,
+          keywords: paperKeywords(paper),
+          citation: generateNaturalCitation(paper),
+          mainEntityOfPage: {"@id": profilePageId},
+        };
+      }),
+    ],
+  };
+};

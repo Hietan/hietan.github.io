@@ -1,10 +1,10 @@
 export const SITE_URL = "https://hietan.com";
-export const SITE_LAST_MODIFIED = "2026-06-15";
+export const SITE_LAST_MODIFIED = "2026-08-07";
 
 export const researcherProfile = {
   name: "Kazuma Yamasaki",
   nameJa: "山﨑 和真",
-  alternateNames: ["Kazuma Yamasaki", "山﨑 和真", "Yamasaki Kazuma"],
+  alternateNames: ["山﨑 和真", "山崎 和真", "山﨑和真", "山崎和真", "Yamasaki Kazuma"],
   jobTitle: "Ph.D. Student",
   affiliation: "Nara Institute of Science and Technology (NAIST)",
   laboratory: "Software Engineering Laboratory",
@@ -15,6 +15,9 @@ export const researcherProfile = {
   googleScholar: "https://scholar.google.co.jp/citations?user=BpMVjB8AAAAJ&hl=ja",
   github: "https://github.com/hietan",
   linkedIn: "https://www.linkedin.com/in/kazumayamasaki/",
+  researchMap: "https://researchmap.jp/KazumaYamasaki",
+  jGlobal: "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202601017681769366",
+  researchr: "https://conf.researchr.org/profile/kazumayamasaki",
 };
 
 export const researchKeywords = [
@@ -70,4 +73,7 @@ export const sameAsLinks = [
   researcherProfile.googleScholar,
   researcherProfile.github,
   researcherProfile.linkedIn,
+  researcherProfile.researchMap,
+  researcherProfile.jGlobal,
+  researcherProfile.researchr,
 ];

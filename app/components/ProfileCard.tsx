@@ -41,7 +41,7 @@ const ProfileCard = ({
       <div className={cx(styles.media, isHero ? styles.heroMedia : undefined)}>
         <Image
           src={photoSrc}
-          alt={nameEn}
+          alt={`${nameJa} (${nameEn})`}
           width={500}
           height={500}
           style={{objectFit: "cover", width: "100%", height: "100%"}}

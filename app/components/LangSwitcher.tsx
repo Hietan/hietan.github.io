@@ -1,19 +1,27 @@
 "use client";
 
-import {useRouter} from "next/navigation";
+import {usePathname, useRouter} from "next/navigation";
 import {setLocale} from "@/app/actions/locale";
+import {isSiteLocale} from "@/app/lib/i18n";
 
 import styles from "./LangSwitcher.module.css";
 
 type Props = {locale: string};
 
 const LangSwitcher = ({locale}: Props) => {
+  const pathname = usePathname();
   const router = useRouter();
 
   const toggle = async () => {
     const next = locale === "ja" ? "en" : "ja";
     await setLocale(next);
-    router.refresh();
+
+    const pathLocale = pathname.split("/")[1];
+    if (isSiteLocale(pathLocale)) {
+      router.push(`/${next}`);
+    } else {
+      router.refresh();
+    }
   };
 
   return (
