@@ -1,6 +1,18 @@
 [
   {
     "year": 2026,
+    "month": 9,
+    "title": "A Preliminary Study of References Between ADRs and GitHub Issues and Pull Requests",
+    "authors": ["Haruna Joko", "Kazuma Yamasaki", "Kazumasa Shimari", "Kenichi Matsumoto"],
+    "index_presenter": 2,
+    "index_me": 2,
+    "event": "Software Engineering Symposium 2026 (SES 2026) International Student Poster Session",
+    "link_href": "https://ses.sigse.jp/2026/program.html",
+    "link_label": "View",
+    "tags": ["presenter", "poster"]
+  },
+  {
+    "year": 2026,
     "month": 8,
     "title": "LLMを用いた誤概念推定に基づくC言語ポインタ学習支援のための動的メモリ可視化システムの提案",
     "authors": ["柴垣 琉生", "土田 陸斗", "山﨑 和真", "嶋利 一真", "松本 健一"],
