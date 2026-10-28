@@ -14,3 +14,10 @@
   margin-bottom: 0.1rem;
   overflow-wrap: break-word;
 }
+
+.track {
+  font-size: 0.8125rem;
+  color: var(--cds-text-secondary);
+  margin-bottom: 0.1rem;
+  overflow-wrap: break-word;
+}

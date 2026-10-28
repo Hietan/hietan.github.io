@@ -1,21 +1,23 @@
 [
   {
     "date": "2026-11",
-    "title": "Program Committee in Mining Challenge",
+    "title": "Program Committee",
+    "track": "Mining Challenge",
     "venue": "2027 IEEE/ACM 24th International Conference on Mining Software Repositories (MSR 2027)",
     "tags": ["review"]
   },
   {
     "date": "2026-10",
     "title": "Junior Program Committee",
-    "venue": "TechDebt 2027",
+    "venue": "10th International Conference on Technical Debt (TechDebt 2027)",
     "link": "https://conf.researchr.org/committee/TechDebt-2027/TechDebt-2027-junior-program-committee-junior-program-committee",
     "link_tag": "TechDebt 2027",
     "tags": ["review"]
   },
   {
     "date": "2026-08",
-    "title": "Sub Reviewer in Technical Track",
+    "title": "Sub Reviewer",
+    "track": "Technical Track",
     "venue": "The 33rd Asia-Pacific Software Engineering Conference (APSEC 2026)",
     "link": "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track",
     "link_tag": "APSEC 2026",
@@ -45,8 +47,9 @@
   },
   {
     "date": "2025-10",
-    "title": "Reviewer in Technical Papers (Junior-PC)",
-    "venue": "2026 IEEE/ACM 23nd International Conference on Mining Software Repositories (MSR 2026)",
+    "title": "Junior Program Committee",
+    "track": "Technical Papers",
+    "venue": "2026 IEEE/ACM 23rd International Conference on Mining Software Repositories (MSR 2026)",
     "link": "https://2026.msrconf.org/committee/msr-2026-junior-pc-technical-papers---junior-program-committee",
     "link_tag": "MSR 2026",
     "tags": ["review"]

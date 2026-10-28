@@ -18,6 +18,7 @@ export type JsonWorks = {
   date: string;
   title: string;
   venue?: string;
+  track?: string;
   link?: string;
   link_tag?: string;
   tags?: string[];

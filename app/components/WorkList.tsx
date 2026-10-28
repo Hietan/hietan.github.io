@@ -17,6 +17,7 @@ const WorkList = ({works, tTags}: Props) => {
       <>
         <div className={styles.title}>{work.title}</div>
         {work.venue && <div className={styles.venue}>{work.venue}</div>}
+        {work.track && <div className={styles.track}>{work.track}</div>}
       </>
     ),
     date: work.date,
