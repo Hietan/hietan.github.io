@@ -1,6 +1,17 @@
 [
   {
     "year": 2026,
+    "month": 11,
+    "title": "GitHub における ADR と Issue および Pull Request の明示的な参照関係の実証的調査",
+    "authors": ["上甲 陽菜", "山﨑 和真", "嶋利 一真", "松本 健一"],
+    "index_me": 2,
+    "event": "第224回 情報処理学会 ソフトウェア工学研究発表会 (IPSJ/SIGSE)（発表予定）",
+    "link_href": "https://www.ipsj.or.jp/kenkyukai/event/se224.html",
+    "link_label": "View",
+    "tags": ["oral"]
+  },
+  {
+    "year": 2026,
     "month": 9,
     "title": "接頭語・語幹・接尾語から英単語を作る対戦型PCゲームの開発と評価",
     "authors": ["木田 早紀", "山﨑 和真", "土田 陸斗", "嶋利 一真", "松本 健一"],
