@@ -48,8 +48,8 @@
     "category": "scholarship",
     "title": "第一種奨学金 採用時返還免除内定制度 内定",
     "title_en": "JASSO Type I Scholarship, Advance Repayment Exemption Provisional System (Provisional Adoption)",
-    "organization": "独立行政法人日本学生支援機構（JASSO）",
-    "organization_en": "Japan Student Services Organization (JASSO)",
+    "organization": "独立行政法人日本学生支援機構（JASSO） ※ NAIST Granite Programとの併用が認められていないため、同プログラムへの採択に伴い内定を辞退。",
+    "organization_en": "Japan Student Services Organization (JASSO) ※ Declined the provisional exemption upon selection for the NAIST Granite Program, as the two support schemes cannot be combined.",
     "tags": ["scholarship_exemption"]
   }
 ]
