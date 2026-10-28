@@ -2,6 +2,40 @@
   {
     "year": 2026,
     "month": 9,
+    "title": "待機を伴うSATDにおける待機対象と待機条件の復元可能性に関する初期調査",
+    "authors": ["谷本 詩温", "山﨑 和真", "嶋利 一真", "松本 健一"],
+    "index_me": 2,
+    "event": "ソフトウェアエンジニアリングシンポジウム 2026 (SES 2026)",
+    "link_href": "https://ses.sigse.jp/2026/program.html",
+    "link_label": "View",
+    "tags": ["poster"]
+  },
+  {
+    "year": 2026,
+    "month": 3,
+    "title": "3D教材活用の授業実践が児童の学習意欲に与える効果",
+    "authors": ["小嶺 倫太朗", "土田 陸斗", "山崎 和真", "嶋利 一真", "松本 健一"],
+    "index_presenter": 1,
+    "index_me": 3,
+    "event": "日本教育工学会 2026年春季全国大会",
+    "link_href": "https://naist-se.github.io/ja/publish/",
+    "link_label": "View",
+    "tags": ["oral"]
+  },
+  {
+    "year": 2025,
+    "month": 11,
+    "title": "A preliminary study on migration guide usage",
+    "authors": ["Takahiro Monno", "Kazumasa Shimari", "Tetsuya Kanda", "Kazuma Yamasaki", "Kenichi Matsumoto"],
+    "index_me": 4,
+    "event": "AI-Driven Software Engineering Summit for Fostering Next-Generation Researchers (AI-Driven)",
+    "link_href": "https://posl.ait.kyushu-u.ac.jp/~aidriven2025/",
+    "link_label": "View",
+    "tags": ["poster"]
+  },
+  {
+    "year": 2026,
+    "month": 9,
     "title": "A Preliminary Study of References Between ADRs and GitHub Issues and Pull Requests",
     "authors": ["Haruna Joko", "Kazuma Yamasaki", "Kazumasa Shimari", "Kenichi Matsumoto"],
     "index_presenter": 2,

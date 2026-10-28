@@ -54,7 +54,8 @@ export type JsonPresentations = {
   month: number;
   title: string;
   authors: string[];
-  index_presenter: number;
+  // Omit when the source does not identify the presenter.
+  index_presenter?: number;
   index_me: number;
   event?: string;
   link_href?: string;
