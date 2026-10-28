@@ -22,9 +22,6 @@ import publications from "@/app/data/research/publications";
 import {isSiteLocale, type SiteLocale} from "@/app/lib/i18n";
 import {generatePersonJsonLd} from "@/app/lib/machineReadableResearch";
 import {buildProfileMetadata} from "@/app/lib/profileMetadata";
-import {researcherProfile} from "@/app/lib/researchProfile";
-
-import styles from "./page.module.css";
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -61,8 +58,6 @@ export default async function Home({params}: Props) {
   const tInfo = await getTranslations("information");
   const tResearch = await getTranslations("researchInterest");
   const tEducation = await getTranslations("education");
-  const primaryName = locale === "ja" ? researcherProfile.nameJa : researcherProfile.name;
-  const alternateName = locale === "ja" ? researcherProfile.name : researcherProfile.nameJa;
 
   return (
     <>
@@ -75,14 +70,6 @@ export default async function Home({params}: Props) {
           })),
         }}
       />
-      <header className={styles.pageHeading}>
-        <h1 className={styles.title}>
-          <span lang={locale}>{primaryName}</span>{" "}
-          <span className={styles.alternateName} lang={locale === "ja" ? "en" : "ja"}>
-            ({alternateName})
-          </span>
-        </h1>
-      </header>
       <Section className="profile-hero-section">
         <ProfileCard
           variant="hero"
