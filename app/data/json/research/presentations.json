@@ -2,6 +2,18 @@
   {
     "year": 2026,
     "month": 9,
+    "title": "接頭語・語幹・接尾語から英単語を作る対戦型PCゲームの開発と評価",
+    "authors": ["木田 早紀", "山﨑 和真", "土田 陸斗", "嶋利 一真", "松本 健一"],
+    "index_presenter": 1,
+    "index_me": 2,
+    "event": "2026年度 情報処理学会関西支部 支部大会（第25回）",
+    "link_href": "https://kansai.ipsj.or.jp/guide/pages/proceedings/kaisai_2026/sessions/session-poster.html",
+    "link_label": "View",
+    "tags": ["poster"]
+  },
+  {
+    "year": 2026,
+    "month": 9,
     "title": "待機を伴うSATDにおける待機対象と待機条件の復元可能性に関する初期調査",
     "authors": ["谷本 詩温", "山﨑 和真", "嶋利 一真", "松本 健一"],
     "index_presenter": 1,
