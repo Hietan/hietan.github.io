@@ -2,10 +2,35 @@
   {
     "year": 2026,
     "month": 11,
-    "title": "GitHub における ADR と Issue および Pull Request の明示的な参照関係の実証的調査",
-    "authors": ["上甲 陽菜", "山﨑 和真", "嶋利 一真", "松本 健一"],
+    "title": "行レベル脆弱性検知におけるCWE別Mixture of Expertsの有効性評価",
+    "authors": ["山﨑 和真", "嶋利 一真", "松本 健一"],
+    "index_presenter": 1,
+    "index_me": 1,
+    "event": "第33回 ソフトウェア工学の基礎ワークショップ (FOSE 2026)",
+    "link_href": "https://fose.jssst.or.jp/fose2026/program.html",
+    "link_label": "View",
+    "tags": ["presenter", "poster"]
+  },
+  {
+    "year": 2026,
+    "month": 11,
+    "title": "LLMエージェントによるライブラリ更新作業における移行ガイドの有効性評価",
+    "authors": ["門埜 孝拓", "山﨑 和真", "嶋利 一真", "神田 哲也", "松本 健一"],
+    "index_presenter": 1,
     "index_me": 2,
-    "event": "第224回 情報処理学会 ソフトウェア工学研究発表会 (IPSJ/SIGSE)（発表予定）",
+    "event": "第33回 ソフトウェア工学の基礎ワークショップ (FOSE 2026)",
+    "link_href": "https://fose.jssst.or.jp/fose2026/program.html",
+    "link_label": "View",
+    "tags": ["poster"]
+  },
+  {
+    "year": 2026,
+    "month": 11,
+    "title": "GitHubにおけるADRとIssueおよびPull Requestの明示的な参照関係の実証的調査",
+    "authors": ["上甲 陽菜", "山﨑 和真", "嶋利 一真", "松本 健一"],
+    "index_presenter": 1,
+    "index_me": 2,
+    "event": "第224回 情報処理学会 ソフトウェア工学研究発表会 (IPSJ/SIGSE)",
     "link_href": "https://www.ipsj.or.jp/kenkyukai/event/se224.html",
     "link_label": "View",
     "tags": ["oral"]
