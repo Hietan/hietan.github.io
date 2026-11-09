@@ -28,6 +28,7 @@
     "month": 11,
     "title": "GitHubにおけるADRとIssueおよびPull Requestの明示的な参照関係の実証的調査",
     "authors": ["上甲 陽菜", "山﨑 和真", "嶋利 一真", "松本 健一"],
+    "index_presenter": 1,
     "index_me": 2,
     "event": "第224回 情報処理学会 ソフトウェア工学研究発表会 (IPSJ/SIGSE)",
     "link_href": "https://www.ipsj.or.jp/kenkyukai/event/se224.html",
